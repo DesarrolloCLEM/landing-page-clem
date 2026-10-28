@@ -1,5 +1,5 @@
 import { Container, Grid, Section } from "@/components/layout";
-import { MapEmbed, SectionHeading, StatCard, TestimonialCard } from "@/components/ui";
+import { ImageGallery, MapEmbed, SectionHeading, StatCard, TestimonialCard } from "@/components/ui";
 
 import { ShowcaseBlock } from "./showcase-block";
 
@@ -45,6 +45,19 @@ export function MediaShowcase() {
               link={{ href: "https://example.com", label: "Leer historia completa" }}
             />
           </Grid>
+        </ShowcaseBlock>
+
+        <ShowcaseBlock
+          title="ImageGallery"
+          description="Cada foto abre en tamaño completo; la primera ocupa dos columnas en escritorio."
+        >
+          <ImageGallery
+            images={[
+              { src: "/images/home/hospitalizacion-habitacion.webp", alt: "Foto de ejemplo 1" },
+              { src: "/images/home/cirugia-quirofano.webp", alt: "Foto de ejemplo 2" },
+              { src: "/images/home/urgencias-equipo.webp", alt: "Foto de ejemplo 3" },
+            ]}
+          />
         </ShowcaseBlock>
 
         <ShowcaseBlock

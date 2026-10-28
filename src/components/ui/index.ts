@@ -19,6 +19,7 @@ export { ExternalLink, type ExternalLinkProps } from "./external-link";
 export { FormField, type FormFieldControlProps, type FormFieldProps } from "./form-field";
 export { Heading, headingVariants, type HeadingLevel, type HeadingProps } from "./heading";
 export { IconBox, iconBoxVariants, type IconBoxProps } from "./icon-box";
+export { ImageGallery, type GalleryImage, type ImageGalleryProps } from "./image-gallery";
 export { Input } from "./input";
 export { JsonLd } from "./json-ld";
 export { Label, type LabelProps } from "./label";

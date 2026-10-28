@@ -38,6 +38,7 @@ description: Patrón obligatorio para crear o modificar componentes genéricos e
 | `StatCard` | `value`, `label` · `variant`: plain, card · `align` | Cifra con su etiqueta; va dentro de un `<dl>` |
 | `TestimonialCard` | `name`, `procedure`, `summary`, `image`, `link?` | Historia de paciente con foto |
 | `MapEmbed` | `src`, `title`, `link` | Mapa de terceros con carga diferida y enlace alternativo |
+| `ImageGallery` | `images` | Rejilla de fotos que abren en tamaño completo, sin JavaScript |
 | `JsonLd` | `data` | Datos estructurados para buscadores |
 | `ExternalLink` | props de `<a>` · `newTabLabel?` | Enlace fuera del sitio: pestaña nueva, `rel` seguro y aviso para lectores de pantalla |
 | `SocialIcon` | `network`: facebook, instagram, tiktok, whatsapp | Ícono de marca decorativo (lucide ya no trae íconos de marca) |

@@ -30,10 +30,10 @@
 
 ## 4. Información institucional
 
-- [ ] 4.1 Crear la feature `about` con `/sobre-nosotros/` (accesos rápidos, cifras, reseña, misión, visión, valores, principios y fotos, sin duplicados). Verificar la paridad contra `content/sobre-nosotros.md`.
-- [ ] 4.2 Crear `/politicas-institucionales/` (con índice), `/organigrama/` (imagen ampliable con descripción textual) y `/comite/`. Verificar que hay cinco políticas y trece comités.
-- [ ] 4.3 Crear `/nuestras-proyecciones/` y `/nueva-infraestructura/` (tabla de capacidad responsive e `ImageGallery` nueva en `ui`). Verificar a 375 px que las tablas no generan scroll horizontal en la página.
-- [ ] 4.4 Commit: `feat(about): migra sobre nosotros y páginas institucionales`.
+- [x] 4.1 Crear la feature `about` con `/sobre-nosotros/` (accesos rápidos, cifras, reseña, misión, visión, valores, principios y fotos, sin duplicados). Verificar la paridad contra `content/sobre-nosotros.md`.
+- [x] 4.2 Crear `/politicas-institucionales/` (con índice), `/organigrama/` (imagen ampliable con descripción textual) y `/comite/`. Verificar que hay cinco políticas y trece comités.
+- [x] 4.3 Crear `/nuestras-proyecciones/` y `/nueva-infraestructura/` (tabla de capacidad responsive e `ImageGallery` nueva en `ui`). Verificar a 375 px que las tablas no generan scroll horizontal en la página.
+- [x] 4.4 Commit: `feat(about): migra sobre nosotros y páginas institucionales`.
 
 ## 5. Transparencia
 
