@@ -39,8 +39,8 @@
 
 ## 6. Documentación
 
-- [ ] 6.1 Actualizar `.claude/skills/create-ui-component/SKILL.md` con el inventario (design D1), la regla de colores semánticos (D2) y la obligación de agregar cada componente al catálogo. Verificar que el ejemplo de `Button` de la skill coincide con el código real.
-- [ ] 6.2 Commit: `docs(skills): actualiza create-ui-component con el inventario del sistema de diseño`.
+- [x] 6.1 Actualizar `.claude/skills/create-ui-component/SKILL.md` con el inventario (design D1), la regla de colores semánticos (D2) y la obligación de agregar cada componente al catálogo. Verificar que el ejemplo de `Button` de la skill coincide con el código real.
+- [x] 6.2 Commit: `docs(skills): actualiza create-ui-component con el inventario del sistema de diseño`.
 
 ## 7. Verificación final
 
