@@ -2,10 +2,10 @@
 
 ## 1. Commit inicial y estructura `src/`
 
-- [ ] 1.1 Crear el commit inicial con el estado actual (create-next-app + OpenSpec), usando el mensaje `chore: estado inicial de create-next-app y OpenSpec`. Verificar que `git log` muestra un commit.
-- [ ] 1.2 Mover `app/` a `src/app/`, cambiar el alias en `tsconfig.json` a `"@/*": ["./src/*"]` y crear `src/components/ui`, `src/components/layout`, `src/features`, `src/config` y `src/lib` con `.gitkeep`. Verificar que `pnpm build` pasa.
-- [ ] 1.3 Eliminar el contenido demo: SVGs de `public/` y JSX de ejemplo en `page.tsx`. Verificar con `grep -r "vercel\|next.svg" src public` sin resultados.
-- [ ] 1.4 Commit: `refactor: mueve el código a src y elimina contenido de ejemplo`.
+- [x] 1.1 Crear el commit inicial con el estado actual (create-next-app + OpenSpec), usando el mensaje `chore: estado inicial de create-next-app y OpenSpec`. Verificar que `git log` muestra un commit.
+- [x] 1.2 Mover `app/` a `src/app/`, cambiar el alias en `tsconfig.json` a `"@/*": ["./src/*"]` y crear `src/components/ui`, `src/components/layout`, `src/features`, `src/config` y `src/lib` con `.gitkeep`. Verificar que `pnpm build` pasa.
+- [x] 1.3 Eliminar el contenido demo: SVGs de `public/` y JSX de ejemplo en `page.tsx`. Verificar con `grep -r "vercel\|next.svg" src public` sin resultados.
+- [x] 1.4 Commit: `refactor: mueve el código a src y elimina contenido de ejemplo`.
 
 ## 2. Tema de marca
 
