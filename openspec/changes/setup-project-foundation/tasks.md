@@ -18,10 +18,10 @@
 
 ## 3. Calidad de código y arquitectura
 
-- [ ] 3.1 Instalar y configurar Prettier con `prettier-plugin-tailwindcss` (`.prettierrc.json`, `.prettierignore`, scripts `format` y `format:check`). Formatear todo. Verificar que `pnpm format:check` pasa.
-- [ ] 3.2 Instalar `eslint-plugin-boundaries` y `eslint-import-resolver-typescript`, y configurar en `eslint.config.mjs` los elementos `app`, `feature`, `component`, `config` y `lib`, más las reglas de dependencias y `entry-point` (design D3). Verificar que `pnpm lint` pasa.
-- [ ] 3.3 Comprobar las reglas con archivos de prueba temporales: una feature `a` que importa la feature `b`, un componente que importa una feature, y una página que importa un archivo interno de una feature. Verificar que `pnpm lint` falla en los tres casos, borrar los archivos y confirmar que vuelve a pasar.
-- [ ] 3.4 Commit: `build: agrega prettier y reglas de arquitectura en eslint`.
+- [x] 3.1 Instalar y configurar Prettier con `prettier-plugin-tailwindcss` (`.prettierrc.json`, `.prettierignore`, scripts `format` y `format:check`). Formatear todo. Verificar que `pnpm format:check` pasa.
+- [x] 3.2 Instalar `eslint-plugin-boundaries` y `eslint-import-resolver-typescript`, y configurar en `eslint.config.mjs` los elementos `app`, `feature`, `component`, `config` y `lib`, más las reglas de dependencias y `entry-point` (design D3). Verificar que `pnpm lint` pasa.
+- [x] 3.3 Comprobar las reglas con archivos de prueba temporales: una feature `a` que importa la feature `b`, un componente que importa una feature, y una página que importa un archivo interno de una feature. Verificar que `pnpm lint` falla en los tres casos, borrar los archivos y confirmar que vuelve a pasar.
+- [x] 3.4 Commit: `build: agrega prettier y reglas de arquitectura en eslint`.
 
 ## 4. Flujo de contribución
 
