@@ -3,8 +3,10 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ViewTransition } from "react";
 
 import { Container, CtaBand, PageHeader, Section } from "@/components/layout";
+import { transitionName } from "@/lib/transition-name";
 
 import {
   allServices,
@@ -69,15 +71,17 @@ function EntryCards({
               key={entry.href}
               className="flex flex-col overflow-hidden rounded-card border border-border bg-white text-ink shadow-card"
             >
-              <div className="relative aspect-[4/3]">
-                <Image
-                  src={entry.image.src}
-                  alt={entry.image.alt}
-                  fill
-                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
+              <ViewTransition name={transitionName(entry.href)} share="auto" default="none">
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={entry.image.src}
+                    alt={entry.image.alt}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+              </ViewTransition>
               <div className="flex flex-1 flex-col gap-3 p-6">
                 <h3 className="font-heading text-xl font-bold text-navy">{entry.title}</h3>
                 <p className="leading-relaxed text-ink-muted">{entry.summary}</p>

@@ -47,9 +47,9 @@ Se usa `animation-timeline: scroll(root)` con `animation-range: 0 48px`, animand
 ### 8. Carrusel con escala por `animation-timeline: view(inline)`
 Cada tarjeta del carrusel de testimonios anima `scale` y `opacity` según su posición dentro del contenedor con scroll horizontal (`view-timeline` del eje inline). Mantiene el `scroll-snap` actual. Solo móvil (donde el carrusel existe).
 
-### 9. Transiciones de página con `<ViewTransition>` de React
-Se envuelve el `children` del layout del sitio con `<ViewTransition>` (fundido por defecto, 200 ms) manteniendo header y footer fuera del envoltorio. La imagen de `ServiceCardGrid`/catálogo y la de `PageHeader` en las fichas comparten `name={`service-${slug}`}`. Los estilos de `::view-transition-*` van en `globals.css` bajo `prefers-reduced-motion: no-preference`.
-- *Riesgo:* con `cacheComponents` y rutas prerenderizadas la transición debe seguir funcionando; se verifica en el build de producción.
+### 9. Transiciones de página: solo imagen compartida
+Se usa `<ViewTransition name={...} share="auto" default="none">` en la imagen de las tarjetas de servicio y en la imagen de `PageHeader` de la ficha, con un nombre derivado de la URL (`transitionName(href)`). Estilos `::view-transition-*` en `globals.css` de 150 ms bajo `prefers-reduced-motion: no-preference`; con movimiento reducido las animaciones se anulan.
+- *Descartado tras probarlo:* un `<ViewTransition>` general en el layout o en `template.tsx` para hacer un fundido en toda navegación. En el build de producción rompía la restauración del scroll con el botón atrás (2619 → 25 px en lugar de volver a ~2868) y añadía ~170 ms a cada navegación. Sin ese envoltorio el scroll se restaura y la navegación por menú es instantánea.
 
 ### 10. Componentes de `ui` y `layout`
 - **Se reutilizan:** `Section`, `Container`, `Grid`, `Card`, `StatCard`, `TestimonialCard`, `PageHeader`, `Header`.

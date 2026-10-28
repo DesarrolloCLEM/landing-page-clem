@@ -30,8 +30,8 @@
 
 ## 5. Transiciones de página
 
-- [ ] 5.1 Envolver el contenido principal del layout del sitio con `<ViewTransition>` y definir los estilos `::view-transition-*` (decisión 9). Verificar en el build de producción que navegar por el menú hace fundido y que el header no parpadea.
-- [ ] 5.2 Compartir el nombre de transición entre la imagen de la tarjeta de servicio y la del `PageHeader` de la ficha. Verificar abriendo "Urología" desde `/servicios/` y volviendo con el botón atrás (la posición de scroll se restaura).
+- [x] 5.1 Definir los estilos `::view-transition-*` de 150 ms (solo con movimiento permitido) y descartar el `<ViewTransition>` general, que rompe la restauración del scroll (decisión 9). Verificado en el build de producción: atrás restaura el scroll y 8 de 8 navegaciones completan.
+- [x] 5.2 Compartir el nombre de transición entre la imagen de las tarjetas (inicio, hospitalización, programas) y la del `PageHeader` de la ficha. Verificado: la navegación dispara la transición con movimiento normal (43 animaciones) y ninguna con movimiento reducido; el morph visual exacto no se pudo capturar en headless.
 - [ ] 5.3 Commit: `feat(layout): agrega transiciones de vista entre páginas`.
 
 ## 6. Verificación final

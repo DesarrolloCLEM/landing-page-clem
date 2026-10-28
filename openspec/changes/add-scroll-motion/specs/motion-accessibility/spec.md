@@ -11,7 +11,7 @@ Cuando el sistema del visitante tiene activado `prefers-reduced-motion: reduce`,
 
 #### Scenario: Visitante con movimiento reducido
 - **WHEN** un visitante con movimiento reducido recorre el inicio
-- **THEN** todos los elementos están visibles y quietos, las cifras muestran su valor final y la navegación entre páginas es instantánea
+- **THEN** todos los elementos están visibles y quietos, las cifras muestran su valor final y la imagen compartida no se anima
 
 ### Requirement: Degradación sin pérdida de contenido
 El contenido SHALL ser visible y utilizable aunque el navegador no soporte las animaciones o JavaScript esté desactivado; ningún elemento puede quedar oculto a la espera de una animación.

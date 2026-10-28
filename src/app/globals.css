@@ -260,7 +260,7 @@
   ::view-transition-group(*),
   ::view-transition-old(*),
   ::view-transition-new(*) {
-    animation-duration: 220ms;
+    animation-duration: 150ms;
     animation-timing-function: ease-out;
   }
 }

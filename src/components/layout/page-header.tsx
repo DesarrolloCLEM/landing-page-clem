@@ -1,4 +1,5 @@
 import Image, { type StaticImageData } from "next/image";
+import { ViewTransition } from "react";
 import type { ReactNode } from "react";
 
 import { Breadcrumbs, type BreadcrumbItem, Eyebrow, Heading, Text } from "@/components/ui";
@@ -13,7 +14,7 @@ export type PageHeaderProps = {
   eyebrow?: ReactNode;
   /** Omit on the home page; internal pages always show their trail. */
   breadcrumbs?: BreadcrumbItem[];
-  image?: { src: string | StaticImageData; alt: string };
+  image?: { src: string | StaticImageData; alt: string; transitionName?: string };
   /** Extra content under the description, such as call-to-action buttons. */
   children?: ReactNode;
   /** Only the catalog renders it as h2; pages keep the default h1. */
@@ -54,16 +55,18 @@ export function PageHeader({
           {children}
         </div>
         {image && (
-          <div className="relative aspect-[4/3] overflow-hidden rounded-card shadow-card">
-            <Image
-              src={image.src}
-              alt={image.alt}
-              fill
-              preload
-              sizes="(min-width: 1024px) 45vw, 100vw"
-              className="object-cover"
-            />
-          </div>
+          <ViewTransition name={image.transitionName} share="auto" default="none">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-card shadow-card">
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                preload
+                sizes="(min-width: 1024px) 45vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+          </ViewTransition>
         )}
       </Container>
     </Section>

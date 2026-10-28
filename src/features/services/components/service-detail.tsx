@@ -13,6 +13,7 @@ import {
 } from "@/components/ui";
 import { appointmentLink } from "@/config/navigation";
 import { contact } from "@/config/site";
+import { transitionName } from "@/lib/transition-name";
 
 import { breadcrumbsFor, relatedServices } from "../data/catalog";
 import type { ServiceEntry } from "../types";
@@ -35,7 +36,7 @@ export function ServiceDetail({ entry, children }: ServiceDetailProps) {
         eyebrow={entry.area ?? entry.tagline}
         title={entry.title}
         description={lead ?? entry.summary}
-        image={entry.image}
+        image={{ ...entry.image, transitionName: transitionName(entry.href) }}
         breadcrumbs={breadcrumbsFor(entry)}
       >
         <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">

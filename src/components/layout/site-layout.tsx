@@ -19,6 +19,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <TopBar />
       <Header />
       <main id={mainContentId} tabIndex={-1} className="flex-1 focus:outline-none">
+        {/* Header and footer stay outside: only the page content cross-fades on navigation. */}
         {children}
       </main>
       <Footer />

@@ -12,7 +12,7 @@ El sitio nuevo ya es correcto y accesible, pero se siente estático: las seccion
 - **Header que se compacta** al bajar: reduce su altura y gana sombra.
 - **Cifras que cuentan:** las cifras de capacidad suben desde cero la primera vez que entran en pantalla.
 - **Carrusel de testimonios con escala:** la tarjeta centrada se agranda levemente al deslizar en móvil, sin avance automático.
-- **Transiciones entre páginas:** fundido suave al navegar y la imagen principal de una ficha de servicio "viaja" desde su tarjeta del catálogo.
+- **Imagen compartida entre páginas:** la imagen de una tarjeta de servicio "viaja" hasta la imagen de su ficha (View Transitions). No hay fundido general en cada navegación: se descartó porque rompía la restauración del scroll al volver.
 - **Preferencia de movimiento:** con `prefers-reduced-motion: reduce` no hay ninguna animación; el contenido se ve completo desde el inicio.
 - **Degradación:** en navegadores sin soporte el contenido se ve completo y sin animar, nunca oculto.
 
@@ -33,7 +33,7 @@ El sitio nuevo ya es correcto y accesible, pero se siente estático: las seccion
 ### New Capabilities
 - `scroll-reveal`: revelado, escalonado, parallax del hero, carrusel con escala y cifras animadas al entrar en pantalla.
 - `scroll-feedback`: barra de progreso de lectura y header que se compacta al desplazarse.
-- `page-transitions`: transiciones de vista entre páginas y de la imagen principal de los servicios.
+- `page-transitions`: imagen compartida entre tarjeta y ficha, sin afectar la navegación ni el scroll.
 - `motion-accessibility`: reglas transversales de movimiento (preferencia del sistema, degradación, rendimiento, sin avance automático).
 
 ### Modified Capabilities
