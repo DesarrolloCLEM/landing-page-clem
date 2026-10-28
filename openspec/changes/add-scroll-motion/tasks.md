@@ -4,10 +4,10 @@
 
 ## 1. Línea base y fundamentos de movimiento
 
-- [ ] 1.1 Registrar la línea base: mediana de 3 corridas de Lighthouse móvil en inicio, hospitalización, contacto e informes, y el tamaño del JavaScript del cliente (`.next/static/chunks`). Verificar guardando los números en `design.md` (sección Context).
-- [ ] 1.2 Crear en `globals.css` el bloque `@layer motion` con las utilidades `motion-reveal`, `motion-stagger` y `motion-parallax` bajo `@supports (animation-timeline: view())` y `prefers-reduced-motion: no-preference`, más la regla `@media print` que las anula. Verificar con `pnpm build` y que, con `prefers-reduced-motion: reduce` emulado, ningún elemento tiene animación aplicada.
-- [ ] 1.3 Documentar las utilidades en la skill `create-ui-component` y en el catálogo `/ui` (sección "Movimiento"). Verificar viéndolas en `/ui` a 375 px y con movimiento reducido.
-- [ ] 1.4 Commit: `feat(motion): agrega utilidades de movimiento ligadas al scroll`.
+- [x] 1.1 Registrar la línea base: mediana de 3 corridas de Lighthouse móvil en inicio, hospitalización, contacto e informes, y el tamaño del JavaScript del cliente (`.next/static/chunks`). Verificar guardando los números en `design.md` (sección Context).
+- [x] 1.2 Crear en `globals.css` el bloque `@layer motion` con las utilidades `motion-reveal`, `motion-stagger` y `motion-parallax` bajo `@supports (animation-timeline: view())` y `prefers-reduced-motion: no-preference`, más la regla `@media print` que las anula. Verificar con `pnpm build` y que, con `prefers-reduced-motion: reduce` emulado, ningún elemento tiene animación aplicada.
+- [x] 1.3 Documentar las utilidades en la skill `create-ui-component` y en el catálogo `/ui` (sección "Movimiento"). Verificar viéndolas en `/ui` a 375 px y con movimiento reducido.
+- [x] 1.4 Commit: `feat(motion): agrega utilidades de movimiento ligadas al scroll`.
 
 ## 2. Revelado en componentes compartidos
 

@@ -4,7 +4,7 @@
 
 - Motivación y alcance: ver `proposal.md`. Requisitos: ver `specs/`.
 - Estado actual: Server Components prerenderizados, Tailwind v4 con tokens en `globals.css`, header `sticky` en `components/layout/header.tsx`, carrusel de testimonios con `scroll-snap` nativo en la feature `home`, `Section` y `Card` como bloques repetidos.
-- Línea base de Lighthouse móvil medida en esta máquina (con ruido alto, ~1,2 GB libres): inicio 85–89, hospitalización 85–93, contacto 91–92, informes 86–95. Accesibilidad, buenas prácticas y SEO: 100.
+- Línea base de Lighthouse móvil (mediana de 3 corridas, medida el 2026-10-28 en esta máquina con ruido alto): inicio 86, hospitalización 90, contacto 93, informes financieros 92. Accesibilidad, buenas prácticas y SEO: 100. JavaScript del cliente (`.next/static/chunks`): 697 774 B.
 - Next 16.4 con React 19.3: `<ViewTransition>` funciona sin configuración y se activa en cada navegación (guía `view-transitions.md`).
 
 ## Goals / Non-Goals

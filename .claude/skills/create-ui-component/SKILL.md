@@ -53,6 +53,20 @@ description: Patrón obligatorio para crear o modificar componentes genéricos e
 | `Checkbox` | `id`, `label`, `error?` + props nativas | Casilla con etiqueta (puede contener enlaces) y error asociado |
 | `FormField` | `id`, `label`, `hint?`, `error?`, `required?`, `children: (control) => ReactNode` | Une label, ayuda y error con el control: `{(control) => <Input {...control} />}` |
 
+## Movimiento (clases de `globals.css`)
+
+Animaciones CSS ligadas al scroll, sin JavaScript. Solo existen con `prefers-reduced-motion: no-preference` y soporte de `animation-timeline`; sin eso el contenido se ve completo. Solo animan `opacity` y `transform`.
+
+| Clase | Uso |
+|---|---|
+| `motion-reveal` | Revela el elemento al entrar en pantalla |
+| `motion-stagger` | En un contenedor: revela sus hijos directos de forma escalonada (`Grid` ya la incluye) |
+| `motion-parallax`, `motion-fade-out` | Solo el hero del inicio |
+| `motion-carousel` | En un `ul` con scroll horizontal (móvil): la tarjeta centrada crece |
+| `motion-progress`, `motion-header*` | Barra de lectura y header compacto; ya están en `Header` |
+
+No animes nada más con transiciones largas ni bucles, y nunca uses `animation-delay` (el scroll lo ignora): desplaza el rango.
+
 ## Reglas
 
 1. **Sin negocio:** no contienen textos de la clínica, rutas ni datos. Todo llega por props o `children`.
