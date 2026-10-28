@@ -32,10 +32,10 @@
 
 ## 5. Catálogo `/ui`
 
-- [ ] 5.1 Crear la feature `src/features/ui-catalog/` con `data/` (textos de muestra) y una sección por familia: acciones, tipografía, contenido, formularios y layout (incluyendo una `Card` dentro de una `Section tone="navy"` y botones `inverse` sobre `tone="primary"`). Verificar que `pnpm lint` pasa.
-- [ ] 5.2 Crear `src/app/(dev)/ui/page.tsx` con la guardia `notFound()` en producción salvo `ENABLE_UI_CATALOG=true` y `robots: { index: false, follow: false }` (design D6). Verificar con `pnpm dev` que `/ui` muestra el catálogo.
-- [ ] 5.3 Verificar la guardia: `pnpm build && pnpm start` → `/ui` responde 404; `ENABLE_UI_CATALOG=true pnpm build && pnpm start` → `/ui` responde 200 y su HTML contiene `noindex`.
-- [ ] 5.4 Commit: `feat(ui-catalog): agrega catálogo interno de componentes en /ui`.
+- [x] 5.1 Crear la feature `src/features/ui-catalog/` con `data/` (textos de muestra) y una sección por familia: acciones, tipografía, contenido, formularios y layout (incluyendo una `Card` dentro de una `Section tone="navy"` y botones `inverse` sobre `tone="primary"`). Verificar que `pnpm lint` pasa.
+- [x] 5.2 Crear `src/app/(dev)/ui/page.tsx` con la guardia `notFound()` en producción salvo `ENABLE_UI_CATALOG=true` y `robots: { index: false, follow: false }` (design D6). Verificar con `pnpm dev` que `/ui` muestra el catálogo.
+- [x] 5.3 Verificar la guardia: `pnpm build && pnpm start` → `/ui` responde 404; `ENABLE_UI_CATALOG=true pnpm build && pnpm start` → `/ui` responde 200 y su HTML contiene `noindex`.
+- [x] 5.4 Commit: `feat(ui-catalog): agrega catálogo interno de componentes en /ui`.
 
 ## 6. Documentación
 
