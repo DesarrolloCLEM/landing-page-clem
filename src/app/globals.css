@@ -33,14 +33,24 @@
   --color-sky-accent: #47bff3;
   --color-health: #009c41;
   --color-health-strong: #007a33;
+  --color-health-50: #e7f6ed;
   --color-navy: #111542;
   --color-emergency: #f9313b;
   --color-emergency-strong: #d0101c;
+  --color-emergency-50: #feeceb;
 
+  --color-ink: #1f242e;
+  --color-ink-muted: #4b5563;
   --color-surface: #f4f3f8;
-  --color-foreground: #1f242e;
-  --color-muted: #4b5563;
   --color-border: #e2e4ec;
+
+  /*
+   * Semantic text colors. Dark section tones redefine them on their own element so
+   * every child adapts; cards reset them back to the ink values.
+   */
+  --color-heading: var(--color-navy);
+  --color-foreground: var(--color-ink);
+  --color-muted: var(--color-ink-muted);
 
   --radius-card: 1rem;
 
@@ -69,7 +79,7 @@
   h4,
   h5,
   h6 {
-    @apply font-heading text-navy;
+    @apply font-heading text-heading;
   }
 
   :focus-visible {

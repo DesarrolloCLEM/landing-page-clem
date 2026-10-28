@@ -2,10 +2,10 @@
 
 ## 1. Tokens semánticos y primitivas de layout
 
-- [ ] 1.1 Agregar a `@theme` `--color-heading`, `--color-health-50` y `--color-emergency-50`, y cambiar la regla base de `h1`–`h6` a `text-heading` (design D2). Verificar con `pnpm build` y una captura de `/` que la página provisional se ve igual.
-- [ ] 1.2 Crear `Container` y `Section` (tonos white/surface/primary/navy con redefinición de variables, espaciado default/compact, `as`) en `src/components/layout/`. Verificar en el HTML generado que `Section tone="navy"` lleva las variables `--color-heading`, `--color-foreground` y `--color-muted`.
-- [ ] 1.3 Crear `Grid` (cols 1–4 mobile-first, gap) y `Stack` (direction, gap, align, justify, wrap). Agregar el barrel `src/components/layout/index.ts` y quitar el `.gitkeep`. Verificar que `pnpm lint` y `pnpm build` pasan.
-- [ ] 1.4 Commit: `feat(layout): agrega Container, Section, Grid y Stack con tonos de marca`.
+- [x] 1.1 Agregar a `@theme` `--color-heading`, `--color-health-50` y `--color-emergency-50`, y cambiar la regla base de `h1`–`h6` a `text-heading` (design D2). Verificar con `pnpm build` y una captura de `/` que la página provisional se ve igual.
+- [x] 1.2 Crear `Container` y `Section` (tonos white/surface/primary/navy con redefinición de variables, espaciado default/compact, `as`) en `src/components/layout/`. Verificar en el HTML generado que `Section tone="navy"` lleva las variables `--color-heading`, `--color-foreground` y `--color-muted`.
+- [x] 1.3 Crear `Grid` (cols 1–4 mobile-first, gap) y `Stack` (direction, gap, align, justify, wrap). Agregar el barrel `src/components/layout/index.ts` y quitar el `.gitkeep`. Verificar que `pnpm lint` y `pnpm build` pasan.
+- [x] 1.4 Commit: `feat(layout): agrega Container, Section, Grid y Stack con tonos de marca`.
 
 ## 2. Acciones y tipografía
 
