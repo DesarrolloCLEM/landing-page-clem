@@ -25,10 +25,10 @@
 
 ## 4. Formularios
 
-- [ ] 4.1 Crear `Label` (indicador `*` con `aria-hidden` cuando es obligatorio), `Input`, `Textarea` y `Select` (estilos comunes, `min-h-11`, borde de error con `aria-invalid:`, chevron decorativo en `Select`). Verificar que `pnpm build` pasa.
-- [ ] 4.2 Crear `FormField` (`id`, `label`, `hint`, `error`, `required`, children como función; design D4). Verificar en el HTML que un campo con error tiene `aria-invalid="true"` y un `aria-describedby` que apunta a los ids de ayuda y error existentes.
-- [ ] 4.3 Exportar los componentes de formulario en `@/components/ui`. Verificar que `pnpm lint` y `pnpm build` pasan.
-- [ ] 4.4 Commit: `feat(ui): agrega componentes de formulario accesibles`.
+- [x] 4.1 Crear `Label` (indicador `*` con `aria-hidden` cuando es obligatorio), `Input`, `Textarea` y `Select` (estilos comunes, `min-h-11`, borde de error con `aria-invalid:`, chevron decorativo en `Select`). Verificar que `pnpm build` pasa.
+- [x] 4.2 Crear `FormField` (`id`, `label`, `hint`, `error`, `required`, children como función; design D4). Verificar en el HTML que un campo con error tiene `aria-invalid="true"` y un `aria-describedby` que apunta a los ids de ayuda y error existentes.
+- [x] 4.3 Exportar los componentes de formulario en `@/components/ui`. Verificar que `pnpm lint` y `pnpm build` pasan.
+- [x] 4.4 Commit: `feat(ui): agrega componentes de formulario accesibles`.
 
 ## 5. Catálogo `/ui`
 
