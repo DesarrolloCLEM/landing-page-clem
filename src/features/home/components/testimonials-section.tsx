@@ -18,7 +18,7 @@ export function TestimonialsSection() {
           align="center"
         />
         {/* Swipeable row on mobile (native scroll-snap, never auto-advances), grid on desktop. */}
-        <ul className="relative -mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-6 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-3">
+        <ul className="motion-carousel relative -mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-6 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-3">
           {testimonials.map((testimonial) => (
             <li key={testimonial.name} className="w-[85%] shrink-0 snap-start sm:w-auto">
               <TestimonialCard

@@ -15,20 +15,23 @@ const outlineInverse =
 export function HomeHero() {
   return (
     <section aria-labelledby="page-title" className="relative isolate overflow-hidden bg-navy">
-      <Image
-        src={hero.image.src}
-        alt={hero.image.alt}
-        fill
-        preload
-        sizes="100vw"
-        className="-z-20 object-cover object-[70%_center]"
-      />
+      {/* Starts 80px above the hero so the parallax never leaves a gap at the top. */}
+      <div className="motion-parallax absolute inset-x-0 -top-20 bottom-0 -z-20">
+        <Image
+          src={hero.image.src}
+          alt={hero.image.alt}
+          fill
+          preload
+          sizes="100vw"
+          className="object-cover object-[70%_center]"
+        />
+      </div>
       {/* Keeps white text above 4.5:1 over any part of the photo. */}
       <div
         aria-hidden="true"
         className="absolute inset-0 -z-10 bg-navy/80 lg:bg-transparent lg:bg-linear-to-r lg:from-navy/95 lg:via-navy/80 lg:to-navy/20"
       />
-      <Container className="flex min-h-[32rem] flex-col justify-center gap-6 py-16 sm:min-h-[36rem] lg:py-24">
+      <Container className="motion-fade-out flex min-h-[32rem] flex-col justify-center gap-6 py-16 sm:min-h-[36rem] lg:py-24">
         <p className="font-heading text-sm font-bold tracking-widest text-sky-accent uppercase">
           {siteConfig.tagline}
         </p>

@@ -17,10 +17,10 @@
 
 ## 3. Hero, cifras y carrusel
 
-- [ ] 3.1 Agregar parallax a la imagen del hero del inicio y atenuación del texto al salir (decisión 4). Verificar el contraste AA del texto con el script de contraste mientras se desplaza y que la foto nunca deja huecos.
-- [ ] 3.2 Crear la isla `CountUp` en `components/ui` y usarla en `StatCard` (decisión 7). Verificar: sin JavaScript muestra el valor final, con lector de pantalla se anuncia solo el valor final y con movimiento reducido no cuenta.
-- [ ] 3.3 Agregar escala y opacidad a las tarjetas del carrusel de testimonios con `view-timeline` inline (decisión 8). Verificar en móvil que la tarjeta centrada se agranda, que el `scroll-snap` sigue funcionando y que el carrusel no avanza solo.
-- [ ] 3.4 Commit: `feat(motion): agrega parallax del hero, cifras animadas y carrusel con escala`.
+- [x] 3.1 Agregar parallax a la imagen del hero del inicio y atenuación del texto al salir (decisión 4). Verificar el contraste AA del texto con el script de contraste mientras se desplaza y que la foto nunca deja huecos.
+- [x] 3.2 Crear la isla `CountUp` en `components/ui` y usarla en `StatCard` (decisión 7). Verificar: sin JavaScript muestra el valor final, con lector de pantalla se anuncia solo el valor final y con movimiento reducido no cuenta.
+- [x] 3.3 Agregar escala y opacidad a las tarjetas del carrusel de testimonios con `view-timeline` inline (decisión 8). Verificar en móvil que la tarjeta centrada se agranda, que el `scroll-snap` sigue funcionando y que el carrusel no avanza solo.
+- [x] 3.4 Commit: `feat(motion): agrega parallax del hero, cifras animadas y carrusel con escala`.
 
 ## 4. Barra de progreso y header compacto
 

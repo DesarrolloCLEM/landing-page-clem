@@ -3,6 +3,8 @@ import type { ComponentProps } from "react";
 
 import { cn } from "@/lib/cn";
 
+import { CountUp } from "./count-up";
+
 export const statCardVariants = cva("flex flex-col-reverse gap-1", {
   variants: {
     variant: {
@@ -29,7 +31,7 @@ export function StatCard({ value, label, variant, align, className, ...props }: 
     <div className={cn(statCardVariants({ variant, align }), className)} {...props}>
       <dt className="text-sm font-semibold text-muted sm:text-base">{label}</dt>
       <dd className="font-heading text-4xl leading-none font-extrabold text-emphasis sm:text-5xl">
-        {value}
+        <CountUp value={value} />
       </dd>
     </div>
   );

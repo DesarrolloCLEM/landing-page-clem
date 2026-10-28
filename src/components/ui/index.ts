@@ -15,6 +15,7 @@ export {
   type CardTitleProps,
 } from "./card";
 export { Checkbox, type CheckboxProps } from "./checkbox";
+export { CountUp } from "./count-up";
 export { DetailsHashOpener } from "./details-hash-opener";
 export { DocumentLink, type DocumentLinkProps } from "./document-link";
 export { Eyebrow } from "./eyebrow";
