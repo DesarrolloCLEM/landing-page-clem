@@ -3,7 +3,7 @@ import type { HTMLAttributes } from "react";
 
 import { cn } from "@/lib/cn";
 
-export const gridVariants = cva("grid grid-cols-1", {
+export const gridVariants = cva("motion-stagger grid grid-cols-1", {
   variants: {
     cols: {
       1: "",

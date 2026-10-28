@@ -17,6 +17,11 @@ description: Patrón obligatorio para crear o modificar componentes genéricos e
 | `Section` | `tone`: white, surface, primary, navy · `spacing`: default, compact · `as`: section, div | Bloque vertical de página. Pásale `aria-labelledby` con el `titleId` de su encabezado |
 | `Grid` | `cols`: 1–4 (mobile-first) · `gap`: sm, md, lg · `as`: div, ul | Rejillas de tarjetas: 1 col en móvil, 2 en `sm`, 3/4 en `lg` |
 | `Stack` | `direction`: vertical, horizontal (con wrap) · `gap`: xs–xl · `align`, `justify` · `as` | Agrupar elementos sin márgenes sueltos |
+| `SiteLayout` | `children` | Enlace "Saltar al contenido", `TopBar`, `Header`, `<main id="contenido">`, `Footer` y `FloatingWhatsApp`. Lo monta `src/app/(site)/layout.tsx` |
+| `Header`, `TopBar`, `Footer`, `FloatingWhatsApp`, `SiteLogo` | — (leen `@/config`) | Piezas globales del sitio; no se usan sueltas en features |
+| `NavMenu`, `MobileNav` | `items` | Islas cliente del menú de escritorio (submenús accesibles) y del menú móvil (`<dialog>` modal) |
+| `PageHeader` | `title`, `description?`, `eyebrow?`, `breadcrumbs?`, `image?`, `children?` | Cabecera de página interna con el único `h1` |
+| `CtaBand` | `title?`, `description?`, `titleId?` | Cierre de página con "Solicitar cita" y teléfono |
 
 ### `@/components/ui`
 
@@ -29,11 +34,39 @@ description: Patrón obligatorio para crear o modificar componentes genéricos e
 | `Eyebrow` | — | Antetítulo en mayúsculas |
 | `SectionHeading` | `title`, `titleId`, `eyebrow?`, `description?`, `as`: h1/h2, `size`, `align`: start/center | Encabezado estándar de cada sección |
 | `Badge` | `tone`: primary, health, emergency, neutral | Etiquetas cortas ("24 horas") |
+| `Accordion`, `AccordionItem` | `id`, `title` | Pregunta desplegable sobre `<details>`; sin JavaScript |
+| `CountUp` | `value` | Isla cliente que cuenta hasta la cifra al entrar en pantalla; `StatCard` ya la usa |
+| `Tabs` | `items`, `label` | Isla cliente de pestañas accesibles; sin JavaScript muestra todos los paneles |
+| `DetailsHashOpener` | — | Isla cliente que abre el `<details>` del ancla de la URL |
+| `Breadcrumbs` | `items`: `{ label, href? }[]` | Migas de pan; el último nivel lleva `aria-current="page"` |
+| `StatCard` | `value`, `label` · `variant`: plain, card · `align` | Cifra con su etiqueta; va dentro de un `<dl>` |
+| `TestimonialCard` | `name`, `procedure`, `summary`, `image`, `link?` | Historia de paciente con foto |
+| `MapEmbed` | `src`, `title`, `link` | Mapa de terceros con carga diferida y enlace alternativo |
+| `DocumentLink` | `title`, `subtitle?`, `href`, `meta` | Documento descargable (PDF) con nombre accesible completo |
+| `ImageGallery` | `images` | Rejilla de fotos que abren en tamaño completo, sin JavaScript |
+| `JsonLd` | `data` | Datos estructurados para buscadores |
+| `ExternalLink` | props de `<a>` · `newTabLabel?` | Enlace fuera del sitio: pestaña nueva, `rel` seguro y aviso para lectores de pantalla |
+| `SocialIcon` | `network`: facebook, instagram, tiktok, whatsapp | Ícono de marca decorativo (lucide ya no trae íconos de marca) |
 | `IconBox` | `tone`: primary, health, emergency, accent · `size`: md, lg | Ícono decorativo (`aria-hidden`) en un recuadro de color. El ícono va como `children` |
 | `Card` + `CardMedia`, `CardHeader`, `CardTitle`, `CardDescription`, `CardContent`, `CardFooter` | `interactive` · `as`: article, div, li | `CardTitle` es h3/sm por defecto. `CardDescription` va dentro de `CardHeader`. `interactive` resalta la tarjeta cuando su enlace recibe foco |
 | `Label` | `required` | Asterisco decorativo; el control lleva `required` |
 | `Input`, `Textarea`, `Select` | props nativas | Borde de error automático con `aria-invalid` |
+| `Checkbox` | `id`, `label`, `error?` + props nativas | Casilla con etiqueta (puede contener enlaces) y error asociado |
 | `FormField` | `id`, `label`, `hint?`, `error?`, `required?`, `children: (control) => ReactNode` | Une label, ayuda y error con el control: `{(control) => <Input {...control} />}` |
+
+## Movimiento (clases de `globals.css`)
+
+Animaciones CSS ligadas al scroll, sin JavaScript. Solo existen con `prefers-reduced-motion: no-preference` y soporte de `animation-timeline`; sin eso el contenido se ve completo. Solo animan `opacity` y `transform`.
+
+| Clase | Uso |
+|---|---|
+| `motion-reveal` | Revela el elemento al entrar en pantalla |
+| `motion-stagger` | En un contenedor: revela sus hijos directos de forma escalonada (`Grid` ya la incluye) |
+| `motion-parallax`, `motion-fade-out` | Solo el hero del inicio |
+| `motion-carousel` | En un `ul` con scroll horizontal (móvil): la tarjeta centrada crece |
+| `motion-progress`, `motion-header*` | Barra de lectura y header compacto; ya están en `Header` |
+
+No animes nada más con transiciones largas ni bucles, y nunca uses `animation-delay` (el scroll lo ignora): desplaza el rango.
 
 ## Reglas
 
