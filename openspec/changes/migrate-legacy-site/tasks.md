@@ -22,11 +22,11 @@
 
 ## 3. Inicio
 
-- [ ] 3.1 Copiar las imágenes del inicio a `public/images/home/` (≤ 2400 px, nombres descriptivos) y crear la feature `home` con el hero y el texto de bienvenida (spec `home-page`). Verificar a 375 px que el título, el subtítulo y el botón principal se ven sin desplazarse.
-- [ ] 3.2 Agregar las secciones de servicios principales, áreas de atención, especialidades destacadas y cifras (`StatCard` nuevo en `ui`). Verificar que cada tarjeta enlaza a una ruta de `/servicios/` del mapa de URLs.
-- [ ] 3.3 Agregar testimonios (scroll-snap, sin avance automático), la invitación a opinar y el bloque de ubicación con mapa diferido y enlace "Ver en Google Maps". Verificar en DevTools que al cargar no se pide ningún recurso de Google Maps.
-- [ ] 3.4 Agregar metadata y datos estructurados de la clínica. Verificar la paridad de contenido contra `content/home.md` y validar el JSON-LD con la prueba de resultados enriquecidos.
-- [ ] 3.5 Commit: `feat(home): migra la página de inicio`.
+- [x] 3.1 Copiar las imágenes del inicio a `public/images/home/` (≤ 2400 px, nombres descriptivos) y crear la feature `home` con el hero y el texto de bienvenida (spec `home-page`). Verificar a 375 px que el título, el subtítulo y el botón principal se ven sin desplazarse.
+- [x] 3.2 Agregar las secciones de servicios principales, áreas de atención, especialidades destacadas y cifras (`StatCard` nuevo en `ui`). Verificar que cada tarjeta enlaza a una ruta de `/servicios/` del mapa de URLs.
+- [x] 3.3 Agregar testimonios (scroll-snap, sin avance automático), la invitación a opinar y el bloque de ubicación con mapa diferido y enlace "Ver en Google Maps". Verificar en DevTools que al cargar no se pide ningún recurso de Google Maps.
+- [x] 3.4 Agregar metadata y datos estructurados de la clínica. Verificar la paridad de contenido contra `content/home.md` y validar el JSON-LD con la prueba de resultados enriquecidos.
+- [x] 3.5 Commit: `feat(home): migra la página de inicio`.
 
 ## 4. Información institucional
 

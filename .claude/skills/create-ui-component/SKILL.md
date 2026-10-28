@@ -35,6 +35,10 @@ description: Patrón obligatorio para crear o modificar componentes genéricos e
 | `SectionHeading` | `title`, `titleId`, `eyebrow?`, `description?`, `as`: h1/h2, `size`, `align`: start/center | Encabezado estándar de cada sección |
 | `Badge` | `tone`: primary, health, emergency, neutral | Etiquetas cortas ("24 horas") |
 | `Breadcrumbs` | `items`: `{ label, href? }[]` | Migas de pan; el último nivel lleva `aria-current="page"` |
+| `StatCard` | `value`, `label` · `variant`: plain, card · `align` | Cifra con su etiqueta; va dentro de un `<dl>` |
+| `TestimonialCard` | `name`, `procedure`, `summary`, `image`, `link?` | Historia de paciente con foto |
+| `MapEmbed` | `src`, `title`, `link` | Mapa de terceros con carga diferida y enlace alternativo |
+| `JsonLd` | `data` | Datos estructurados para buscadores |
 | `ExternalLink` | props de `<a>` · `newTabLabel?` | Enlace fuera del sitio: pestaña nueva, `rel` seguro y aviso para lectores de pantalla |
 | `SocialIcon` | `network`: facebook, instagram, tiktok, whatsapp | Ícono de marca decorativo (lucide ya no trae íconos de marca) |
 | `IconBox` | `tone`: primary, health, emergency, accent · `size`: md, lg | Ícono decorativo (`aria-hidden`) en un recuadro de color. El ícono va como `children` |
