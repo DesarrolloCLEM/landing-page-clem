@@ -17,11 +17,11 @@
 
 ## 3. Contenido
 
-- [ ] 3.1 Crear `Badge` (tonos primary/health/emergency/neutral, design D3). Verificar con el script de contraste que cada combinación de texto es ≥ 4.5:1.
-- [ ] 3.2 Crear `IconBox` (tonos y tamaños, envoltura `aria-hidden`). Verificar en el HTML que el `span` lleva `aria-hidden="true"`.
-- [ ] 3.3 Crear `Card`, `CardMedia`, `CardHeader`, `CardTitle`, `CardDescription`, `CardContent` y `CardFooter` (variante `interactive` con `hover:` y `has-[a:focus-visible]:`, restableciendo las variables de color en la tarjeta). Verificar que el CSS generado contiene la regla `:has(a:focus-visible)`.
-- [ ] 3.4 Exportar los componentes nuevos en `@/components/ui`. Verificar que `pnpm lint` y `pnpm build` pasan.
-- [ ] 3.5 Commit: `feat(ui): agrega Badge, IconBox y Card`.
+- [x] 3.1 Crear `Badge` (tonos primary/health/emergency/neutral, design D3). Verificar con el script de contraste que cada combinación de texto es ≥ 4.5:1.
+- [x] 3.2 Crear `IconBox` (tonos y tamaños, envoltura `aria-hidden`). Verificar en el HTML que el `span` lleva `aria-hidden="true"`.
+- [x] 3.3 Crear `Card`, `CardMedia`, `CardHeader`, `CardTitle`, `CardDescription`, `CardContent` y `CardFooter` (variante `interactive` con `hover:` y `has-[a:focus-visible]:`, restableciendo las variables de color en la tarjeta). Verificar que el CSS generado contiene la regla `:has(a:focus-visible)`.
+- [x] 3.4 Exportar los componentes nuevos en `@/components/ui`. Verificar que `pnpm lint` y `pnpm build` pasan.
+- [x] 3.5 Commit: `feat(ui): agrega Badge, IconBox y Card`.
 
 ## 4. Formularios
 
