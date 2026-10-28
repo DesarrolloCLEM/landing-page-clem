@@ -17,6 +17,11 @@ description: Patrón obligatorio para crear o modificar componentes genéricos e
 | `Section` | `tone`: white, surface, primary, navy · `spacing`: default, compact · `as`: section, div | Bloque vertical de página. Pásale `aria-labelledby` con el `titleId` de su encabezado |
 | `Grid` | `cols`: 1–4 (mobile-first) · `gap`: sm, md, lg · `as`: div, ul | Rejillas de tarjetas: 1 col en móvil, 2 en `sm`, 3/4 en `lg` |
 | `Stack` | `direction`: vertical, horizontal (con wrap) · `gap`: xs–xl · `align`, `justify` · `as` | Agrupar elementos sin márgenes sueltos |
+| `SiteLayout` | `children` | Enlace "Saltar al contenido", `TopBar`, `Header`, `<main id="contenido">`, `Footer` y `FloatingWhatsApp`. Lo monta `src/app/(site)/layout.tsx` |
+| `Header`, `TopBar`, `Footer`, `FloatingWhatsApp`, `SiteLogo` | — (leen `@/config`) | Piezas globales del sitio; no se usan sueltas en features |
+| `NavMenu`, `MobileNav` | `items` | Islas cliente del menú de escritorio (submenús accesibles) y del menú móvil (`<dialog>` modal) |
+| `PageHeader` | `title`, `description?`, `eyebrow?`, `breadcrumbs?`, `image?`, `children?` | Cabecera de página interna con el único `h1` |
+| `CtaBand` | `title?`, `description?`, `titleId?` | Cierre de página con "Solicitar cita" y teléfono |
 
 ### `@/components/ui`
 
@@ -29,10 +34,14 @@ description: Patrón obligatorio para crear o modificar componentes genéricos e
 | `Eyebrow` | — | Antetítulo en mayúsculas |
 | `SectionHeading` | `title`, `titleId`, `eyebrow?`, `description?`, `as`: h1/h2, `size`, `align`: start/center | Encabezado estándar de cada sección |
 | `Badge` | `tone`: primary, health, emergency, neutral | Etiquetas cortas ("24 horas") |
+| `Breadcrumbs` | `items`: `{ label, href? }[]` | Migas de pan; el último nivel lleva `aria-current="page"` |
+| `ExternalLink` | props de `<a>` · `newTabLabel?` | Enlace fuera del sitio: pestaña nueva, `rel` seguro y aviso para lectores de pantalla |
+| `SocialIcon` | `network`: facebook, instagram, tiktok, whatsapp | Ícono de marca decorativo (lucide ya no trae íconos de marca) |
 | `IconBox` | `tone`: primary, health, emergency, accent · `size`: md, lg | Ícono decorativo (`aria-hidden`) en un recuadro de color. El ícono va como `children` |
 | `Card` + `CardMedia`, `CardHeader`, `CardTitle`, `CardDescription`, `CardContent`, `CardFooter` | `interactive` · `as`: article, div, li | `CardTitle` es h3/sm por defecto. `CardDescription` va dentro de `CardHeader`. `interactive` resalta la tarjeta cuando su enlace recibe foco |
 | `Label` | `required` | Asterisco decorativo; el control lleva `required` |
 | `Input`, `Textarea`, `Select` | props nativas | Borde de error automático con `aria-invalid` |
+| `Checkbox` | `id`, `label`, `error?` + props nativas | Casilla con etiqueta (puede contener enlaces) y error asociado |
 | `FormField` | `id`, `label`, `hint?`, `error?`, `required?`, `children: (control) => ReactNode` | Une label, ayuda y error con el control: `{(control) => <Input {...control} />}` |
 
 ## Reglas

@@ -73,6 +73,22 @@
     color-scheme: light;
   }
 
+  /* Keeps anchors and focused elements clear of the sticky header. */
+  html {
+    scroll-padding-top: 6rem;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  /* The open mobile menu (modal dialog) locks the page behind it. */
+  body:has(dialog[open]) {
+    overflow: hidden;
+  }
+
   body {
     @apply bg-white font-body text-foreground antialiased;
   }

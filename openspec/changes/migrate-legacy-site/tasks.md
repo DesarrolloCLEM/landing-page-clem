@@ -12,13 +12,13 @@
 
 ## 2. Layout del sitio
 
-- [ ] 2.1 Crear en `components/ui` `Breadcrumbs`, `ExternalLink` (pestaña nueva, `rel`, aviso accesible) y `Checkbox` siguiendo la skill `create-ui-component`, y agregarlos al catálogo `/ui`. Verificar en el HTML que `ExternalLink` incluye `rel="noopener noreferrer"` y el texto oculto "abre en una pestaña nueva".
-- [ ] 2.2 Crear `TopBar`, `Header` (sticky, logo, botón "Solicitar cita") y la isla `NavMenu` con submenús accesibles. Verificar con teclado que los submenús abren con Enter, cierran con Escape y el ítem activo tiene `aria-current="page"`.
-- [ ] 2.3 Crear la isla `MobileNav` con submenús expandibles, teléfono, WhatsApp y redes. Verificar a 375 px que el foco entra al menú al abrir, Escape lo cierra y el foco vuelve al botón.
-- [ ] 2.4 Crear `Footer`, `FloatingWhatsApp` y el enlace "Saltar al contenido"; montar `SiteLayout` en `src/app/(site)/layout.tsx` y mover el inicio provisional dentro del grupo. Verificar que el footer no tiene enlaces rotos y que el botón flotante no tapa el footer a 375 px.
-- [ ] 2.5 Crear `PageHeader` (título, migas de pan, imagen opcional) y `CtaBand` (cierre con "Solicitar cita" y teléfono) en `components/layout`. Verificar en `/ui` que ambos se ven bien a 320 px y 1280 px.
-- [ ] 2.6 Crear la página 404 en español con enlaces a Inicio, Servicios, Agenda y Contacto. Verificar con `curl -I` sobre el build que una URL inexistente responde 404.
-- [ ] 2.7 Commit: `feat(layout): agrega header, menú móvil, footer y página 404`.
+- [x] 2.1 Crear en `components/ui` `Breadcrumbs`, `ExternalLink` (pestaña nueva, `rel`, aviso accesible) y `Checkbox` siguiendo la skill `create-ui-component`, y agregarlos al catálogo `/ui`. Verificar en el HTML que `ExternalLink` incluye `rel="noopener noreferrer"` y el texto oculto "abre en una pestaña nueva".
+- [x] 2.2 Crear `TopBar`, `Header` (sticky, logo, botón "Solicitar cita") y la isla `NavMenu` con submenús accesibles. Verificar con teclado que los submenús abren con Enter, cierran con Escape y el ítem activo tiene `aria-current="page"`.
+- [x] 2.3 Crear la isla `MobileNav` con submenús expandibles, teléfono, WhatsApp y redes. Verificar a 375 px que el foco entra al menú al abrir, Escape lo cierra y el foco vuelve al botón.
+- [x] 2.4 Crear `Footer`, `FloatingWhatsApp` y el enlace "Saltar al contenido"; montar `SiteLayout` en `src/app/(site)/layout.tsx` y mover el inicio provisional dentro del grupo. Verificar que el footer no tiene enlaces rotos y que el botón flotante no tapa el footer a 375 px.
+- [x] 2.5 Crear `PageHeader` (título, migas de pan, imagen opcional) y `CtaBand` (cierre con "Solicitar cita" y teléfono) en `components/layout`. Verificar en `/ui` que ambos se ven bien a 320 px y 1280 px.
+- [x] 2.6 Crear la página 404 en español con enlaces a Inicio, Servicios, Agenda y Contacto. Verificar con `curl -I` sobre el build que una URL inexistente responde 404.
+- [x] 2.7 Commit: `feat(layout): agrega header, menú móvil, footer y página 404`.
 
 ## 3. Inicio
 

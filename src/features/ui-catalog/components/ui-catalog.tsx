@@ -6,6 +6,7 @@ import { ActionsShowcase } from "./actions-showcase";
 import { ContentShowcase } from "./content-showcase";
 import { FormsShowcase } from "./forms-showcase";
 import { LayoutShowcase } from "./layout-showcase";
+import { NavigationShowcase } from "./navigation-showcase";
 import { TypographyShowcase } from "./typography-showcase";
 
 export function UiCatalog() {
@@ -26,6 +27,7 @@ export function UiCatalog() {
       <ActionsShowcase />
       <TypographyShowcase />
       <ContentShowcase />
+      <NavigationShowcase />
       <FormsShowcase />
       <LayoutShowcase />
     </main>
