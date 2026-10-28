@@ -11,9 +11,9 @@
 
 ## 2. Revelado en componentes compartidos
 
-- [ ] 2.1 Aplicar `motion-reveal` a `SectionHeading`, `Card`, `TestimonialCard`, `ImageGallery` y a los bloques destacados de `Section`, y `motion-stagger` con `--i` en `Grid`. Verificar a 375 px que las tarjetas entran escalonadas y que ningún elemento queda oculto al cargar la página sin desplazarse.
-- [ ] 2.2 Verificar en `/`, `/servicios/`, `/sobre-nosotros/` y una ficha que el contenido visible al cargar no parpadea (CLS < 0,1) y que sin soporte de `animation-timeline` (desactivado en la prueba) todo se ve completo.
-- [ ] 2.3 Commit: `feat(motion): agrega revelado y entrada escalonada a secciones y tarjetas`.
+- [x] 2.1 Aplicar `motion-reveal` a `SectionHeading`, `Card`, `TestimonialCard`, `ImageGallery` y a los bloques destacados de `Section`, y `motion-stagger` con `--i` en `Grid`. Verificar a 375 px que las tarjetas entran escalonadas y que ningún elemento queda oculto al cargar la página sin desplazarse.
+- [x] 2.2 Verificar en `/`, `/servicios/`, `/sobre-nosotros/` y una ficha que el contenido visible al cargar no parpadea (CLS < 0,1) y que sin soporte de `animation-timeline` (desactivado en la prueba) todo se ve completo.
+- [x] 2.3 Commit: `feat(motion): agrega revelado y entrada escalonada a secciones y tarjetas`.
 
 ## 3. Hero, cifras y carrusel
 

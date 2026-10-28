@@ -22,7 +22,12 @@ export function ImageGallery({
   className,
 }: ImageGalleryProps) {
   return (
-    <ul className={cn("grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3", className)}>
+    <ul
+      className={cn(
+        "motion-stagger grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3",
+        className,
+      )}
+    >
       {images.map((image, index) => (
         <li key={image.src} className={cn(index === 0 && "lg:col-span-2 lg:row-span-2")}>
           <a

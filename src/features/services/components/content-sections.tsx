@@ -31,7 +31,7 @@ function Items({ section }: { section: ContentSection }) {
   switch (section.layout) {
     case "stats":
       return (
-        <dl className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <dl className="motion-stagger grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((item) => (
             <div
               key={item.title + item.description}
@@ -82,7 +82,7 @@ function Items({ section }: { section: ContentSection }) {
       );
     case "tags":
       return (
-        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="motion-stagger grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((item) => (
             <li
               key={item.title}
@@ -112,7 +112,7 @@ function Items({ section }: { section: ContentSection }) {
       );
     default:
       return (
-        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="motion-stagger grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((item) => (
             <li
               key={item.title}
@@ -150,7 +150,7 @@ export function ContentSections({
         aria-labelledby={titleId}
       >
         <Container className="flex flex-col gap-6">
-          <Heading as="h2" id={titleId} size="lg">
+          <Heading as="h2" id={titleId} size="lg" className="motion-reveal">
             {section.title}
           </Heading>
           {section.intro?.map((paragraph) => (

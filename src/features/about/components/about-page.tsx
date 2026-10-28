@@ -68,7 +68,7 @@ export function AboutPage() {
           <Heading as="h2" id="capacity-title" size="md">
             {capacityTitle}
           </Heading>
-          <dl className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+          <dl className="motion-stagger grid grid-cols-2 gap-4 lg:grid-cols-4">
             {institutionStats.map((stat) => (
               <StatCard key={stat.label} variant="card" value={stat.value} label={stat.label} />
             ))}

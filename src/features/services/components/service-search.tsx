@@ -97,7 +97,7 @@ export function ServiceSearch({
             {group.description && !term && (
               <p className="max-w-3xl text-muted">{group.description}</p>
             )}
-            <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <ul className="motion-stagger grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {group.items.map((item) => (
                 <li key={item.href}>
                   <Link

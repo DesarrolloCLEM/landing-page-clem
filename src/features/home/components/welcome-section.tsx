@@ -18,7 +18,7 @@ export function WelcomeSection() {
           <Heading as="h3" size="sm">
             {welcome.statsTitle}
           </Heading>
-          <dl className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+          <dl className="motion-stagger grid grid-cols-2 gap-4 sm:grid-cols-3">
             {installedCapacity.map((stat) => (
               <StatCard key={stat.label} variant="card" value={stat.value} label={stat.label} />
             ))}
