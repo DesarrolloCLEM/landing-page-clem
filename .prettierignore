@@ -6,3 +6,5 @@ pnpm-lock.yaml
 next-env.d.ts
 openspec
 .claude
+# Reference material from the legacy site (not source code)
+assets
