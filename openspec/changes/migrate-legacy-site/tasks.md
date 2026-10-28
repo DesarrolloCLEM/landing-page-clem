@@ -85,11 +85,11 @@
 
 ## 11. Migración de URLs y SEO
 
-- [ ] 11.1 Crear `src/config/redirects.ts` con el mapa de URLs de `design.md`, exponerlo en `next.config.ts` como redirecciones permanentes y activar `trailingSlash`. Verificar con `curl -I` que `/services/hepatitis-a-vaccine/` responde 301 hacia `/servicios/especialidades/ortopedia-y-traumatologia/`.
-- [ ] 11.2 Agregar al mapa las 18 URLs de PDF en `/wp-content/uploads/` a partir de `inventory/assets-manifest.json`. Verificar que `/wp-content/uploads/2024/11/2019-I.pdf` redirige a un PDF que responde 200.
-- [ ] 11.3 Crear `sitemap.xml` y `robots.txt` y revisar que cada página tiene título y descripción únicos. Verificar que el sitemap no contiene `/services/`, `/p-` ni `/team/`.
-- [ ] 11.4 Crear `scripts/check-redirects.mjs`, que recorre todo el mapa contra un servidor local y falla si un destino no responde 200 en un salto o si una URL demo no responde 404; documentarlo en el README. Verificar que el script pasa sobre `pnpm build && pnpm start`.
-- [ ] 11.5 Commit: `feat(seo): agrega redirecciones 301, sitemap y robots`.
+- [x] 11.1 Crear `src/config/redirects.ts` con el mapa de URLs de `design.md`, exponerlo en `next.config.ts` como redirecciones permanentes y activar `trailingSlash`. Verificar con `curl -I` que `/services/hepatitis-a-vaccine/` responde 301 hacia `/servicios/especialidades/ortopedia-y-traumatologia/`.
+- [x] 11.2 Agregar al mapa las 18 URLs de PDF en `/wp-content/uploads/` a partir de `inventory/assets-manifest.json`. Verificar que `/wp-content/uploads/2024/11/2019-I.pdf` redirige a un PDF que responde 200.
+- [x] 11.3 Crear `sitemap.xml` y `robots.txt` y revisar que cada página tiene título y descripción únicos. Verificar que el sitemap no contiene `/services/`, `/p-` ni `/team/`.
+- [x] 11.4 Crear `scripts/check-redirects.mjs`, que recorre todo el mapa contra un servidor local y falla si un destino no responde 200 en un salto o si una URL demo no responde 404; documentarlo en el README. Verificar que el script pasa sobre `pnpm build && pnpm start`.
+- [x] 11.5 Commit: `feat(seo): agrega redirecciones 301, sitemap y robots`.
 
 ## 12. Verificación final
 

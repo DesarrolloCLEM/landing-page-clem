@@ -24,14 +24,15 @@ pnpm dev       # servidor de desarrollo en http://localhost:3000
 
 ## Scripts
 
-| Script              | Descripción                                  |
-| ------------------- | -------------------------------------------- |
-| `pnpm dev`          | Servidor de desarrollo                       |
-| `pnpm build`        | Build de producción                          |
-| `pnpm start`        | Sirve el build de producción                 |
-| `pnpm lint`         | ESLint, incluidas las reglas de arquitectura |
-| `pnpm format`       | Formatea el código con Prettier              |
-| `pnpm format:check` | Verifica el formato sin modificar archivos   |
+| Script                       | Descripción                                                                                                                                                            |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `pnpm dev`                   | Servidor de desarrollo                                                                                                                                                 |
+| `pnpm build`                 | Build de producción                                                                                                                                                    |
+| `pnpm start`                 | Sirve el build de producción                                                                                                                                           |
+| `pnpm lint`                  | ESLint, incluidas las reglas de arquitectura                                                                                                                           |
+| `pnpm format`                | Formatea el código con Prettier                                                                                                                                        |
+| `pnpm format:check`          | Verifica el formato sin modificar archivos                                                                                                                             |
+| `pnpm check:redirects [url]` | Revisa contra un servidor en marcha (por defecto `http://localhost:3000`) que cada URL antigua responda 301 hacia su destino y que las páginas retiradas respondan 404 |
 
 ## Variables de entorno
 

@@ -160,6 +160,13 @@ export function ProgramPage({ slug }: { slug: string }) {
   return <ServiceDetail entry={entry} />;
 }
 
+/** Every page of the service catalog, for the sitemap. */
+export const serviceHrefs = () => [
+  "/servicios/",
+  "/servicios/programas/",
+  ...allServices.map((entry) => entry.href),
+];
+
 export const specialtyParams = () => specialties.map((entry) => ({ slug: entry.slug }));
 export const programParams = () => programs.map((entry) => ({ slug: entry.slug }));
 export const hospitalizationParams = () =>
