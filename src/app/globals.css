@@ -51,6 +51,7 @@
   --color-heading: var(--color-navy);
   --color-foreground: var(--color-ink);
   --color-muted: var(--color-ink-muted);
+  --color-emphasis: var(--color-primary);
 
   --radius-card: 1rem;
 

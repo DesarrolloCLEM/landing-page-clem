@@ -4,7 +4,7 @@ import type { HTMLAttributes } from "react";
 import { cn } from "@/lib/cn";
 
 // Dark tones redefine the semantic text colors on the section itself,
-// so headings, body text and muted text inside adapt without extra classes.
+// so headings, body text, muted text and links inside adapt without extra classes.
 const onDark =
   "[--color-heading:white] [--color-foreground:white] [--color-muted:var(--color-brand-100)]";
 
@@ -13,8 +13,8 @@ export const sectionVariants = cva("text-foreground", {
     tone: {
       white: "bg-white",
       surface: "bg-surface",
-      primary: cn("bg-primary", onDark),
-      navy: cn("bg-navy", onDark),
+      primary: cn("bg-primary [--color-emphasis:white]", onDark),
+      navy: cn("bg-navy [--color-emphasis:var(--color-sky-accent)]", onDark),
     },
     spacing: {
       default: "py-16 lg:py-24",

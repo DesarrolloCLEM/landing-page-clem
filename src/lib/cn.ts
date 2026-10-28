@@ -7,6 +7,7 @@ const twMerge = extendTailwindMerge({
     classGroups: {
       "font-family": [{ font: ["heading", "body"] }],
       shadow: [{ shadow: ["card", "card-hover"] }],
+      rounded: [{ rounded: ["card"] }],
     },
   },
 });

@@ -9,11 +9,11 @@
 
 ## 2. Acciones y tipografía
 
-- [ ] 2.1 Crear `Button` y `buttonVariants` (5 variantes, 3 tamaños, `min-h-11`, `type="button"` por defecto) siguiendo el ejemplo de la skill. Verificar en el HTML que un `Button` sin `type` renderiza `type="button"`.
-- [ ] 2.2 Crear `TextLink` (sobre `next/link`, `withArrow` con ícono `aria-hidden`). Verificar en el HTML que el ícono lleva `aria-hidden="true"`.
-- [ ] 2.3 Crear `Heading` (`as` obligatorio + `size` visual), `Text` (size/tone), `Eyebrow` y `SectionHeading` (`titleId` para `aria-labelledby`, `align`). Verificar que `<Heading as="h3" size="sm">` genera un `<h3>` con las clases del tamaño sm.
-- [ ] 2.4 Crear el barrel `src/components/ui/index.ts` con los componentes anteriores y quitar el `.gitkeep`. Verificar que `pnpm lint` y `pnpm build` pasan.
-- [ ] 2.5 Commit: `feat(ui): agrega Button, TextLink y componentes de tipografía`.
+- [x] 2.1 Crear `Button` y `buttonVariants` (5 variantes, 3 tamaños, `min-h-11`, `type="button"` por defecto) siguiendo el ejemplo de la skill. Verificar en el HTML que un `Button` sin `type` renderiza `type="button"`.
+- [x] 2.2 Crear `TextLink` (sobre `next/link`, `withArrow` con ícono `aria-hidden`). Verificar en el HTML que el ícono lleva `aria-hidden="true"`.
+- [x] 2.3 Crear `Heading` (`as` obligatorio + `size` visual), `Text` (size/tone), `Eyebrow` y `SectionHeading` (`titleId` para `aria-labelledby`, `align`). Verificar que `<Heading as="h3" size="sm">` genera un `<h3>` con las clases del tamaño sm.
+- [x] 2.4 Crear el barrel `src/components/ui/index.ts` con los componentes anteriores y quitar el `.gitkeep`. Verificar que `pnpm lint` y `pnpm build` pasan.
+- [x] 2.5 Commit: `feat(ui): agrega Button, TextLink y componentes de tipografía`.
 
 ## 3. Contenido
 
