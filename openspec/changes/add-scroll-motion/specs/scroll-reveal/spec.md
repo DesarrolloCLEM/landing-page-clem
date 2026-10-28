@@ -47,11 +47,11 @@ Las cifras de capacidad SHALL contar desde cero hasta su valor la primera vez qu
 - **THEN** anuncia solo el valor final, no los números intermedios
 
 ### Requirement: Carrusel de testimonios con escala
-En móvil, el carrusel de testimonios SHALL ampliar levemente (hasta 5 %) la tarjeta más cercana al centro mientras el visitante desliza, sin avanzar nunca por sí solo.
+En móvil, el carrusel de testimonios SHALL ampliar levemente (hasta 6 %) la tarjeta más cercana al centro, sin cambiar su opacidad para no perder contraste, mientras el visitante desliza, sin avanzar nunca por sí solo.
 
 #### Scenario: Deslizar testimonios
 - **WHEN** un visitante desliza el carrusel con el dedo
-- **THEN** la tarjeta centrada se ve ligeramente más grande y opaca que las vecinas, y el desplazamiento se ajusta a cada tarjeta
+- **THEN** la tarjeta centrada se ve ligeramente más grande que las vecinas, y el desplazamiento se ajusta a cada tarjeta
 
 #### Scenario: Sin avance automático
 - **WHEN** el visitante no toca el carrusel

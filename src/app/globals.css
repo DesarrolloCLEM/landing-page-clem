@@ -142,11 +142,9 @@
     @keyframes motion-carousel {
       0%,
       100% {
-        opacity: 0.65;
         scale: 0.94;
       }
       50% {
-        opacity: 1;
         scale: 1;
       }
     }
@@ -218,7 +216,7 @@
       animation-range: 0 70vh;
     }
 
-    /* Horizontal carousels (mobile): the card nearest to the center is the largest. */
+    /* Horizontal carousels (mobile): the card nearest to the center is the largest (scale only: opacity would lower contrast). */
     @media (max-width: 639px) {
       .motion-carousel > * {
         animation: motion-carousel linear both;
