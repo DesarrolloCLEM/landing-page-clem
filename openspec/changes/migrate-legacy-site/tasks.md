@@ -43,21 +43,21 @@
 
 ## 6. Servicios: catálogo y unidades
 
-- [ ] 6.1 Definir los tipos de la feature `services` (unidad, especialidad, subespecialidad, programa, habitación) y crear `/servicios/` con la isla `ServiceSearch`. Verificar que sin JavaScript se ve la lista completa y que "uro" filtra Urología ignorando tildes.
-- [ ] 6.2 Crear `/servicios/urgencias/` y `/servicios/consulta-externa/` uniendo `/services/*` y `p-*`; reemplazar las imágenes de Unsplash por fotos del inventario. Verificar la paridad contra los dos archivos de `content/` y que no hay imágenes externas.
-- [ ] 6.3 Crear `/servicios/cirugia/`, `/servicios/cuidado-critico/` y `/servicios/diagnostico-y-apoyo-terapeutico/`. Verificar la paridad contra `content/` y que cada ficha cierra con `CtaBand`.
-- [ ] 6.4 Crear `/servicios/hospitalizacion/` con hospitalización pediátrica, Suite VIP y la comparación de habitaciones, y las tres páginas de detalle de habitación con galería. Verificar a 375 px y 1280 px el comparativo de habitaciones.
-- [ ] 6.5 Commit: `feat(services): agrega catálogo y fichas de unidades asistenciales`.
+- [x] 6.1 Definir los tipos de la feature `services` (unidad, especialidad, subespecialidad, programa, habitación) y crear `/servicios/` con la isla `ServiceSearch`. Verificar que sin JavaScript se ve la lista completa y que "uro" filtra Urología ignorando tildes.
+- [x] 6.2 Crear `/servicios/urgencias/` y `/servicios/consulta-externa/` uniendo `/services/*` y `p-*`; reemplazar las imágenes de Unsplash por fotos del inventario. Verificar la paridad contra los dos archivos de `content/` y que no hay imágenes externas.
+- [x] 6.3 Crear `/servicios/cirugia/`, `/servicios/cuidado-critico/` y `/servicios/diagnostico-y-apoyo-terapeutico/`. Verificar la paridad contra `content/` y que cada ficha cierra con `CtaBand`.
+- [x] 6.4 Crear `/servicios/hospitalizacion/` con hospitalización pediátrica, Suite VIP y la comparación de habitaciones, y las tres páginas de detalle de habitación con galería. Verificar a 375 px y 1280 px el comparativo de habitaciones.
+- [x] 6.5 Commit: `feat(services): agrega catálogo y fichas de unidades asistenciales`.
 
 ## 7. Especialidades y programas
 
-- [ ] 7.1 Crear la ruta dinámica `/servicios/especialidades/[slug]/` con la plantilla de ficha (migas de pan, imagen, contenido, CTA y relacionados), parámetros generados en build y 404 para slugs desconocidos. Verificar con `pnpm build` que se prerenderizan todas las fichas.
-- [ ] 7.2 Cargar las fichas quirúrgicas: cirugía general, de tórax, cardiovascular, plástica y reconstructiva, maxilofacial y pediátrica. Verificar la paridad de cada una contra sus archivos de `content/` (ver mapa de URLs).
-- [ ] 7.3 Cargar neurocirugía, neurocirugía pediátrica, ortopedia y traumatología, urología, otorrinolaringología y oftalmología. Verificar la paridad contra `content/`.
-- [ ] 7.4 Cargar medicina interna, neurología, dermatología, alergología, medicina del dolor, salud mental, nutrición y dieta, anestesiología y radiología. Verificar la paridad contra `content/`.
-- [ ] 7.5 Cargar ginecología y obstetricia, perinatología, pediatría (con sus subespecialidades sin ficha), cardiología pediátrica, hematología pediátrica, fisioterapia, medicina física y rehabilitación y fonoaudiología. Verificar que "Neumología pediátrica" aparece como texto sin enlace.
-- [ ] 7.6 Crear `/servicios/programas/` y las fichas Nace con Esperanza, Chequeos médicos preventivos y Centro de Intervencionismo Cardiovascular. Verificar la paridad contra `content/` y que los chequeos con paquete enlazan a AppCLEM.
-- [ ] 7.7 Commit: `feat(services): agrega fichas de especialidades y programas especiales`.
+- [x] 7.1 Crear la ruta dinámica `/servicios/especialidades/[slug]/` con la plantilla de ficha (migas de pan, imagen, contenido, CTA y relacionados), parámetros generados en build y 404 para slugs desconocidos. Verificar con `pnpm build` que se prerenderizan todas las fichas.
+- [x] 7.2 Cargar las fichas quirúrgicas: cirugía general, de tórax, cardiovascular, plástica y reconstructiva, maxilofacial y pediátrica. Verificar la paridad de cada una contra sus archivos de `content/` (ver mapa de URLs).
+- [x] 7.3 Cargar neurocirugía, neurocirugía pediátrica, ortopedia y traumatología, urología, otorrinolaringología y oftalmología. Verificar la paridad contra `content/`.
+- [x] 7.4 Cargar medicina interna, neurología, dermatología, alergología, medicina del dolor, salud mental, nutrición y dieta, anestesiología y radiología. Verificar la paridad contra `content/`.
+- [x] 7.5 Cargar ginecología y obstetricia, perinatología, pediatría (con sus subespecialidades sin ficha), cardiología pediátrica, hematología pediátrica, fisioterapia, medicina física y rehabilitación y fonoaudiología. Verificar que "Neumología pediátrica" aparece como texto sin enlace.
+- [x] 7.6 Crear `/servicios/programas/` y las fichas Nace con Esperanza, Chequeos médicos preventivos y Centro de Intervencionismo Cardiovascular. Verificar la paridad contra `content/` y que los chequeos con paquete enlazan a AppCLEM.
+- [x] 7.7 Commit: `feat(services): agrega fichas de especialidades y programas especiales`.
 
 ## 8. Usuarios
 
