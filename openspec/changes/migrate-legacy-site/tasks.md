@@ -4,11 +4,11 @@
 
 ## 1. Inventario y configuración compartida
 
-- [ ] 1.1 Versionar `assets/legacy-site/` (inventario, contenido, 254 imágenes y 18 PDF). Verificar con `git ls-files assets/legacy-site | wc -l` que hay al menos 272 archivos binarios más los de inventario y contenido.
-- [ ] 1.2 Crear `src/config/site.ts` con dirección, PBX, correo, WhatsApp de citas y de Alianza de Usuarios, redes, horarios de visita, horario de citas, extensiones y URLs de AppCLEM y tiendas (spec `site-navigation`). Verificar con `pnpm build` y con una búsqueda en `src/` que el teléfono y el correo no aparecen escritos fuera de este archivo.
-- [ ] 1.3 Crear `src/config/stats.ts` (cifras de capacidad y proyección) y `src/config/testimonials.ts` (tres testimonios con reel de Instagram); copiar las fotos de los testimonios a `public/images/testimonials/` reducidas a ≤ 2400 px. Verificar que los tres testimonios tienen nombre y procedimiento distintos.
-- [ ] 1.4 Crear `src/config/navigation.ts` con el menú principal, submenús, enlaces del footer y paquetes integrales. Verificar que ningún `href` es `#` ni apunta a `/contact/`, `/shop/` o `/about-us/`.
-- [ ] 1.5 Commit: `feat(config): agrega datos de contacto, navegación, cifras y testimonios`.
+- [x] 1.1 Versionar `assets/legacy-site/` (inventario, contenido, 254 imágenes y 18 PDF). Verificar con `git ls-files assets/legacy-site | wc -l` que hay al menos 272 archivos binarios más los de inventario y contenido.
+- [x] 1.2 Crear `src/config/site.ts` con dirección, PBX, correo, WhatsApp de citas y de Alianza de Usuarios, redes, horarios de visita, horario de citas, extensiones y URLs de AppCLEM y tiendas (spec `site-navigation`). Verificar con `pnpm build` y con una búsqueda en `src/` que el teléfono y el correo no aparecen escritos fuera de este archivo.
+- [x] 1.3 Crear `src/config/stats.ts` (cifras de capacidad y proyección) y `src/config/testimonials.ts` (tres testimonios con reel de Instagram); copiar las fotos de los testimonios a `public/images/testimonials/` reducidas a ≤ 2400 px. Verificar que los tres testimonios tienen nombre y procedimiento distintos.
+- [x] 1.4 Crear `src/config/navigation.ts` con el menú principal, submenús, enlaces del footer y paquetes integrales. Verificar que ningún `href` es `#` ni apunta a `/contact/`, `/shop/` o `/about-us/`.
+- [x] 1.5 Commit: `feat(config): agrega datos de contacto, navegación, cifras y testimonios`.
 
 ## 2. Layout del sitio
 
