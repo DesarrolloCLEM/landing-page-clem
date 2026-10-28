@@ -91,7 +91,7 @@ const subjectSpanish = ({ subject }) => {
   ];
 };
 
-export default {
+const config = {
   extends: ["@commitlint/config-conventional"],
   plugins: [{ rules: { "subject-spanish": subjectSpanish } }],
   rules: {
@@ -99,3 +99,5 @@ export default {
     "subject-spanish": [2, "always"],
   },
 };
+
+export default config;
