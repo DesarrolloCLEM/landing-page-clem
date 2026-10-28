@@ -1,5 +1,13 @@
 import { Container, CtaBand, PageHeader, Section, Stack } from "@/components/layout";
-import { Breadcrumbs, ExternalLink, SectionHeading, SocialIcon } from "@/components/ui";
+import {
+  Accordion,
+  AccordionItem,
+  Breadcrumbs,
+  ExternalLink,
+  SectionHeading,
+  SocialIcon,
+  Tabs,
+} from "@/components/ui";
 
 import { ShowcaseBlock } from "./showcase-block";
 
@@ -40,6 +48,33 @@ export function NavigationShowcase() {
             >
               Enlace a un sitio externo
             </ExternalLink>
+          </ShowcaseBlock>
+
+          <ShowcaseBlock
+            title="Accordion"
+            description="Sobre <details>: funciona sin JavaScript. DetailsHashOpener abre el ítem del ancla de la URL."
+          >
+            <Accordion>
+              <AccordionItem id="catalog-faq-1" title="¿Pregunta de ejemplo?">
+                <p>Respuesta de ejemplo.</p>
+              </AccordionItem>
+              <AccordionItem id="catalog-faq-2" title="¿Otra pregunta?">
+                <p>Otra respuesta.</p>
+              </AccordionItem>
+            </Accordion>
+          </ShowcaseBlock>
+
+          <ShowcaseBlock
+            title="Tabs"
+            description="Flechas, Inicio y Fin cambian de pestaña. Sin JavaScript se ven todos los paneles."
+          >
+            <Tabs
+              label="Ejemplo de pestañas"
+              items={[
+                { id: "uno", label: "Primera", content: <p>Contenido de la primera pestaña.</p> },
+                { id: "dos", label: "Segunda", content: <p>Contenido de la segunda pestaña.</p> },
+              ]}
+            />
           </ShowcaseBlock>
 
           <ShowcaseBlock title="SocialIcon" description="Decorativo: el enlace lleva el nombre.">

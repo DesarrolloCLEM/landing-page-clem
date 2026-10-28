@@ -34,6 +34,9 @@ description: Patrón obligatorio para crear o modificar componentes genéricos e
 | `Eyebrow` | — | Antetítulo en mayúsculas |
 | `SectionHeading` | `title`, `titleId`, `eyebrow?`, `description?`, `as`: h1/h2, `size`, `align`: start/center | Encabezado estándar de cada sección |
 | `Badge` | `tone`: primary, health, emergency, neutral | Etiquetas cortas ("24 horas") |
+| `Accordion`, `AccordionItem` | `id`, `title` | Pregunta desplegable sobre `<details>`; sin JavaScript |
+| `Tabs` | `items`, `label` | Isla cliente de pestañas accesibles; sin JavaScript muestra todos los paneles |
+| `DetailsHashOpener` | — | Isla cliente que abre el `<details>` del ancla de la URL |
 | `Breadcrumbs` | `items`: `{ label, href? }[]` | Migas de pan; el último nivel lleva `aria-current="page"` |
 | `StatCard` | `value`, `label` · `variant`: plain, card · `align` | Cifra con su etiqueta; va dentro de un `<dl>` |
 | `TestimonialCard` | `name`, `procedure`, `summary`, `image`, `link?` | Historia de paciente con foto |

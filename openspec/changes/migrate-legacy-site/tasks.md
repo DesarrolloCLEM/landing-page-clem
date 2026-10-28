@@ -61,10 +61,10 @@
 
 ## 8. Usuarios
 
-- [ ] 8.1 Crear la feature `patients` con `/usuarios/` (SIAU, Alianza de Usuarios, compromisos y testimonios de `src/config/testimonials.ts`). Verificar que el botón de la Alianza abre `wa.me/573044748399`.
-- [ ] 8.2 Crear `Tabs` en `ui` y `/deberes-y-derechos/`. Verificar que las flechas del teclado cambian de pestaña y que sin JavaScript se ven ambos bloques.
-- [ ] 8.3 Crear `Accordion` (sobre `<details>`) en `ui`, la isla `FaqHashOpener` y `/preguntas-frecuentes/` con datos estructurados de FAQ. Verificar que una URL con ancla abre esa pregunta y que todas las respuestas están en el HTML.
-- [ ] 8.4 Commit: `feat(patients): migra usuarios, deberes y derechos y preguntas frecuentes`.
+- [x] 8.1 Crear la feature `patients` con `/usuarios/` (SIAU, Alianza de Usuarios, compromisos y testimonios de `src/config/testimonials.ts`). Verificar que el botón de la Alianza abre `wa.me/573044748399`.
+- [x] 8.2 Crear `Tabs` en `ui` y `/deberes-y-derechos/`. Verificar que las flechas del teclado cambian de pestaña y que sin JavaScript se ven ambos bloques.
+- [x] 8.3 Crear `Accordion` (sobre `<details>`) en `ui`, la isla `FaqHashOpener` y `/preguntas-frecuentes/` con datos estructurados de FAQ. Verificar que una URL con ancla abre esa pregunta y que todas las respuestas están en el HTML.
+- [x] 8.4 Commit: `feat(patients): migra usuarios, deberes y derechos y preguntas frecuentes`.
 
 ## 9. Agenda, App Clem y paquetes
 
