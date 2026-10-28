@@ -1,5 +1,13 @@
 import { Container, Grid, Section } from "@/components/layout";
-import { Button, FormField, Input, SectionHeading, Select, Textarea } from "@/components/ui";
+import {
+  Button,
+  Checkbox,
+  FormField,
+  Input,
+  SectionHeading,
+  Select,
+  Textarea,
+} from "@/components/ui";
 
 import { sampleRequestTypes } from "../data/samples";
 import { ShowcaseBlock } from "./showcase-block";
@@ -45,6 +53,12 @@ export function FormsShowcase() {
             <FormField id="catalog-disabled" label="Campo deshabilitado">
               {(control) => <Input disabled defaultValue="No editable" {...control} />}
             </FormField>
+            <Checkbox
+              id="catalog-consent"
+              required
+              label="Acepto que mis datos se recopilen y almacenen."
+              error="Debes aceptar el tratamiento de datos."
+            />
             <div>
               <Button type="submit">Enviar</Button>
             </div>

@@ -73,6 +73,22 @@
     color-scheme: light;
   }
 
+  /* Keeps anchors and focused elements clear of the sticky header. */
+  html {
+    scroll-padding-top: 6rem;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  /* The open mobile menu (modal dialog) locks the page behind it. */
+  body:has(dialog[open]) {
+    overflow: hidden;
+  }
+
   body {
     @apply bg-white font-body text-foreground antialiased;
   }
@@ -88,5 +104,184 @@
 
   :focus-visible {
     @apply outline-2 outline-offset-2 outline-primary;
+  }
+}
+
+/*
+ * Scroll motion (openspec/changes/add-scroll-motion).
+ * Everything lives inside the media query + @supports below, so with reduced motion, no
+ * support for scroll-driven animations, or print, none of these rules exist and the content
+ * is simply visible. Only opacity and transform are animated.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    @keyframes motion-reveal {
+      from {
+        opacity: 0;
+        transform: translateY(28px);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    @keyframes motion-parallax {
+      to {
+        transform: translateY(80px);
+      }
+    }
+
+    @keyframes motion-fade-out {
+      to {
+        opacity: 0.15;
+        transform: translateY(-16px);
+      }
+    }
+
+    @keyframes motion-carousel {
+      0%,
+      100% {
+        scale: 0.94;
+      }
+      50% {
+        scale: 1;
+      }
+    }
+
+    @keyframes motion-progress {
+      to {
+        scale: 1 1;
+      }
+    }
+
+    @keyframes motion-header-up {
+      to {
+        transform: translateY(calc(var(--header-shrink) * -1));
+      }
+    }
+
+    @keyframes motion-header-down {
+      to {
+        transform: translateY(calc(var(--header-shrink) / 2));
+      }
+    }
+
+    @keyframes motion-header-shadow {
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Reveals the element while it enters the viewport. */
+    .motion-reveal {
+      animation: motion-reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 30%;
+    }
+
+    /*
+     * Reveals the direct children of a grid one after another. Scroll-driven animations ignore
+     * animation-delay, so the stagger shifts the range instead (max 4 steps).
+     */
+    .motion-stagger > * {
+      --i: 0;
+      animation: motion-reveal linear both;
+      animation-timeline: view();
+      animation-range: entry calc(var(--i) * 6%) entry calc(30% + var(--i) * 6%);
+    }
+    .motion-stagger > :nth-child(2) {
+      --i: 1;
+    }
+    .motion-stagger > :nth-child(3) {
+      --i: 2;
+    }
+    .motion-stagger > :nth-child(4) {
+      --i: 3;
+    }
+    .motion-stagger > :nth-child(n + 5) {
+      --i: 4;
+    }
+
+    /* Slower than the page: the photo of the home hero. Its box starts 80px above the hero. */
+    .motion-parallax {
+      animation: motion-parallax linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 100vh;
+    }
+
+    .motion-fade-out {
+      animation: motion-fade-out linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 70vh;
+    }
+
+    /* Horizontal carousels (mobile): the card nearest to the center is the largest (scale only: opacity would lower contrast). */
+    @media (max-width: 639px) {
+      .motion-carousel > * {
+        animation: motion-carousel linear both;
+        animation-timeline: view(inline);
+      }
+    }
+
+    /* Reading progress: stays collapsed (scale-x-0) on pages that do not scroll (inactive timeline). */
+    .motion-progress {
+      animation: motion-progress linear both;
+      animation-timeline: scroll(root);
+    }
+
+    /* Header: gets shorter and casts a shadow after the first 48px of scroll. */
+    .motion-header {
+      --header-shrink: 8px;
+      animation: motion-header-up linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 48px;
+    }
+    .motion-header-inner {
+      animation: motion-header-down linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 48px;
+    }
+    .motion-header-shadow {
+      animation: motion-header-shadow linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 48px;
+    }
+    @media (min-width: 640px) {
+      .motion-header {
+        --header-shrink: 16px;
+      }
+    }
+  }
+
+  /* Page transitions: short and calm; header and footer sit outside the transitioned area. */
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation-duration: 150ms;
+    animation-timing-function: ease-out;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}
+
+@media print {
+  .motion-reveal,
+  .motion-stagger > *,
+  .motion-parallax,
+  .motion-fade-out,
+  .motion-carousel > *,
+  .motion-header,
+  .motion-header-inner,
+  .motion-header-shadow {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 }

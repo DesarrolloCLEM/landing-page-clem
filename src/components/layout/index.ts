@@ -1,4 +1,15 @@
 export { Container, containerVariants, type ContainerProps } from "./container";
+export { CtaBand, type CtaBandProps } from "./cta-band";
+export { FloatingWhatsApp } from "./floating-whatsapp";
+export { Footer } from "./footer";
 export { Grid, gridVariants, type GridProps } from "./grid";
+export { Header } from "./header";
+export { MobileNav } from "./mobile-nav";
+export { NavMenu } from "./nav-menu";
+export { PageHeader, type PageHeaderProps } from "./page-header";
+export { ScrollProgress } from "./scroll-progress";
 export { Section, sectionVariants, type SectionProps } from "./section";
+export { mainContentId, SiteLayout } from "./site-layout";
+export { SiteLogo, type SiteLogoProps } from "./site-logo";
 export { Stack, stackVariants, type StackProps } from "./stack";
+export { TopBar } from "./top-bar";
