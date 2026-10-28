@@ -25,10 +25,10 @@
 
 ## 4. Flujo de contribución
 
-- [ ] 4.1 Instalar `husky`, `@commitlint/cli` y `@commitlint/config-conventional`; ejecutar `husky init`. Crear `commitlint.config.mjs` con `subject-case` desactivado y la regla local `subject-spanish` (design D8). Verificar con `echo "feat(home): add hero" | pnpm commitlint` que falla, y con `echo "feat(home): agrega hero" | pnpm commitlint` que pasa.
-- [ ] 4.2 Configurar `.husky/commit-msg` (commitlint) y `.husky/pre-commit` (`pnpm lint && pnpm format:check`). Verificar que un `git commit -m "agrega cosas"` se rechaza.
-- [ ] 4.3 Crear `.github/pull_request_template.md` en español con: resumen, change de OpenSpec, tipo de cambio, capturas móvil/escritorio y checklist (lint, build, accesibilidad, Server/Client, SEO, contenido fiel al sitio actual). Verificar que el archivo existe y se ve bien en una vista previa de Markdown.
-- [ ] 4.4 Commit: `chore: agrega commitlint, husky y plantilla de PR en español`.
+- [x] 4.1 Instalar `husky`, `@commitlint/cli` y `@commitlint/config-conventional`; ejecutar `husky init`. Crear `commitlint.config.mjs` con `subject-case` desactivado y la regla local `subject-spanish` (design D8). Verificar con `echo "feat(home): add hero" | pnpm commitlint` que falla, y con `echo "feat(home): agrega hero" | pnpm commitlint` que pasa.
+- [x] 4.2 Configurar `.husky/commit-msg` (commitlint) y `.husky/pre-commit` (`pnpm lint && pnpm format:check`). Verificar que un `git commit -m "agrega cosas"` se rechaza.
+- [x] 4.3 Crear `.github/pull_request_template.md` en español con: resumen, change de OpenSpec, tipo de cambio, capturas móvil/escritorio y checklist (lint, build, accesibilidad, Server/Client, SEO, contenido fiel al sitio actual). Verificar que el archivo existe y se ve bien en una vista previa de Markdown.
+- [x] 4.4 Commit: `chore: agrega commitlint, husky y plantilla de PR en español`.
 
 ## 5. Skills y documentación para agentes
 
