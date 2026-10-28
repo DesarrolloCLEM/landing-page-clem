@@ -24,9 +24,9 @@
 
 ## 4. Barra de progreso y header compacto
 
-- [ ] 4.1 Crear `ScrollProgress` (Server Component, `aria-hidden`) y activarlo en las páginas largas vía `PageHeader` (decisión 5). Verificar que llega al 100 % al final, que no aparece en páginas cortas y que axe no reporta nada.
-- [ ] 4.2 Compactar el header con CSS ligado al scroll (decisión 6). Verificar que logo, menú y botón de cita siguen visibles, que no hay CLS y que un elemento enfocado con teclado queda visible bajo el header.
-- [ ] 4.3 Commit: `feat(layout): agrega barra de progreso y header compacto al hacer scroll`.
+- [x] 4.1 Crear `ScrollProgress` (Server Component, `aria-hidden`) y activarlo en las páginas largas vía `PageHeader` (decisión 5). Verificar que llega al 100 % al final, que no aparece en páginas cortas y que axe no reporta nada.
+- [x] 4.2 Compactar el header con CSS ligado al scroll (decisión 6). Verificar que logo, menú y botón de cita siguen visibles, que no hay CLS y que un elemento enfocado con teclado queda visible bajo el header.
+- [x] 4.3 Commit: `feat(layout): agrega barra de progreso y header compacto al hacer scroll`.
 
 ## 5. Transiciones de página
 

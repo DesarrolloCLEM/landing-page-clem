@@ -7,6 +7,7 @@ export { Header } from "./header";
 export { MobileNav } from "./mobile-nav";
 export { NavMenu } from "./nav-menu";
 export { PageHeader, type PageHeaderProps } from "./page-header";
+export { ScrollProgress } from "./scroll-progress";
 export { Section, sectionVariants, type SectionProps } from "./section";
 export { mainContentId, SiteLayout } from "./site-layout";
 export { SiteLogo, type SiteLogoProps } from "./site-logo";

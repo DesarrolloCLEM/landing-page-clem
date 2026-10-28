@@ -33,7 +33,7 @@ Los elementos ya visibles al cargar quedan dentro del rango `entry` ya cumplido,
 ### 4. Parallax del hero con dos capas
 La imagen usa `animation-timeline: scroll(root)` con `translateY` de hasta 80 px y el bloque de texto atenúa con `opacity` al salir. Se limita al hero del inicio.
 
-### 5. Barra de progreso con CSS puro
+### 5. Barra de progreso con CSS puro (sin prop por página)
 `ScrollProgress` es un `div` decorativo (`aria-hidden`) con `animation: grow linear; animation-timeline: scroll(root)` y `transform: scaleX`. No necesita JavaScript, así que **no** es isla cliente: es un Server Component. Se muestra solo si la página supera 1,5 pantallas, con `@container`/`@supports` sobre la altura del documento no disponibles; para ocultarla en páginas cortas se usa una prop `enabled` que cada página larga activa a través de `PageHeader`.
 
 ### 6. Header compacto con CSS
