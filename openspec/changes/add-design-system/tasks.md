@@ -44,10 +44,10 @@
 
 ## 7. Verificación final
 
-- [ ] 7.1 `pnpm lint`, `pnpm format:check` y `pnpm build` pasan; `/` sigue prerenderizada (○) y no hay `"use client"` en `src/components/` (verificar con `grep -r "use client" src/components` sin resultados).
-- [ ] 7.2 Capturas de `/ui` en 375 px y 1440 px: sin scroll horizontal, grillas con 1 y 4 columnas respectivamente, y texto legible en las secciones primary y navy.
-- [ ] 7.3 Lighthouse Accessibility ≥ 95 sobre `/ui` (build con `ENABLE_UI_CATALOG=true`), y recorrido con teclado: foco visible en botones, enlaces y campos, y resaltado de las tarjetas interactivas.
-- [ ] 7.4 `openspec validate add-design-system --strict` pasa.
+- [x] 7.1 `pnpm lint`, `pnpm format:check` y `pnpm build` pasan; `/` sigue prerenderizada (○) y no hay `"use client"` en `src/components/` (verificar con `grep -r "use client" src/components` sin resultados).
+- [x] 7.2 Capturas de `/ui` en 375 px y 1440 px: sin scroll horizontal, grillas con 1 y 4 columnas respectivamente, y texto legible en las secciones primary y navy.
+- [x] 7.3 Lighthouse Accessibility ≥ 95 sobre `/ui` (build con `ENABLE_UI_CATALOG=true`), y recorrido con teclado: foco visible en botones, enlaces y campos, y resaltado de las tarjetas interactivas.
+- [x] 7.4 `openspec validate add-design-system --strict` pasa.
 
 ## Workflow follow-up
 
