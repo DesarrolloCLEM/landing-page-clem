@@ -75,13 +75,13 @@
 
 ## 10. Contacto y formularios
 
-- [ ] 10.1 Crear `src/lib/form-delivery.ts` con `deliverSubmission()` (solo servidor), que por ahora registra en el log el tipo de formulario y la fecha, sin SMTP (design, decisión 6). Verificar con `pnpm build` que el módulo no llega al bundle del cliente.
-- [ ] 10.2 Crear en la feature `contact` la validación en servidor, el campo trampa y el tiempo mínimo de llenado. Verificar que un envío en menos de 3 s o con el campo trampa lleno se descarta.
-- [ ] 10.3 Crear `/contacto/` con la isla `ContactForm` (Server Action, errores por campo, foco en el primer error, datos conservados si falla) y extensiones en texto. Verificar envío correcto, error de validación y fallo simulado de la entrega.
-- [ ] 10.4 Crear `/felicitaciones-sugerencias-quejas-y-reclamos/` con `FeedbackForm` y tipo de solicitud obligatorio. Verificar que el envío registrado indica el tipo de solicitud.
-- [ ] 10.5 Crear `/eliminar-cuenta/` con `AccountDeletionForm`. Verificar que la URL responde 200 sin redirección y que el envío se registra como solicitud de eliminación.
-- [ ] 10.6 Crear la feature `legal` con `/politica-de-tratamiento-de-datos/` con un texto genérico basado en la Ley 1581 de 2012 (marcado `TODO(clinica)`), y enlazarla desde la casilla de consentimiento de los tres formularios. Verificar que ningún formulario se envía sin la aceptación.
-- [ ] 10.7 Commit: `feat(contact): agrega contacto y formularios`.
+- [x] 10.1 Crear `src/lib/form-delivery.ts` con `deliverSubmission()` (solo servidor), que por ahora registra en el log el tipo de formulario y la fecha, sin SMTP (design, decisión 6). Verificar con `pnpm build` que el módulo no llega al bundle del cliente.
+- [x] 10.2 Crear en la feature `contact` la validación en servidor, el campo trampa y el tiempo mínimo de llenado. Verificar que un envío en menos de 3 s o con el campo trampa lleno se descarta.
+- [x] 10.3 Crear `/contacto/` con la isla `ContactForm` (Server Action, errores por campo, foco en el primer error, datos conservados si falla) y extensiones en texto. Verificar envío correcto, error de validación y fallo simulado de la entrega.
+- [x] 10.4 Crear `/felicitaciones-sugerencias-quejas-y-reclamos/` con `FeedbackForm` y tipo de solicitud obligatorio. Verificar que el envío registrado indica el tipo de solicitud.
+- [x] 10.5 Crear `/eliminar-cuenta/` con `AccountDeletionForm`. Verificar que la URL responde 200 sin redirección y que el envío se registra como solicitud de eliminación.
+- [x] 10.6 Crear la feature `legal` con `/politica-de-tratamiento-de-datos/` con un texto genérico basado en la Ley 1581 de 2012 (marcado `TODO(clinica)`), y enlazarla desde la casilla de consentimiento de los tres formularios. Verificar que ningún formulario se envía sin la aceptación.
+- [x] 10.7 Commit: `feat(contact): agrega contacto y formularios`.
 
 ## 11. Migración de URLs y SEO
 

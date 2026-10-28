@@ -33,6 +33,15 @@ pnpm dev       # servidor de desarrollo en http://localhost:3000
 | `pnpm format`       | Formatea el código con Prettier              |
 | `pnpm format:check` | Verifica el formato sin modificar archivos   |
 
+## Variables de entorno
+
+| Variable                         | Uso                                                                                    |
+| -------------------------------- | -------------------------------------------------------------------------------------- |
+| `ENABLE_UI_CATALOG`              | `true` publica el catálogo interno `/ui` en un build de producción                     |
+| `FORM_DELIVERY_SIMULATE_FAILURE` | `true` simula una falla de entrega de los formularios, para probar el error en staging |
+
+Los formularios (contacto, PQRS y eliminación de cuenta) todavía **no envían correo**: `src/lib/form-delivery.ts` solo registra cada envío en el log del servidor, sin datos personales. Conectar SMTP u otro canal consiste en reemplazar esa función.
+
 ## Estructura
 
 ```
