@@ -1,0 +1,72 @@
+schema: spec-driven
+
+context: |
+  Language: es
+  All artifacts must be written in es.
+  Keep OpenSpec structural headings and SHALL/MUST keywords in English.
+
+  ## Proyecto
+  Landing page de Clínica La Esperanza (Montería, Córdoba, Colombia). Reemplaza el sitio
+  WordPress actual (https://clinicalaesperanza.co/). Debe conservar el MISMO contenido;
+  la UI y la UX se modernizan respetando la identidad visual de la clínica.
+  Lema institucional: "Fe, Amor y Servicio".
+
+  ## Stack
+  - Next.js 16.4 (App Router) con `cacheComponents: true` y `partialPrefetching: true`.
+    Esta versión tiene cambios respecto a versiones anteriores: consultar siempre
+    `node_modules/next/dist/docs/` antes de usar una API.
+  - React 19, TypeScript estricto, pnpm.
+  - Tailwind CSS v4 (CSS-first): tokens en `@theme` dentro de `src/app/globals.css`.
+    No existe `tailwind.config.js`.
+  - Variantes con `class-variance-authority`; helper `cn()` (clsx + tailwind-merge) en `src/lib/cn.ts`.
+  - Íconos con `lucide-react`.
+
+  ## Renderizado
+  - Server Components por defecto. El contenido es estático y se prerenderiza en build.
+  - `"use client"` solo en islas interactivas pequeñas (menú móvil, carrusel, formularios).
+    Nunca marcar como client una página, un layout ni una sección completa.
+  - Mutaciones (formularios) con Server Actions.
+  - Datos que vengan de fuentes externas se cachean con `"use cache"`.
+
+  ## Arquitectura por feature
+  src/
+    app/                rutas; `page.tsx` delgado que solo compone la feature y exporta metadata
+      (site)/           grupo de rutas con el layout público del sitio
+    components/ui/      componentes genéricos sin conocimiento de negocio (Button, Card, Badge, Label, Input, Heading...)
+    components/layout/  Container, Section, Grid, Stack, TopBar, Header, MobileNav, Footer, SiteLayout
+    features/<feature>/ components/, data/, actions/, types.ts, index.ts (API pública)
+    config/site.ts      fuente única de verdad: navegación, contacto, redes, horarios
+    lib/                utilidades
+  Reglas de dependencia: app -> features -> components -> lib. Una feature NO importa otra
+  feature. Desde fuera solo se importa el `index.ts` de una feature.
+
+  ## Idioma
+  - Código en inglés: variables, funciones, componentes, tipos, carpetas de `features/` y `components/`.
+  - Excepción: los segmentos de `src/app/` son URLs públicas y conservan los slugs del sitio actual en español.
+  - Contenido visible para el usuario en español (Colombia).
+  - Commits en español con Conventional Commits (`feat(home): agrega sección de servicios`).
+  - Pull requests en español, usando `.github/pull_request_template.md`.
+
+  ## Identidad visual (extraída del sitio actual)
+  - Azul principal #1166b5; azul oscuro #0562B3 / #015cac; azul claro #47BFF3;
+    verde #009C41; navy #111542; rojo urgencias #F9313B; fondo suave #F4F3F8.
+  - Logo horizontal azul.
+  - Tipografía original: Soleil / Omnes / Museo Sans (Adobe). Si no hay licencia se usan
+    alternativas de Google Fonts vía `next/font`.
+
+  ## Calidad
+  - Accesibilidad WCAG 2.1 AA, HTML semántico, foco visible.
+  - Lighthouse >= 95 en Performance, Accessibility, Best Practices y SEO.
+  - Imágenes con `next/image`; fuentes con `next/font`.
+
+rules:
+  proposal:
+    - Indicar siempre qué queda fuera de alcance.
+    - Indicar qué feature(s) de `src/features/` y qué rutas de `src/app/` se tocan.
+  design:
+    - Justificar cada componente marcado con "use client".
+    - Listar los componentes de `components/ui` y `components/layout` que se reutilizan o crean.
+  tasks:
+    - Tareas de máximo ~2 horas.
+    - Incluir una tarea final de verificación (pnpm lint, pnpm build, revisión responsive y accesibilidad).
+    - Cada grupo de tareas debe poder cerrarse con un commit en español.
