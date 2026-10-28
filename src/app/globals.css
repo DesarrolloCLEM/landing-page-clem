@@ -1,26 +1,78 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@source not "../../openspec";
+@source not "../../.claude";
+
+/*
+ * Brand tokens for Clínica La Esperanza (taken from clinicalaesperanza.co).
+ * Light theme only: the brand does not define a dark palette.
+ *
+ * Text pairs that meet WCAG 2.1 AA (>= 4.5:1):
+ *   white on primary (5.8:1), white on health-strong (5.5:1),
+ *   white on emergency-strong (5.6:1), white on navy, navy on sky-accent,
+ *   foreground / muted on white and surface.
+ * health, emergency and sky-accent are for icons and decoration, not for text.
+ */
+@theme {
+  --color-brand-50: #eef6fd;
+  --color-brand-100: #d8eafa;
+  --color-brand-200: #b6d7f5;
+  --color-brand-300: #85bdee;
+  --color-brand-400: #4f9be3;
+  --color-brand-500: #1166b5;
+  --color-brand-600: #0b559a;
+  --color-brand-700: #0a4680;
+  --color-brand-800: #0d3a69;
+  --color-brand-900: #103258;
+  --color-brand-950: #0b203b;
+
+  --color-primary: var(--color-brand-500);
+  --color-primary-dark: var(--color-brand-600);
+  --color-primary-foreground: #ffffff;
+
+  --color-sky-accent: #47bff3;
+  --color-health: #009c41;
+  --color-health-strong: #007a33;
+  --color-navy: #111542;
+  --color-emergency: #f9313b;
+  --color-emergency-strong: #d0101c;
+
+  --color-surface: #f4f3f8;
+  --color-foreground: #1f242e;
+  --color-muted: #4b5563;
+  --color-border: #e2e4ec;
+
+  --radius-card: 1rem;
+
+  --shadow-card: 0 1px 3px 0 rgb(17 21 66 / 0.06), 0 4px 16px -4px rgb(17 21 66 / 0.08);
+  --shadow-card-hover: 0 4px 8px -2px rgb(17 21 66 / 0.08), 0 16px 32px -8px rgb(17 21 66 / 0.16);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-nunito-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-body);
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    color-scheme: light;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    @apply bg-white font-body text-foreground antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading text-navy;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary;
+  }
 }

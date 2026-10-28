@@ -9,12 +9,12 @@
 
 ## 2. Tema de marca
 
-- [ ] 2.1 Instalar `clsx`, `tailwind-merge`, `class-variance-authority` y `lucide-react`. Crear `src/lib/cn.ts`. Verificar que `pnpm build` pasa.
-- [ ] 2.2 Reescribir `src/app/globals.css` con `@theme`: escala `brand` basada en `#1166b5`, `sky-accent`, `health`, `navy`, `emergency`, `surface`, `--font-heading`, `--font-body`, radios y sombras. Quitar el bloque de modo oscuro. Verificar que las clases `bg-brand-500` y `text-navy` generan CSS en el build.
-- [ ] 2.3 Crear `src/config/fonts.ts` con Nunito (títulos) y Nunito Sans (texto) vía `next/font/google` y `display: "swap"`. Verificar en DevTools que las fuentes se sirven desde `/_next/static`.
-- [ ] 2.4 Actualizar `src/app/layout.tsx` con `lang="es-CO"`, las variables de fuente y la metadata base (`title.template: "%s | Clínica La Esperanza"`, `title.default`, `description` en español). Verificar en el HTML generado `lang="es-CO"` y el título.
-- [ ] 2.5 Crear una página provisional en `src/app/page.tsx` (Server Component) que muestre el nombre de la clínica, el lema y un bloque de muestra de los colores de marca. Verificar visualmente con el SO en modo oscuro que la página sigue en tema claro.
-- [ ] 2.6 Commit: `feat(theme): agrega tokens de marca, fuentes y layout raíz en español`.
+- [x] 2.1 Instalar `clsx`, `tailwind-merge`, `class-variance-authority` y `lucide-react`. Crear `src/lib/cn.ts`. Verificar que `pnpm build` pasa.
+- [x] 2.2 Reescribir `src/app/globals.css` con `@theme`: escala `brand` basada en `#1166b5`, `sky-accent`, `health`, `navy`, `emergency`, `surface`, `--font-heading`, `--font-body`, radios y sombras. Quitar el bloque de modo oscuro. Verificar que las clases `bg-brand-500` y `text-navy` generan CSS en el build.
+- [x] 2.3 Crear `src/config/fonts.ts` con Nunito (títulos) y Nunito Sans (texto) vía `next/font/google` y `display: "swap"`. Verificar en DevTools que las fuentes se sirven desde `/_next/static`.
+- [x] 2.4 Actualizar `src/app/layout.tsx` con `lang="es-CO"`, las variables de fuente y la metadata base (`title.template: "%s | Clínica La Esperanza"`, `title.default`, `description` en español). Verificar en el HTML generado `lang="es-CO"` y el título.
+- [x] 2.5 Crear una página provisional en `src/app/page.tsx` (Server Component) que muestre el nombre de la clínica, el lema y un bloque de muestra de los colores de marca. Verificar visualmente con el SO en modo oscuro que la página sigue en tema claro.
+- [x] 2.6 Commit: `feat(theme): agrega tokens de marca, fuentes y layout raíz en español`.
 
 ## 3. Calidad de código y arquitectura
 
