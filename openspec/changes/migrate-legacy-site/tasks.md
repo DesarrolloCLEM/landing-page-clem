@@ -93,13 +93,13 @@
 
 ## 12. Verificación final
 
-- [ ] 12.1 Ejecutar `pnpm lint && pnpm format:check && pnpm build` sin errores y confirmar que todas las rutas se generan prerenderizadas.
-- [ ] 12.2 Recorrer `inventory/site-map.md` y confirmar que cada página con contenido tiene su página nueva o una redirección, con paridad de contenido revisada.
-- [ ] 12.3 Buscar en el HTML generado `href="#"`, `wp-content`, `unsplash`, `info@website.com` y `https://https://`, sin resultados.
-- [ ] 12.4 Revisar responsive a 320, 375, 768, 1280 y 1920 px, navegación solo con teclado y zoom al 200 % en inicio, una ficha de especialidad, hospitalización, preguntas frecuentes y contacto.
-- [ ] 12.5 Ejecutar una auditoría automática de accesibilidad (axe) en todas las rutas, sin errores A ni AA.
+- [x] 12.1 Ejecutar `pnpm lint && pnpm format:check && pnpm build` sin errores y confirmar que todas las rutas se generan prerenderizadas.
+- [x] 12.2 Recorrer `inventory/site-map.md` y confirmar que cada página con contenido tiene su página nueva o una redirección, con paridad de contenido revisada.
+- [x] 12.3 Buscar en el HTML generado `href="#"`, `wp-content`, `unsplash`, `info@website.com` y `https://https://`, sin resultados.
+- [x] 12.4 Revisar responsive a 320, 375, 768, 1280 y 1920 px, navegación solo con teclado y zoom al 200 % en inicio, una ficha de especialidad, hospitalización, preguntas frecuentes y contacto.
+- [x] 12.5 Ejecutar una auditoría automática de accesibilidad (axe) en todas las rutas, sin errores A ni AA.
 - [ ] 12.6 Ejecutar Lighthouse móvil en inicio, hospitalización, contacto e informes financieros, con ≥ 95 en las cuatro categorías.
-- [ ] 12.7 Ejecutar `scripts/check-redirects.mjs` sobre el build final.
+- [x] 12.7 Ejecutar `scripts/check-redirects.mjs` sobre el build final.
 
 ## Workflow follow-up
 

@@ -24,17 +24,17 @@ export function ProjectionsPage() {
                 className="flex flex-col gap-4 rounded-card border border-border bg-white p-5 shadow-card"
               >
                 <h2 className="font-heading font-bold text-navy">{item.label}</h2>
-                <dl className="flex items-center gap-3">
-                  <div className="flex flex-1 flex-col rounded-xl bg-surface px-4 py-3">
+                <div className="flex items-center gap-3">
+                  <dl className="flex flex-1 flex-col rounded-xl bg-surface px-4 py-3">
                     <dt className="text-sm font-semibold text-ink-muted">
                       {projectionsHeader.currentLabel}
                     </dt>
                     <dd className="font-heading text-3xl font-extrabold text-navy">
                       {item.current}
                     </dd>
-                  </div>
+                  </dl>
                   <ArrowRight aria-hidden="true" className="size-5 shrink-0 text-primary" />
-                  <div className="flex flex-1 flex-col rounded-xl bg-brand-50 px-4 py-3">
+                  <dl className="flex flex-1 flex-col rounded-xl bg-brand-50 px-4 py-3">
                     <dt className="text-sm font-semibold text-brand-700">
                       {projectionsHeader.projectedLabel}
                     </dt>
@@ -44,8 +44,8 @@ export function ProjectionsPage() {
                         <TrendingUp aria-hidden="true" className="size-5 text-health-strong" />
                       )}
                     </dd>
-                  </div>
-                </dl>
+                  </dl>
+                </div>
               </li>
             ))}
           </ul>

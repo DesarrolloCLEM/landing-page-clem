@@ -18,6 +18,7 @@ export function SiteLogo({ inverted = false, className }: SiteLogoProps) {
           inverted ? "/images/brand/logo-horizontal-white.png" : "/images/brand/logo-horizontal.png"
         }
         alt={`${siteConfig.name} – Inicio`}
+        preload={!inverted}
         width={176}
         height={48}
         className="h-10 w-auto sm:h-12"

@@ -104,12 +104,12 @@ export async function Footer() {
           <FooterHeading id="footer-hours">Horarios de visita</FooterHeading>
           <dl className="flex flex-col gap-3 text-sm">
             {visitingHours.map((item) => (
-              <div key={item.label} className="flex gap-2">
-                <Clock aria-hidden="true" className="mt-0.5 size-4 shrink-0" />
-                <div>
-                  <dt className="font-semibold text-white">{item.label}</dt>
-                  <dd>{item.value}</dd>
-                </div>
+              <div key={item.label} className="flex flex-col gap-0.5">
+                <dt className="flex items-center gap-2 font-semibold text-white">
+                  <Clock aria-hidden="true" className="size-4 shrink-0" />
+                  {item.label}
+                </dt>
+                <dd className="ps-7">{item.value}</dd>
               </div>
             ))}
           </dl>

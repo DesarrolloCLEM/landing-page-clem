@@ -69,13 +69,13 @@ export function ContactPage() {
             {phoneExtensions.map((item) => (
               <div
                 key={item.label}
-                className="flex items-center gap-3 rounded-card border border-border bg-white p-4 text-ink shadow-card"
+                className="flex flex-col gap-1 rounded-card border border-border bg-white p-4 text-ink shadow-card"
               >
-                <PhoneCall aria-hidden="true" className="size-5 shrink-0 text-primary" />
-                <div>
-                  <dt className="font-semibold">{item.label}</dt>
-                  <dd className="text-ink-muted">Ext. {item.value}</dd>
-                </div>
+                <dt className="flex items-center gap-2 font-semibold">
+                  <PhoneCall aria-hidden="true" className="size-5 shrink-0 text-primary" />
+                  {item.label}
+                </dt>
+                <dd className="ps-7 text-ink-muted">Ext. {item.value}</dd>
               </div>
             ))}
           </dl>

@@ -45,12 +45,12 @@ export function LocationSection() {
             </Heading>
             <dl className="flex flex-col gap-3">
               {visitingHours.map((item) => (
-                <div key={item.label} className="flex gap-3">
-                  <Clock aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-primary" />
-                  <div>
-                    <dt className="font-semibold">{item.label}</dt>
-                    <dd className="text-muted">{item.value}</dd>
-                  </div>
+                <div key={item.label} className="flex flex-col gap-0.5">
+                  <dt className="flex items-center gap-2 font-semibold">
+                    <Clock aria-hidden="true" className="size-5 shrink-0 text-primary" />
+                    {item.label}
+                  </dt>
+                  <dd className="ps-7 text-muted">{item.value}</dd>
                 </div>
               ))}
             </dl>

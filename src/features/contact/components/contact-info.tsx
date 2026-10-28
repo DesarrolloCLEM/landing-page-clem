@@ -54,12 +54,12 @@ export function ContactInfo({ headingLevel = "h2" }: { headingLevel?: "h2" | "h3
         <Sub className="font-heading font-bold">{contactPage.hoursTitle}</Sub>
         <dl className="flex flex-col gap-2">
           {visitingHours.map((item) => (
-            <div key={item.label} className="flex gap-2">
-              <Clock aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-brand-100" />
-              <div>
-                <dt className="font-semibold">{item.label}</dt>
-                <dd className="text-brand-100">{item.value}</dd>
-              </div>
+            <div key={item.label} className="flex flex-col gap-0.5">
+              <dt className="flex items-center gap-2 font-semibold">
+                <Clock aria-hidden="true" className="size-5 shrink-0 text-brand-100" />
+                {item.label}
+              </dt>
+              <dd className="ps-7 text-brand-100">{item.value}</dd>
             </div>
           ))}
         </dl>
