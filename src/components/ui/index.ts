@@ -14,6 +14,7 @@ export {
   type CardTitleProps,
 } from "./card";
 export { Checkbox, type CheckboxProps } from "./checkbox";
+export { DocumentLink, type DocumentLinkProps } from "./document-link";
 export { Eyebrow } from "./eyebrow";
 export { ExternalLink, type ExternalLinkProps } from "./external-link";
 export { FormField, type FormFieldControlProps, type FormFieldProps } from "./form-field";

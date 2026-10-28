@@ -37,9 +37,9 @@
 
 ## 5. Transparencia
 
-- [ ] 5.1 Copiar los 18 PDF a `public/documentos/<categoría>/` con nombres legibles, registrar título, periodo y tamaño en los datos de la feature `transparency`, y crear `DocumentLink` en `ui`. Verificar que los 18 archivos existen y que sus tamaños coinciden con los datos.
-- [ ] 5.2 Crear `/informes-financieros/`, `/reportes-de-area/` e `/indicadores/`. Verificar que hay 18 enlaces de descarga, ordenados del periodo más reciente al más antiguo, con nombre accesible completo.
-- [ ] 5.3 Commit: `feat(transparency): migra informes financieros, reportes e indicadores`.
+- [x] 5.1 Copiar los 18 PDF a `public/documentos/<categoría>/` con nombres legibles, registrar título, periodo y tamaño en los datos de la feature `transparency`, y crear `DocumentLink` en `ui`. Verificar que los 18 archivos existen y que sus tamaños coinciden con los datos.
+- [x] 5.2 Crear `/informes-financieros/`, `/reportes-de-area/` e `/indicadores/`. Verificar que hay 18 enlaces de descarga, ordenados del periodo más reciente al más antiguo, con nombre accesible completo.
+- [x] 5.3 Commit: `feat(transparency): migra informes financieros, reportes e indicadores`.
 
 ## 6. Servicios: catálogo y unidades
 

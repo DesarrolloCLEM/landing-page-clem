@@ -1,5 +1,12 @@
 import { Container, Grid, Section } from "@/components/layout";
-import { ImageGallery, MapEmbed, SectionHeading, StatCard, TestimonialCard } from "@/components/ui";
+import {
+  DocumentLink,
+  ImageGallery,
+  MapEmbed,
+  SectionHeading,
+  StatCard,
+  TestimonialCard,
+} from "@/components/ui";
 
 import { ShowcaseBlock } from "./showcase-block";
 
@@ -45,6 +52,18 @@ export function MediaShowcase() {
               link={{ href: "https://example.com", label: "Leer historia completa" }}
             />
           </Grid>
+        </ShowcaseBlock>
+
+        <ShowcaseBlock
+          title="DocumentLink"
+          description="El nombre accesible del enlace incluye el título y el tamaño del archivo."
+        >
+          <DocumentLink
+            title="Documento de ejemplo"
+            subtitle="2024-2025"
+            href="#"
+            meta="PDF, 662 KB"
+          />
         </ShowcaseBlock>
 
         <ShowcaseBlock
