@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Clínica La Esperanza: landing page
 
-## Getting Started
+Sitio web institucional de [Clínica La Esperanza](https://clinicalaesperanza.co/) (Montería, Córdoba, Colombia). Reemplaza el sitio actual en WordPress con una versión moderna, rápida y accesible que conserva su contenido y su identidad visual.
 
-First, run the development server:
+## Stack
+
+- [Next.js 16](https://nextjs.org) (App Router, Server Components, prerenderizado estático)
+- React 19 y TypeScript
+- Tailwind CSS v4 (`class-variance-authority`, `tailwind-merge`)
+- [OpenSpec](https://github.com/Fission-AI/OpenSpec) para el desarrollo guiado por especificaciones
+- ESLint (con reglas de arquitectura), Prettier, husky y commitlint
+
+## Requisitos
+
+- Node.js 20 o superior
+- pnpm (versión indicada en `packageManager` de `package.json`)
+
+## Primeros pasos
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install   # instala dependencias y activa los hooks de git (no uses --ignore-scripts)
+pnpm dev       # servidor de desarrollo en http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Scripts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Script              | Descripción                                  |
+| ------------------- | -------------------------------------------- |
+| `pnpm dev`          | Servidor de desarrollo                       |
+| `pnpm build`        | Build de producción                          |
+| `pnpm start`        | Sirve el build de producción                 |
+| `pnpm lint`         | ESLint, incluidas las reglas de arquitectura |
+| `pnpm format`       | Formatea el código con Prettier              |
+| `pnpm format:check` | Verifica el formato sin modificar archivos   |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Estructura
 
-## Learn More
+```
+src/
+├── app/              # Rutas (URLs en español). Páginas delgadas.
+├── components/
+│   ├── ui/           # Componentes genéricos: Button, Card, Badge...
+│   └── layout/       # Container, Section, Header, Footer...
+├── features/         # Un módulo por área del sitio: home, services, about...
+├── config/           # Datos del sitio (navegación, contacto) y fuentes
+└── lib/              # Utilidades
+openspec/             # Specs y changes (OpenSpec)
+.claude/skills/       # Convenciones del proyecto para agentes de IA
+```
 
-To learn more about Next.js, take a look at the following resources:
+Reglas de dependencias: `app → features → components → config/lib`. Una feature no puede importar otra. `pnpm lint` falla si se rompe alguna de estas reglas.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Flujo de trabajo
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Proponer:** cada cambio funcional empieza con un change de OpenSpec (`/opsx:propose`), con propuesta, specs, diseño y tareas.
+2. **Rama:** `<tipo>/<descripcion-corta>`, por ejemplo `feat/home-hero`.
+3. **Implementar:** `/opsx:apply <change>`, con un commit por grupo de tareas.
+4. **Commits en español** con [Conventional Commits](https://www.conventionalcommits.org/es/): `feat(home): agrega sección de servicios`. commitlint rechaza los mensajes que no cumplen el formato o que están en inglés.
+5. **Pull request** en español, con la plantilla de `.github/pull_request_template.md`.
+6. **Archivar:** `/opsx:archive <change>` después del merge.
 
-## Deploy on Vercel
+## Convenciones
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Código (variables, componentes, carpetas) en inglés. Contenido, commits y PRs en español.
+- Server Components por defecto; `"use client"` solo en islas interactivas pequeñas.
+- Colores y tipografías solo mediante los tokens de `src/app/globals.css`.

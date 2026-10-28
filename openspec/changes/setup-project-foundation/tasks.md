@@ -32,12 +32,12 @@
 
 ## 5. Skills y documentación para agentes
 
-- [ ] 5.1 Crear `.claude/skills/project-architecture/SKILL.md` (design D9) con el árbol, las capas, el idioma, las reglas de Server/Client y la referencia a `node_modules/next/dist/docs/`. Verificar que el frontmatter tiene `name` y `description`.
-- [ ] 5.2 Crear `.claude/skills/create-feature/SKILL.md` con el requisito de un change de OpenSpec previo, la estructura de la feature, la plantilla de `page.tsx` y la checklist. Verificar que el frontmatter es válido.
-- [ ] 5.3 Crear `.claude/skills/create-ui-component/SKILL.md` con el patrón `cva` + `cn`, las props nativas extendidas, `ref` como prop y la checklist de accesibilidad, incluyendo un ejemplo completo de `Button`. Verificar que el frontmatter es válido.
-- [ ] 5.4 Crear `.claude/skills/git-workflow/SKILL.md` con el formato de commit (ejemplos válidos y rechazados), los nombres de rama, la plantilla de PR y el vínculo con OpenSpec. Verificar que el frontmatter es válido.
-- [ ] 5.5 Agregar a `AGENTS.md`, debajo del bloque de Next, la sección del proyecto (idioma, flujo OpenSpec, skills). Crear `CLAUDE.md` con `@AGENTS.md`. Reescribir `README.md` en español. Verificar que el bloque de Next queda intacto.
-- [ ] 5.6 Commit: `docs: agrega skills del proyecto y documentación en español`.
+- [x] 5.1 Crear `.claude/skills/project-architecture/SKILL.md` (design D9) con el árbol, las capas, el idioma, las reglas de Server/Client y la referencia a `node_modules/next/dist/docs/`. Verificar que el frontmatter tiene `name` y `description`.
+- [x] 5.2 Crear `.claude/skills/create-feature/SKILL.md` con el requisito de un change de OpenSpec previo, la estructura de la feature, la plantilla de `page.tsx` y la checklist. Verificar que el frontmatter es válido.
+- [x] 5.3 Crear `.claude/skills/create-ui-component/SKILL.md` con el patrón `cva` + `cn`, las props nativas extendidas, `ref` como prop y la checklist de accesibilidad, incluyendo un ejemplo completo de `Button`. Verificar que el frontmatter es válido.
+- [x] 5.4 Crear `.claude/skills/git-workflow/SKILL.md` con el formato de commit (ejemplos válidos y rechazados), los nombres de rama, la plantilla de PR y el vínculo con OpenSpec. Verificar que el frontmatter es válido.
+- [x] 5.5 Agregar a `AGENTS.md`, debajo del bloque de Next, la sección del proyecto (idioma, flujo OpenSpec, skills). Crear `CLAUDE.md` con `@AGENTS.md`. Reescribir `README.md` en español. Verificar que el bloque de Next queda intacto.
+- [x] 5.6 Commit: `docs: agrega skills del proyecto y documentación en español`.
 
 ## 6. Verificación final
 
