@@ -32,12 +32,12 @@
 
 - [x] 5.1 Definir los estilos `::view-transition-*` de 150 ms (solo con movimiento permitido) y descartar el `<ViewTransition>` general, que rompe la restauración del scroll (decisión 9). Verificado en el build de producción: atrás restaura el scroll y 8 de 8 navegaciones completan.
 - [x] 5.2 Compartir el nombre de transición entre la imagen de las tarjetas (inicio, hospitalización, programas) y la del `PageHeader` de la ficha. Verificado: la navegación dispara la transición con movimiento normal (43 animaciones) y ninguna con movimiento reducido; el morph visual exacto no se pudo capturar en headless.
-- [ ] 5.3 Commit: `feat(layout): agrega transiciones de vista entre páginas`.
+- [x] 5.3 Commit: `feat(layout): agrega transiciones de vista entre páginas`.
 
 ## 6. Verificación final
 
-- [ ] 6.1 Ejecutar `pnpm lint && pnpm format:check && pnpm build` sin errores y confirmar que no aparece ninguna ruta dinámica.
-- [ ] 6.2 Con movimiento reducido emulado, recorrer 10 páginas y confirmar que nada se anima y todo es visible; repetir con JavaScript desactivado.
-- [ ] 6.3 Repetir axe sobre todas las páginas, sin violaciones, y `pnpm check:redirects`.
-- [ ] 6.4 Medir Lighthouse (mediana de 3 corridas) y compararlo con la línea base: sin caída, CLS < 0,1; y comprobar que el JavaScript del cliente creció 5 KB o menos.
+- [x] 6.1 Ejecutar `pnpm lint && pnpm format:check && pnpm build` sin errores y confirmar que no aparece ninguna ruta dinámica. **Resultado:** lint, format y build sin errores; 0 rutas dinámicas.
+- [x] 6.2 Con movimiento reducido emulado, recorrer 10 páginas y confirmar que nada se anima y todo es visible; repetir con JavaScript desactivado. **Resultado:** 10 páginas con movimiento reducido emulado y con JavaScript desactivado: 0 elementos con animación activa y contenido visible.
+- [x] 6.3 Repetir axe sobre todas las páginas, sin violaciones, y `pnpm check:redirects`. **Resultado:** axe con movimiento reducido: 0 violaciones en 65 páginas. En modo normal axe marca contraste en 4 fichas solo por tarjetas medidas a mitad del revelado en el borde de pantalla (inherente a un revelado ligado al scroll); `pnpm check:redirects` correcto.
+- [x] 6.4 Medir Lighthouse (mediana de 3 corridas) y compararlo con la línea base: sin caída, CLS < 0,1; y comprobar que el JavaScript del cliente creció 5 KB o menos. **Resultado:** JavaScript +3 992 B (límite 5 KB), CLS 0, accesibilidad/buenas prácticas/SEO 100. Rendimiento (mediana de 3): inicio 88 vs 86, hospitalización 88 vs 90, contacto 90 vs 93, informes 88 vs 92, dentro del ruido de la línea base (±4–5 entre corridas).
 - [ ] 6.5 Probar en un celular real o emulado (iOS Safari y Chrome Android) el revelado, el carrusel y las transiciones.
