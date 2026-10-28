@@ -41,10 +41,10 @@
 
 ## 6. Verificación final
 
-- [ ] 6.1 Desde un estado limpio, ejecutar `pnpm install`, `pnpm lint`, `pnpm format:check` y `pnpm build`. Verificar que todo pasa y que la salida del build marca `/` como prerenderizada.
-- [ ] 6.2 Revisar la página provisional en 375 px y 1440 px, con el SO en modo claro y oscuro. Verificar que no hay scroll horizontal y que el tema siempre es claro.
-- [ ] 6.3 Pasar Lighthouse (Accessibility) a la página provisional. Verificar un puntaje de al menos 95 y `lang="es-CO"`.
-- [ ] 6.4 Ejecutar `openspec validate setup-project-foundation --strict`. Verificar que pasa.
+- [x] 6.1 Desde un estado limpio, ejecutar `pnpm install`, `pnpm lint`, `pnpm format:check` y `pnpm build`. Verificar que todo pasa y que la salida del build marca `/` como prerenderizada.
+- [x] 6.2 Revisar la página provisional en 375 px y 1440 px, con el SO en modo claro y oscuro. Verificar que no hay scroll horizontal y que el tema siempre es claro.
+- [x] 6.3 Pasar Lighthouse (Accessibility) a la página provisional. Verificar un puntaje de al menos 95 y `lang="es-CO"`.
+- [x] 6.4 Ejecutar `openspec validate setup-project-foundation --strict`. Verificar que pasa.
 
 ## Workflow follow-up
 
