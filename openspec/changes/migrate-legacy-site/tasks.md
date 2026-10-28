@@ -68,10 +68,10 @@
 
 ## 9. Agenda, App Clem y paquetes
 
-- [ ] 9.1 Crear la feature `appointments` con `/agenda/` (pasos numerados en texto y horario de citas). Verificar que "Agendar por WhatsApp" abre `wa.me/573046843367`.
-- [ ] 9.2 Crear la feature `app-clem` con `/app-clem/` (Resultados, Registro previo con su aviso, insignias de tiendas). Verificar los cuatro destinos externos y que el texto de Resultados no repite el de Registro previo.
-- [ ] 9.3 Crear `/paquetes-integrales/` con Latidos de vida, Mujer Sana y Listo para entrenar enlazados a AppCLEM. Verificar que los tres botones abren su URL en una pestaña nueva.
-- [ ] 9.4 Commit: `feat(app-clem): agrega agenda, App Clem y paquetes integrales`.
+- [x] 9.1 Crear la feature `appointments` con `/agenda/` (pasos numerados en texto y horario de citas). Verificar que "Agendar por WhatsApp" abre `wa.me/573046843367`.
+- [x] 9.2 Crear la feature `app-clem` con `/app-clem/` (Resultados, Registro previo con su aviso, insignias de tiendas). Verificar los cuatro destinos externos y que el texto de Resultados no repite el de Registro previo.
+- [x] 9.3 Crear `/paquetes-integrales/` con Latidos de vida, Mujer Sana y Listo para entrenar enlazados a AppCLEM. Verificar que los tres botones abren su URL en una pestaña nueva.
+- [x] 9.4 Commit: `feat(app-clem): agrega agenda, App Clem y paquetes integrales`.
 
 ## 10. Contacto y formularios
 
