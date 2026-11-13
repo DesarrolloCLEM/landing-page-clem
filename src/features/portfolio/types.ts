@@ -28,11 +28,26 @@ export type PortfolioQuickLink = {
   href: string;
 };
 
-export type PortfolioHeroSlide = {
+export type PortfolioHeroContent = {
   heading: string;
-  description?: string;
+  description: string;
   cta: PortfolioQuickLink;
-  image: ImageRef;
+  videoSrc: string;
+  poster: ImageRef;
+};
+
+/** Item of the "Por qué elegirnos" tab. */
+export type PortfolioWhyItem = {
+  title: string;
+  description: string;
+  href: string;
+};
+
+/** Figure of the "Crecimiento" tab: a caption above the value. */
+export type PortfolioGrowthStat = {
+  caption: string;
+  value: string;
+  label: string;
 };
 
 /** Icon tiles of the "¿Quiénes somos?" section. */

@@ -1,34 +1,27 @@
 import type {
   ImageRef,
   PortfolioCaptionedImage,
-  PortfolioHeroSlide,
+  PortfolioGrowthStat,
+  PortfolioHeroContent,
   PortfolioNumberedService,
   PortfolioQuickLink,
   PortfolioServiceCard,
   PortfolioStory,
   PortfolioTile,
+  PortfolioWhyItem,
 } from "../types";
 
-export const heroSlides: PortfolioHeroSlide[] = [
-  {
-    heading: "Construimos juntos el futuro de la salud",
-    description:
-      "Somos una institución de salud de mediana y alta complejidad, comprometida con brindar servicios integrales, seguros y de calidad.",
-    cta: { label: "Conoce más", href: "/portafolio/infraestructura/" },
-    image: {
-      src: "/images/about/nueva-torre-exterior.webp",
-      alt: "Render exterior de la nueva torre de Clínica La Esperanza",
-    },
+export const hero: PortfolioHeroContent = {
+  heading: "Construimos juntos el futuro de la salud",
+  description:
+    "Somos una institución de salud de mediana y alta complejidad, comprometida con brindar servicios integrales, seguros y de calidad.",
+  cta: { label: "Conoce más", href: "/portafolio/infraestructura/" },
+  videoSrc: "/videos/portafolio-portada.mp4",
+  poster: {
+    src: "/images/about/nueva-torre-exterior.webp",
+    alt: "Render exterior de la nueva torre de Clínica La Esperanza",
   },
-  {
-    heading: "Construimos juntos el futuro de la salud",
-    cta: { label: "Conoce más", href: "/portafolio/#NuestrosServicios" },
-    image: {
-      src: "/images/about/fachada-clinica.webp",
-      alt: "Fachada de Clínica La Esperanza en Montería",
-    },
-  },
-];
+};
 
 export const heroLinks: PortfolioQuickLink[] = [
   { label: "Nueva torre", href: "/portafolio/infraestructura/" },
@@ -41,11 +34,51 @@ export const heroLinks: PortfolioQuickLink[] = [
 
 export const whoWeAre = {
   title: "¿Quiénes somos?",
-  heading:
-    "Una institución preparada para responder a las necesidades de nuestros pacientes y aliados.",
   description:
     "Somos una institución prestadora de servicios de salud de mediana y alta complejidad que integra infraestructura, tecnología y talento humano para ofrecer una atención segura, oportuna y centrada en la calidad asistencial.",
 };
+
+export const presentationTab = {
+  description:
+    "Nuestra gestión se orienta al mejoramiento continuo, la innovación y el fortalecimiento de las capacidades institucionales, consolidando una oferta de servicios que responde a los desafíos actuales del sector salud.",
+  image: {
+    src: "/images/about/nueva-torre-exterior.webp",
+    alt: "Render exterior de la nueva torre de Clínica La Esperanza",
+  },
+};
+
+export const whyChooseUsIntro =
+  "Contamos con una oferta integral de servicios de mediana y alta complejidad.";
+
+export const whyChooseUs: PortfolioWhyItem[] = [
+  {
+    title: "Capacidad resolutiva",
+    description:
+      "Servicios de mediana y alta complejidad que resuelven el caso dentro de la institución.",
+    href: "/portafolio/hospitalizacion/",
+  },
+  {
+    title: "Infraestructura y tecnología",
+    description: "Áreas asistenciales renovadas y equipos de diagnóstico de última generación.",
+    href: "/portafolio/diagnostico-y-apoyo-terapeutico/",
+  },
+  {
+    title: "Equipo multidisciplinario",
+    description: "Especialistas de distintas áreas que trabajan de forma coordinada.",
+    href: "/portafolio/consulta-externa/",
+  },
+  {
+    title: "Calidad y seguridad",
+    description: "Protocolos de seguridad del paciente aplicados en cada servicio.",
+    href: "/portafolio/hospitalizacion/",
+  },
+];
+
+export const growthStats: PortfolioGrowthStat[] = [
+  { caption: "Capacidad actual", value: "123", label: "Camas habilitadas" },
+  { caption: "En construcción", value: "7.764 m²", label: "Nueva torre" },
+  { caption: "Nueva torre", value: "218", label: "Camas proyectadas" },
+];
 
 export const whoWeAreTiles: PortfolioTile[] = [
   {
@@ -66,13 +99,6 @@ export const whoWeAreTiles: PortfolioTile[] = [
     href: "/portafolio/infraestructura/",
     icon: "bed",
   },
-];
-
-export const whoWeAreTabs: PortfolioQuickLink[] = [
-  { label: "Presentación", href: "/portafolio/#quienesSomos" },
-  { label: "Por qué elegirnos", href: "/portafolio/hospitalizacion/" },
-  { label: "Capacidad instalada", href: "/portafolio/infraestructura/" },
-  { label: "Crecimiento", href: "/portafolio/infraestructura/" },
 ];
 
 export const servicesIntro =

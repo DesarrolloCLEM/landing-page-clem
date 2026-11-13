@@ -1,9 +1,9 @@
-import { ArrowRight, BedDouble, Mail, MapPin, Phone, ShieldCheck, TrendingUp } from "lucide-react";
+import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 import { Container, Grid, Section } from "@/components/layout";
-import { Badge, Heading, IconBox, ImageGallery, StatCard, Text } from "@/components/ui";
+import { Badge, Heading, ImageGallery, StatCard, Text } from "@/components/ui";
 import { contact, siteConfig } from "@/config/site";
 import { expansionStats } from "@/config/stats";
 
@@ -17,76 +17,16 @@ import {
   servicesIntro,
   stories,
   storiesIntro,
-  whoWeAre,
-  whoWeAreTabs,
-  whoWeAreTiles,
 } from "../data/portfolio-home";
 import { PortfolioHero } from "./portfolio-hero";
-
-const tileIcons = {
-  shield: ShieldCheck,
-  trending: TrendingUp,
-  bed: BedDouble,
-} as const;
+import { PortfolioWhoWeAre } from "./portfolio-who-we-are";
 
 export function PortfolioHomePage() {
   return (
     <>
       <PortfolioHero />
 
-      <Section id="quienesSomos" spacing="default" aria-labelledby="who-title">
-        <Container className="flex flex-col gap-8">
-          <div className="flex flex-col gap-4">
-            <Heading as="h2" id="who-title" size="xl">
-              {whoWeAre.title}
-            </Heading>
-            <Text size="lead" className="max-w-3xl">
-              {whoWeAre.heading}
-            </Text>
-            <Text tone="muted" className="max-w-3xl">
-              {whoWeAre.description}
-            </Text>
-          </div>
-
-          <nav aria-label="Secciones de presentación" className="flex flex-wrap gap-2">
-            {whoWeAreTabs.map((tab) => (
-              <Link
-                key={tab.label}
-                href={tab.href}
-                className="inline-flex min-h-11 items-center rounded-full border border-border bg-white px-4 text-sm font-semibold text-navy transition-colors hover:border-primary hover:text-primary"
-              >
-                {tab.label}
-              </Link>
-            ))}
-          </nav>
-
-          <Grid as="ul" cols={3} gap="md">
-            {whoWeAreTiles.map((tile) => {
-              const Icon = tileIcons[tile.icon];
-              return (
-                <li key={tile.label}>
-                  <Link
-                    href={tile.href}
-                    className="group flex h-full flex-col gap-3 rounded-card border border-border bg-white p-6 shadow-card transition-shadow hover:shadow-card-hover"
-                  >
-                    <IconBox size="lg">
-                      <Icon />
-                    </IconBox>
-                    <h3 className="flex items-center justify-between gap-2 font-heading text-lg font-bold text-navy">
-                      {tile.label}
-                      <ArrowRight
-                        aria-hidden="true"
-                        className="size-4 shrink-0 text-primary transition-transform group-hover:translate-x-0.5"
-                      />
-                    </h3>
-                    <p className="text-sm leading-relaxed text-ink-muted">{tile.description}</p>
-                  </Link>
-                </li>
-              );
-            })}
-          </Grid>
-        </Container>
-      </Section>
+      <PortfolioWhoWeAre />
 
       <Section
         id="NuestrosServicios"

@@ -4,7 +4,8 @@ export type {
   EquipmentItem,
   ImageRef,
   PortfolioCaptionedImage,
-  PortfolioHeroSlide,
+  PortfolioGrowthStat,
+  PortfolioHeroContent,
   PortfolioNavLink,
   PortfolioNumberedService,
   PortfolioQuickLink,
@@ -12,6 +13,7 @@ export type {
   PortfolioSpecialtyGroup,
   PortfolioStory,
   PortfolioTile,
+  PortfolioWhyItem,
 } from "./types";
 
 export { PortfolioHomePage } from "./components/portfolio-home-page";
