@@ -5,7 +5,7 @@ import { Container, Section } from "@/components/layout";
 import { ExternalLink, Heading, Text } from "@/components/ui";
 import { cn } from "@/lib/cn";
 
-import type { ContentItem, ContentSection } from "../types";
+import type { ContentItem, ContentSection } from "@/config/services";
 
 function ItemTitle({ item, className }: { item: ContentItem; className?: string }) {
   if (!item.href) return <span className={className}>{item.title}</span>;

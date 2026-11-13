@@ -1,5 +1,5 @@
 // Generated from assets/legacy-site/content (services/* and p-sub-* pages), then reviewed.
-import type { ServiceEntry } from "../types";
+import type { ServiceEntry } from "./types";
 
 export const specialties: ServiceEntry[] = [
   {

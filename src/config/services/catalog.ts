@@ -1,6 +1,6 @@
-import type { BreadcrumbItem } from "@/components/ui";
+import type { ServiceEntry, SpecialtyArea } from "./types";
 
-import type { ServiceEntry, SpecialtyArea } from "../types";
+export type ServiceBreadcrumbItem = { label: string; href?: string };
 import { hospitalizationOptions } from "./hospitalization";
 import { programs, programsIntro } from "./programs";
 import { specialties } from "./specialties";
@@ -110,10 +110,10 @@ export function relatedServices(entry: ServiceEntry) {
     .filter((item) => item !== undefined);
 }
 
-const home: BreadcrumbItem = { label: "Inicio", href: "/" };
-const servicesCrumb: BreadcrumbItem = { label: "Servicios", href: "/servicios/" };
+const home: ServiceBreadcrumbItem = { label: "Inicio", href: "/" };
+const servicesCrumb: ServiceBreadcrumbItem = { label: "Servicios", href: "/servicios/" };
 
-export function breadcrumbsFor(entry: ServiceEntry): BreadcrumbItem[] {
+export function breadcrumbsFor(entry: ServiceEntry): ServiceBreadcrumbItem[] {
   switch (entry.kind) {
     case "unit":
       return [home, servicesCrumb, { label: entry.title }];

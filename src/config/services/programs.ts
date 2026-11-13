@@ -1,6 +1,6 @@
 import { healthPackages } from "@/config/site";
 
-import type { ServiceEntry } from "../types";
+import type { ServiceEntry } from "./types";
 
 const packageHref = (slug: string) => healthPackages.find((item) => item.slug === slug)?.href;
 

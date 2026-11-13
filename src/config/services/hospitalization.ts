@@ -1,4 +1,4 @@
-import type { ContentItem, RoomFeature, ServiceEntry } from "../types";
+import type { ContentItem, RoomFeature, ServiceEntry } from "./types";
 
 const base = "/servicios/hospitalizacion";
 

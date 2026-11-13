@@ -5,7 +5,7 @@ import { Container, Section } from "@/components/layout";
 import { buttonVariants, Heading } from "@/components/ui";
 import { appointmentLink } from "@/config/navigation";
 
-import type { Plan } from "../types";
+import type { Plan } from "@/config/services";
 
 export function PlansSection({ plans }: { plans: Plan[] }) {
   return (

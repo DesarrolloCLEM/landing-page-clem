@@ -6,7 +6,7 @@ import { useId, useState } from "react";
 
 import { Heading } from "@/components/ui";
 
-import type { CatalogGroup } from "../data/catalog";
+import type { CatalogGroup } from "@/config/services";
 
 // Client island: filters the catalog while the visitor types. The server renders the
 // full list (empty query), so without JavaScript every service is still visible.

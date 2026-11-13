@@ -16,11 +16,12 @@ import {
   getProgram,
   getSpecialty,
   getUnit,
-} from "../data/catalog";
-import { hospitalizationOptions } from "../data/hospitalization";
-import { programs, programsIntro } from "../data/programs";
-import { specialties } from "../data/specialties";
-import type { ServiceEntry } from "../types";
+  hospitalizationOptions,
+  programs,
+  programsIntro,
+  specialties,
+  type ServiceEntry,
+} from "@/config/services";
 import { RoomOptions } from "./room-options";
 import { ServiceDetail } from "./service-detail";
 import { ServiceSearch } from "./service-search";

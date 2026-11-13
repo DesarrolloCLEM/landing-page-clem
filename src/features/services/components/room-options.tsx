@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Container, Section } from "@/components/layout";
 import { Heading, Text } from "@/components/ui";
 
-import { roomComparison, roomOptions } from "../data/hospitalization";
+import { roomComparison, roomOptions } from "@/config/services";
 
 function FeatureValue({ value }: { value: boolean | string }) {
   if (typeof value === "string") return <span className="font-semibold">{value}</span>;

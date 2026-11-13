@@ -15,8 +15,7 @@ import { appointmentLink } from "@/config/navigation";
 import { contact } from "@/config/site";
 import { transitionName } from "@/lib/transition-name";
 
-import { breadcrumbsFor, relatedServices } from "../data/catalog";
-import type { ServiceEntry } from "../types";
+import { breadcrumbsFor, relatedServices, type ServiceEntry } from "@/config/services";
 import { ContentSections } from "./content-sections";
 import { PlansSection } from "./plans-section";
 
