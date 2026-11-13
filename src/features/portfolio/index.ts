@@ -12,3 +12,5 @@ export { PortfolioInfrastructurePage } from "./components/portfolio-infrastructu
 export { PortfolioLayout } from "./components/portfolio-layout";
 export { PortfolioRoomComparison } from "./components/portfolio-room-comparison";
 export { PortfolioServicePage } from "./components/portfolio-service-page";
+
+export { gynecologyEquipment, interventionismEquipment } from "./data/portfolio-equipment";
