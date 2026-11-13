@@ -10,7 +10,6 @@ const hospitalization = (slug = "") => `/servicios/hospitalizacion/${slug ? `${s
 const pageRedirects: LegacyRedirect[] = [
   // Catalog and care units.
   { source: "/nuestros-servicios", destination: "/servicios/" },
-  { source: "/portafolio", destination: "/servicios/" },
   { source: "/services", destination: "/servicios/" },
   { source: "/services/urgencias", destination: "/servicios/urgencias/" },
   { source: "/p-urgencias", destination: "/servicios/urgencias/" },

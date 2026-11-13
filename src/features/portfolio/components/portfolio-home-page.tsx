@@ -1,76 +1,138 @@
-import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowRight, BedDouble, Mail, MapPin, Phone, ShieldCheck, TrendingUp } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 import { Container, Grid, Section } from "@/components/layout";
-import { Heading, StatCard, Text } from "@/components/ui";
-import { expansionStats } from "@/config/stats";
+import { Badge, Heading, IconBox, ImageGallery, StatCard, Text } from "@/components/ui";
 import { contact, siteConfig } from "@/config/site";
+import { expansionStats } from "@/config/stats";
 
 import {
-  heroSlogan,
-  heroSubtitle,
-  quickLinks,
+  contactClosing,
+  institutionalInfrastructure,
+  newInfrastructure,
+  numberedServices,
+  projectImages,
   serviceCards,
+  servicesIntro,
   stories,
+  storiesIntro,
   whoWeAre,
+  whoWeAreTabs,
+  whoWeAreTiles,
 } from "../data/portfolio-home";
+import { PortfolioHero } from "./portfolio-hero";
+
+const tileIcons = {
+  shield: ShieldCheck,
+  trending: TrendingUp,
+  bed: BedDouble,
+} as const;
 
 export function PortfolioHomePage() {
   return (
     <>
-      {/* Hero */}
-      <Section tone="navy" spacing="default" aria-label="Presentación">
-        <Container className="flex flex-col items-center gap-6 text-center text-white">
-          <Heading as="h1" size="display">
-            {heroSlogan}
-          </Heading>
-          <Text size="lead" className="max-w-2xl text-white/80">
-            {heroSubtitle}
-          </Text>
-        </Container>
-      </Section>
+      <PortfolioHero />
 
-      {/* Quiénes somos */}
-      <Section spacing="compact" aria-labelledby="who-title">
-        <Container className="flex flex-col gap-6">
-          <Heading as="h2" id="who-title" size="lg">
-            {whoWeAre.title}
-          </Heading>
-          <Text size="lead" tone="muted" className="max-w-3xl">
-            {whoWeAre.heading}
-          </Text>
-          <Text tone="muted" className="max-w-3xl">
-            {whoWeAre.description}
-          </Text>
-          <nav aria-label="Accesos rápidos" className="flex flex-wrap gap-3">
-            {quickLinks.map((link) => (
+      <Section id="quienesSomos" spacing="default" aria-labelledby="who-title">
+        <Container className="flex flex-col gap-8">
+          <div className="flex flex-col gap-4">
+            <Heading as="h2" id="who-title" size="xl">
+              {whoWeAre.title}
+            </Heading>
+            <Text size="lead" className="max-w-3xl">
+              {whoWeAre.heading}
+            </Text>
+            <Text tone="muted" className="max-w-3xl">
+              {whoWeAre.description}
+            </Text>
+          </div>
+
+          <nav aria-label="Secciones de presentación" className="flex flex-wrap gap-2">
+            {whoWeAreTabs.map((tab) => (
               <Link
-                key={link.label}
-                href={link.href}
-                className="inline-flex items-center gap-1 rounded-full border border-brand-200 bg-white px-4 py-2 text-sm font-semibold text-brand-700 transition-colors hover:border-primary hover:bg-brand-50"
+                key={tab.label}
+                href={tab.href}
+                className="inline-flex min-h-11 items-center rounded-full border border-border bg-white px-4 text-sm font-semibold text-navy transition-colors hover:border-primary hover:text-primary"
               >
-                {link.label}
-                <ArrowRight aria-hidden="true" className="size-4" />
+                {tab.label}
               </Link>
             ))}
           </nav>
+
+          <Grid as="ul" cols={3} gap="md">
+            {whoWeAreTiles.map((tile) => {
+              const Icon = tileIcons[tile.icon];
+              return (
+                <li key={tile.label}>
+                  <Link
+                    href={tile.href}
+                    className="group flex h-full flex-col gap-3 rounded-card border border-border bg-white p-6 shadow-card transition-shadow hover:shadow-card-hover"
+                  >
+                    <IconBox size="lg">
+                      <Icon />
+                    </IconBox>
+                    <h3 className="flex items-center justify-between gap-2 font-heading text-lg font-bold text-navy">
+                      {tile.label}
+                      <ArrowRight
+                        aria-hidden="true"
+                        className="size-4 shrink-0 text-primary transition-transform group-hover:translate-x-0.5"
+                      />
+                    </h3>
+                    <p className="text-sm leading-relaxed text-ink-muted">{tile.description}</p>
+                  </Link>
+                </li>
+              );
+            })}
+          </Grid>
         </Container>
       </Section>
 
-      {/* Servicios */}
-      <Section id="servicios" tone="surface" spacing="compact" aria-labelledby="services-title">
-        <Container className="flex flex-col gap-8">
-          <div className="flex flex-col gap-2">
-            <Heading as="h2" id="services-title" size="lg">
+      <Section
+        id="NuestrosServicios"
+        tone="surface"
+        spacing="default"
+        aria-labelledby="services-title"
+      >
+        <Container className="flex flex-col gap-10">
+          <div className="flex flex-col gap-3">
+            <Heading as="h2" id="services-title" size="xl">
               Nuestros servicios
             </Heading>
-            <Text tone="muted" className="max-w-2xl">
-              Oferta asistencial de mediana y alta complejidad, estructurada para responder de
-              manera integral a las necesidades de nuestros pacientes.
+            <Text tone="muted" className="max-w-3xl">
+              {servicesIntro}
             </Text>
           </div>
-          <Grid as="ul" cols={3} gap="md">
+
+          <Grid as="ul" cols={4} gap="sm" className="xl:grid-cols-5">
+            {numberedServices.map((service) => (
+              <li key={service.number}>
+                <Link
+                  href={service.href}
+                  className="group flex h-full flex-col overflow-hidden rounded-card border border-border bg-white shadow-card transition-shadow hover:shadow-card-hover"
+                >
+                  <div className="relative aspect-[4/3]">
+                    <Image
+                      src={service.image.src}
+                      alt={service.image.alt}
+                      fill
+                      sizes="(min-width: 1280px) 20vw, (min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                      className="object-cover transition-transform duration-300 group-hover:scale-105 motion-reduce:transition-none"
+                    />
+                    <span className="absolute top-3 left-3 inline-flex items-center rounded-full bg-navy/90 px-2.5 py-1 font-heading text-xs font-bold text-white">
+                      {service.number}
+                    </span>
+                  </div>
+                  <div className="flex flex-1 flex-col gap-1.5 p-4">
+                    <h3 className="font-heading text-base font-bold text-navy">{service.title}</h3>
+                    <p className="text-sm leading-relaxed text-ink-muted">{service.summary}</p>
+                  </div>
+                </Link>
+              </li>
+            ))}
+          </Grid>
+
+          <Grid as="ul" cols={4} gap="md">
             {serviceCards.map((card) => (
               <li key={card.href}>
                 <Link
@@ -82,12 +144,18 @@ export function PortfolioHomePage() {
                       src={card.image.src}
                       alt={card.image.alt}
                       fill
-                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
                       className="object-cover transition-transform duration-300 group-hover:scale-105 motion-reduce:transition-none"
                     />
                   </div>
                   <div className="flex flex-1 flex-col gap-2 p-5">
-                    <h3 className="font-heading text-lg font-bold text-navy">{card.title}</h3>
+                    <h3 className="flex items-center justify-between gap-2 font-heading text-lg font-bold text-navy">
+                      {card.title}
+                      <ArrowRight
+                        aria-hidden="true"
+                        className="size-4 shrink-0 text-primary transition-transform group-hover:translate-x-0.5"
+                      />
+                    </h3>
                     <p className="text-sm leading-relaxed text-ink-muted">{card.summary}</p>
                   </div>
                 </Link>
@@ -97,16 +165,64 @@ export function PortfolioHomePage() {
         </Container>
       </Section>
 
-      {/* Infraestructura */}
-      <Section id="infraestructura" spacing="compact" aria-labelledby="infra-title">
+      <Section spacing="default" aria-labelledby="project-title">
         <Container className="flex flex-col gap-8">
-          <div className="flex flex-col gap-2">
-            <Heading as="h2" id="infra-title" size="lg">
-              Nueva infraestructura
+          <div className="flex flex-col gap-3">
+            <Heading as="h2" id="project-title" size="xl">
+              {newInfrastructure.title}
             </Heading>
-            <Text tone="muted" className="max-w-2xl">
-              Construimos el futuro de la atención en salud a través de un proyecto de expansión que
-              fortalecerá nuestra capacidad instalada.
+            <Text tone="muted" className="max-w-3xl">
+              {newInfrastructure.description}
+            </Text>
+          </div>
+          <ImageGallery images={projectImages} />
+          <div>
+            <Link
+              href={newInfrastructure.cta.href}
+              className="inline-flex min-h-12 items-center gap-2 rounded-full bg-primary px-6 font-heading font-bold text-white transition-opacity hover:opacity-90"
+            >
+              {newInfrastructure.cta.label}
+              <ArrowRight aria-hidden="true" className="size-4" />
+            </Link>
+          </div>
+        </Container>
+      </Section>
+
+      <Section tone="surface" spacing="default" aria-labelledby="institutional-title">
+        <Container className="flex flex-col gap-8">
+          <Heading as="h2" id="institutional-title" size="xl">
+            Infraestructura institucional
+          </Heading>
+          <Grid as="ul" cols={3} gap="md">
+            {institutionalInfrastructure.map((item) => (
+              <li
+                key={item.caption}
+                className="overflow-hidden rounded-card border border-border bg-white shadow-card"
+              >
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={item.image.src}
+                    alt={item.image.alt}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <p className="p-5 font-heading text-lg font-bold text-navy">{item.caption}</p>
+              </li>
+            ))}
+          </Grid>
+        </Container>
+      </Section>
+
+      <Section id="Infraestructura" spacing="default" aria-labelledby="growth-title">
+        <Container className="flex flex-col gap-8">
+          <div className="flex flex-col gap-3">
+            <Heading as="h2" id="growth-title" size="xl">
+              {newInfrastructure.title}
+            </Heading>
+            <Text tone="muted" className="max-w-3xl">
+              {newInfrastructure.description}
             </Text>
           </div>
           <dl className="grid gap-6 sm:grid-cols-3">
@@ -114,26 +230,26 @@ export function PortfolioHomePage() {
               <StatCard key={stat.label} value={stat.value} label={stat.label} variant="card" />
             ))}
           </dl>
-          <Link
-            href="/portafolio/infraestructura/"
-            className="inline-flex items-center gap-1 font-semibold text-primary hover:underline"
-          >
-            Conoce más sobre el proyecto
-            <ArrowRight aria-hidden="true" className="size-4" />
-          </Link>
+          <div>
+            <Link
+              href="/portafolio/infraestructura/"
+              className="inline-flex items-center gap-1 font-semibold text-primary hover:underline"
+            >
+              Conoce más sobre el proyecto
+              <ArrowRight aria-hidden="true" className="size-4" />
+            </Link>
+          </div>
         </Container>
       </Section>
 
-      {/* Historias que inspiran */}
-      <Section tone="surface" spacing="compact" aria-labelledby="stories-title">
+      <Section id="Historia" tone="surface" spacing="default" aria-labelledby="stories-title">
         <Container className="flex flex-col gap-8">
-          <div className="flex flex-col gap-2">
-            <Heading as="h2" id="stories-title" size="lg">
+          <div className="flex flex-col gap-3">
+            <Heading as="h2" id="stories-title" size="xl">
               Historias que inspiran
             </Heading>
-            <Text tone="muted">
-              Cada historia refleja el compromiso de nuestro equipo con una atención centrada en las
-              personas.
+            <Text tone="muted" className="max-w-3xl">
+              {storiesIntro}
             </Text>
           </div>
           <Grid as="ul" cols={3} gap="md">
@@ -151,7 +267,8 @@ export function PortfolioHomePage() {
                     className="object-cover"
                   />
                 </div>
-                <div className="flex flex-col gap-2 p-5">
+                <div className="flex flex-1 flex-col items-start gap-2 p-5">
+                  <Badge tone="primary">{story.tag}</Badge>
                   <h3 className="font-heading text-lg font-bold text-navy">{story.title}</h3>
                   <p className="text-sm leading-relaxed text-ink-muted">{story.description}</p>
                 </div>
@@ -161,13 +278,15 @@ export function PortfolioHomePage() {
         </Container>
       </Section>
 
-      {/* Contacto */}
-      <Section tone="navy" spacing="compact" aria-labelledby="contact-title">
-        <Container className="flex flex-col items-center gap-6 text-center text-white">
-          <Heading as="h2" id="contact-title" size="lg">
-            Comprometidos con la salud, preparados para el futuro
+      <Section id="contacto" tone="navy" spacing="default" aria-labelledby="contact-title">
+        <Container className="flex flex-col items-center gap-6 text-center">
+          <Heading as="h2" id="contact-title" size="xl">
+            Contacto
           </Heading>
-          <address className="flex flex-col gap-3 text-white/80 not-italic">
+          <Text size="lead" className="max-w-2xl">
+            {contactClosing}
+          </Text>
+          <address className="flex flex-col gap-3 text-white/85 not-italic">
             <p className="flex items-center justify-center gap-2">
               <MapPin aria-hidden="true" className="size-4 shrink-0" />
               {contact.address.full}

@@ -2,9 +2,16 @@ export type {
   BuildingInfo,
   CapacityRow,
   EquipmentItem,
+  ImageRef,
+  PortfolioCaptionedImage,
+  PortfolioHeroSlide,
+  PortfolioNavLink,
+  PortfolioNumberedService,
   PortfolioQuickLink,
   PortfolioServiceCard,
+  PortfolioSpecialtyGroup,
   PortfolioStory,
+  PortfolioTile,
 } from "./types";
 
 export { PortfolioHomePage } from "./components/portfolio-home-page";

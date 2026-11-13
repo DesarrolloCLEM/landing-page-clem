@@ -1,19 +1,65 @@
+export type ImageRef = { src: string; alt: string };
+
 export type PortfolioServiceCard = {
   title: string;
   summary: string;
   href: string;
-  image: { src: string; alt: string };
+  image: ImageRef;
+};
+
+/** Numbered card of the "Nuestros servicios" strip (01–05). */
+export type PortfolioNumberedService = {
+  number: string;
+  title: string;
+  summary: string;
+  href: string;
+  image: ImageRef;
 };
 
 export type PortfolioStory = {
+  tag: string;
   title: string;
   description: string;
-  image: { src: string; alt: string };
+  image: ImageRef;
 };
 
 export type PortfolioQuickLink = {
   label: string;
   href: string;
+};
+
+export type PortfolioHeroSlide = {
+  heading: string;
+  description?: string;
+  cta: PortfolioQuickLink;
+  image: ImageRef;
+};
+
+/** Icon tiles of the "¿Quiénes somos?" section. */
+export type PortfolioTile = {
+  label: string;
+  description: string;
+  href: string;
+  icon: "shield" | "trending" | "bed";
+};
+
+/** Captioned photo without a link, used by "Infraestructura institucional". */
+export type PortfolioCaptionedImage = {
+  caption: string;
+  image: ImageRef;
+};
+
+export type PortfolioNavLink = {
+  label: string;
+  href: string;
+  children?: PortfolioNavLink[];
+};
+
+/** Column of the "Nuestras especialidades" mega menu. */
+export type PortfolioSpecialtyGroup = {
+  label: string;
+  href?: string;
+  items: PortfolioNavLink[];
 };
 
 export type BuildingInfo = {
