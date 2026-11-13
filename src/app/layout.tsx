@@ -32,7 +32,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="es-CO" className={cn(headingFont.variable, bodyFont.variable)}>
-      <body className="flex min-h-dvh flex-col">{children}</body>
+      <body suppressHydrationWarning className="flex min-h-dvh flex-col">
+        {children}
+      </body>
     </html>
   );
 }
