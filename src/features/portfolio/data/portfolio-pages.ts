@@ -5,11 +5,15 @@ import { cirugiaPage } from "./pages/cirugia";
 import { consultaExternaPage } from "./pages/consulta-externa";
 import { cuidadoCriticoPage } from "./pages/cuidado-critico";
 import { diagnosticoPage } from "./pages/diagnostico-y-apoyo-terapeutico";
+import { centroIntervencionismoPage } from "./pages/centro-de-intervencionismo";
+import { chequeosPreventivosPage } from "./pages/chequeos-medicos-preventivos";
 import { ginecologiaPage } from "./pages/ginecologia-y-obstetricia";
 import { habitacionEstandarPage, habitacionPlusPage, suiteSerenaPage } from "./pages/habitaciones";
 import { hospitalizacionPage } from "./pages/hospitalizacion";
 import { hospitalizacionPediatricaPage } from "./pages/hospitalizacion-pediatrica";
 import { infraestructuraPage } from "./pages/infraestructura";
+import { naceConEsperanzaPage } from "./pages/nace-con-esperanza";
+import { programasEspecialesPage } from "./pages/programas-especiales";
 import { suiteVipPage } from "./pages/suite-vip";
 import { urgenciasPage } from "./pages/urgencias";
 
@@ -31,8 +35,15 @@ export const portfolioHospitalizationPages: Record<string, PortfolioPageContent>
   "suite-serena": suiteSerenaPage,
 };
 
+export const portfolioProgramPages: Record<string, PortfolioPageContent> = {
+  "nace-con-esperanza": naceConEsperanzaPage,
+  "centro-de-intervencionismo": centroIntervencionismoPage,
+  "chequeos-medicos-preventivos": chequeosPreventivosPage,
+};
+
 export const portfolioUnitSlugs = Object.keys(portfolioUnitPages);
 export const portfolioHospitalizationSlugs = Object.keys(portfolioHospitalizationPages);
+export const portfolioProgramSlugs = Object.keys(portfolioProgramPages);
 
 export function getPortfolioUnitPage(slug: string): PortfolioPageContent | undefined {
   return portfolioUnitPages[slug];
@@ -42,4 +53,8 @@ export function getPortfolioHospitalizationPage(slug: string): PortfolioPageCont
   return portfolioHospitalizationPages[slug];
 }
 
-export { infraestructuraPage };
+export function getPortfolioProgramPage(slug: string): PortfolioPageContent | undefined {
+  return portfolioProgramPages[slug];
+}
+
+export { infraestructuraPage, programasEspecialesPage };

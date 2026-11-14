@@ -3,12 +3,30 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Container, Grid, Section } from "@/components/layout";
-import { Badge, Eyebrow, Heading, ImageGallery, Text } from "@/components/ui";
+import {
+  Accordion,
+  AccordionItem,
+  Badge,
+  Eyebrow,
+  Heading,
+  ImageGallery,
+  Text,
+} from "@/components/ui";
 
 import type { PortfolioBlock } from "../types";
 
 /** Blocks that paint their own background and ignore the alternating tone. */
 const selfToned = new Set(["banner", "closing"]);
+
+/** Anchor id for an accordion item, derived from its title. */
+function slugify(value: string) {
+  return value
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
 
 function blockKey(block: PortfolioBlock, index: number) {
   const label = "title" in block ? block.title : undefined;
@@ -275,7 +293,12 @@ function PortfolioBlockView({ block, tone }: { block: PortfolioBlock; tone: "whi
                         className="object-cover"
                       />
                     </div>
-                    <h3 className="p-4 font-heading text-base font-bold text-navy">{item.title}</h3>
+                    <div className="flex flex-1 flex-col gap-1.5 p-4">
+                      <h3 className="font-heading text-base font-bold text-navy">{item.title}</h3>
+                      {item.body ? (
+                        <p className="text-sm leading-relaxed text-ink-muted">{item.body}</p>
+                      ) : null}
+                    </div>
                   </>
                 );
                 return (
@@ -346,6 +369,75 @@ function PortfolioBlockView({ block, tone }: { block: PortfolioBlock; tone: "whi
                         <BlockCta cta={room.cta} />
                       </div>
                     ) : null}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </Container>
+        </Section>
+      );
+
+    case "accordion":
+      return (
+        <Section tone={tone} spacing="compact">
+          <Container className="flex flex-col gap-8">
+            <BlockHeading title={block.title} body={block.body} />
+            <Accordion>
+              {block.items.map((item) => (
+                <AccordionItem key={item.title} id={slugify(item.title)} title={item.title}>
+                  {item.subtitle ? (
+                    <p className="font-heading font-semibold text-primary">{item.subtitle}</p>
+                  ) : null}
+                  {item.body.map((paragraph) => (
+                    <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+                  ))}
+                  {item.items && item.items.length > 0 ? (
+                    <ul className="flex flex-col gap-2">
+                      {item.items.map((entry) => (
+                        <li key={entry} className="flex items-start gap-3">
+                          <span
+                            aria-hidden="true"
+                            className="mt-2 size-1.5 shrink-0 rounded-full bg-primary"
+                          />
+                          {entry}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : null}
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </Container>
+        </Section>
+      );
+
+    case "plans":
+      return (
+        <Section tone={tone} spacing="compact">
+          <Container className="flex flex-col gap-8">
+            <BlockHeading title={block.title} />
+            <ul className="grid gap-6 lg:grid-cols-2">
+              {block.items.map((plan) => (
+                <li
+                  key={plan.name}
+                  className="flex flex-col gap-4 rounded-card border border-border bg-white p-6 shadow-card"
+                >
+                  <h3 className="font-heading text-xl font-bold text-navy">{plan.name}</h3>
+                  <p className="text-sm leading-relaxed text-ink-muted">{plan.description}</p>
+                  <p className="font-heading text-3xl font-extrabold text-primary">{plan.price}</p>
+                  <div className="flex flex-col gap-2">
+                    <p className="font-heading font-bold text-navy">Incluye</p>
+                    <ul className="flex flex-col gap-2 text-sm text-ink-muted">
+                      {plan.includes.map((item) => (
+                        <li key={item} className="flex items-start gap-2">
+                          <Check
+                            aria-hidden="true"
+                            className="mt-0.5 size-4 shrink-0 text-health-strong"
+                          />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </li>
               ))}

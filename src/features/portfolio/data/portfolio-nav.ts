@@ -36,11 +36,11 @@ export const portfolioSpecialtyGroups: PortfolioSpecialtyGroup[] = [
   },
   {
     label: "Ginecología",
-    href: specialty("ginecologia-y-obstetricia"),
+    href: "/portafolio/ginecologia-y-obstetricia/",
     items: [
-      { label: "Materno Fetal (Perinatología)", href: specialty("perinatologia") },
-      { label: "Ginecología Oncológica", href: specialty("ginecologia-y-obstetricia") },
-      { label: "Ginecología Laparoscópica", href: specialty("ginecologia-y-obstetricia") },
+      { label: "Materno Fetal (Perinatología)", href: "/portafolio/ginecologia-y-obstetricia/" },
+      { label: "Ginecología Oncológica", href: "/portafolio/ginecologia-y-obstetricia/" },
+      { label: "Ginecología Laparoscópica", href: "/portafolio/ginecologia-y-obstetricia/" },
     ],
   },
   {
@@ -48,7 +48,7 @@ export const portfolioSpecialtyGroups: PortfolioSpecialtyGroup[] = [
     href: specialty("cirugia-general"),
     items: [
       { label: "Cirugía Pancreatohepatobiliar", href: specialty("cirugia-general") },
-      { label: "Cirugía de Tórax", href: specialty("cirugia-de-torax") },
+      { label: "Cirugía de Tórax", href: specialty("cirugia-general") },
     ],
   },
   {
@@ -59,13 +59,13 @@ export const portfolioSpecialtyGroups: PortfolioSpecialtyGroup[] = [
       { label: "Neumología Pediátrica", href: specialty("pediatria") },
       { label: "Infectología Pediátrica", href: specialty("pediatria") },
       { label: "Neonatología", href: specialty("pediatria") },
-      { label: "Hemato-oncología Pediátrica", href: specialty("hematologia-pediatrica") },
+      { label: "Hemato-oncología Pediátrica", href: specialty("pediatria") },
       { label: "Endocrinología Pediátrica", href: specialty("pediatria") },
       { label: "Nefrología Pediátrica", href: specialty("pediatria") },
-      { label: "Neurocirugía Pediátrica", href: specialty("neurocirugia-pediatrica") },
+      { label: "Neurocirugía Pediátrica", href: specialty("pediatria") },
       { label: "Oftalmología Pediátrica", href: specialty("pediatria") },
       { label: "Gastroenterología Pediátrica", href: specialty("pediatria") },
-      { label: "Cirugía Pediátrica", href: specialty("cirugia-pediatrica") },
+      { label: "Cirugía Pediátrica", href: specialty("pediatria") },
     ],
   },
   {
@@ -83,7 +83,7 @@ export const portfolioSpecialtyGroups: PortfolioSpecialtyGroup[] = [
   {
     label: "Neurocirugía",
     href: specialty("neurocirugia"),
-    items: [{ label: "Medicina del Dolor", href: specialty("medicina-del-dolor") }],
+    items: [{ label: "Medicina del Dolor", href: specialty("neurocirugia") }],
   },
   {
     label: "Radiología",
@@ -111,7 +111,7 @@ export const portfolioStandaloneSpecialties: PortfolioNavLink[] = [
     href: specialty("cirugia-plastica-y-reconstructiva"),
   },
   { label: "Cirugía Maxilofacial", href: specialty("cirugia-maxilofacial") },
-  { label: "Otorrinolaringología", href: specialty("otorrinolaringologia") },
+  { label: "Otorrinolaringología", href: "/servicios/especialidades/otorrinolaringologia/" },
   { label: "Oftalmología y Oculoplastia", href: specialty("oftalmologia") },
   { label: "Fonoaudiología", href: specialty("fonoaudiologia") },
   { label: "Nutrición y Dieta", href: specialty("nutricion-y-dieta") },

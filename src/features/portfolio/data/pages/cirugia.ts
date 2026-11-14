@@ -86,7 +86,6 @@ export const cirugiaPage: PortfolioPageContent = {
         },
         {
           title: "Cirugía Pediátrica",
-          href: "/portafolio/especialidades/cirugia-pediatrica/",
           body: "Procedimientos quirúrgicos adaptados a las necesidades particulares de los niños, en distintas especialidades.",
         },
         {
@@ -111,7 +110,8 @@ export const cirugiaPage: PortfolioPageContent = {
         },
         {
           title: "Cirugía Otorrinolaringológica",
-          href: "/portafolio/especialidades/otorrinolaringologia/",
+          // The deployed portfolio has no sheet for this specialty either.
+          href: "/servicios/especialidades/otorrinolaringologia/",
           body: "Procedimientos especializados en oído, nariz y garganta.",
         },
         {

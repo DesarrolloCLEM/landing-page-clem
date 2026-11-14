@@ -1,22 +1,23 @@
 export type {
-  BuildingInfo,
-  CapacityRow,
-  EquipmentItem,
   ImageRef,
+  PortfolioAccordionItem,
   PortfolioBlock,
-  PortfolioCardItem,
-  PortfolioGroupItem,
-  PortfolioPageContent,
-  PortfolioStatItem,
   PortfolioCapacityStat,
   PortfolioCaptionedImage,
+  PortfolioCardItem,
+  PortfolioComparisonRow,
   PortfolioGrowthStat,
+  PortfolioGroupItem,
   PortfolioHeroContent,
   PortfolioNavLink,
   PortfolioNumberedService,
+  PortfolioPageContent,
+  PortfolioPlan,
   PortfolioQuickLink,
+  PortfolioRoomOption,
   PortfolioServiceCard,
   PortfolioSpecialtyGroup,
+  PortfolioStatItem,
   PortfolioStory,
   PortfolioTile,
   PortfolioWhyItem,
@@ -25,18 +26,23 @@ export type {
 export { PortfolioBlocks } from "./components/portfolio-blocks";
 export { PortfolioContentPage } from "./components/portfolio-content-page";
 export { PortfolioHomePage } from "./components/portfolio-home-page";
-export { PortfolioInfrastructurePage } from "./components/portfolio-infrastructure-page";
 export { PortfolioLayout } from "./components/portfolio-layout";
-export { PortfolioRoomComparison } from "./components/portfolio-room-comparison";
-export { PortfolioServicePage } from "./components/portfolio-service-page";
 
-export { gynecologyEquipment, interventionismEquipment } from "./data/portfolio-equipment";
 export {
   getPortfolioHospitalizationPage,
+  getPortfolioProgramPage,
   getPortfolioUnitPage,
   infraestructuraPage,
   portfolioHospitalizationPages,
   portfolioHospitalizationSlugs,
+  portfolioProgramPages,
+  portfolioProgramSlugs,
   portfolioUnitPages,
   portfolioUnitSlugs,
+  programasEspecialesPage,
 } from "./data/portfolio-pages";
+export {
+  getPortfolioSpecialtyPage,
+  portfolioSpecialtyPages,
+  portfolioSpecialtySlugs,
+} from "./data/portfolio-specialties";

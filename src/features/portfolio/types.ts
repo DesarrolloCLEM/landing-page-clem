@@ -127,6 +127,21 @@ export type PortfolioComparisonRow = {
   values: (boolean | string)[];
 };
 
+/** Expandable item: the live pages collapse these long descriptions. */
+export type PortfolioAccordionItem = {
+  title: string;
+  subtitle?: string;
+  body: string[];
+  items?: string[];
+};
+
+export type PortfolioPlan = {
+  name: string;
+  description: string;
+  price: string;
+  includes: string[];
+};
+
 export type PortfolioBlock =
   /** Full-width photo strip that opens the page. */
   | { kind: "banner"; image: ImageRef }
@@ -151,10 +166,12 @@ export type PortfolioBlock =
       kind: "photoCards";
       title?: string;
       body?: string;
-      items: { title: string; href?: string; image: ImageRef }[];
+      items: { title: string; body?: string; href?: string; image: ImageRef }[];
       cols?: 2 | 3 | 4;
     }
   | { kind: "rooms"; title?: string; items: PortfolioRoomOption[] }
+  | { kind: "accordion"; title?: string; body?: string; items: PortfolioAccordionItem[] }
+  | { kind: "plans"; title?: string; items: PortfolioPlan[] }
   | {
       kind: "comparison";
       title?: string;
@@ -174,24 +191,4 @@ export type PortfolioPageContent = {
   /** Links of the local menu shown above the content. */
   nav?: PortfolioQuickLink[];
   blocks: PortfolioBlock[];
-};
-
-export type BuildingInfo = {
-  name: string;
-  lot: string;
-  builtArea: string;
-  details: string;
-};
-
-export type CapacityRow = {
-  service: string;
-  current: number;
-  expansion: number;
-  projected: number;
-};
-
-export type EquipmentItem = {
-  name: string;
-  description: string;
-  confirmed: boolean;
 };

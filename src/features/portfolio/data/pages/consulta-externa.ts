@@ -50,7 +50,8 @@ export const consultaExternaPage: PortfolioPageContent = {
         { title: "Cirugía Plástica", href: specialty("cirugia-plastica-y-reconstructiva") },
         { title: "Urología", href: specialty("urologia") },
         { title: "Cirugía Maxilofacial", href: specialty("cirugia-maxilofacial") },
-        { title: "Otorrinolaringología", href: specialty("otorrinolaringologia") },
+        // The deployed portfolio links this one to the public page.
+        { title: "Otorrinolaringología", href: "/servicios/especialidades/otorrinolaringologia/" },
         { title: "Neurología", href: specialty("neurologia") },
         { title: "Nutrición y Dietética", href: specialty("nutricion-y-dieta") },
         {
