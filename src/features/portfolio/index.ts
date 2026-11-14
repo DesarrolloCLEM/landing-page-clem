@@ -3,6 +3,7 @@ export type {
   CapacityRow,
   EquipmentItem,
   ImageRef,
+  PortfolioCapacityStat,
   PortfolioCaptionedImage,
   PortfolioGrowthStat,
   PortfolioHeroContent,

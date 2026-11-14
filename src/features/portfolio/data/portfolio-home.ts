@@ -1,5 +1,11 @@
+// Content of /portafolio/, mirrored from the deployed WordPress portfolio
+// (https://clinicalaesperanza.co/portafolio/) including its images.
+// Only unmistakable typos are corrected: "Ginercología" -> "Ginecología",
+// "infraesctructura" -> "infraestructura" and "Córdiba" -> "Córdoba".
+
 import type {
   ImageRef,
+  PortfolioCapacityStat,
   PortfolioCaptionedImage,
   PortfolioGrowthStat,
   PortfolioHeroContent,
@@ -18,7 +24,7 @@ export const hero: PortfolioHeroContent = {
   cta: { label: "Conoce más", href: "/portafolio/infraestructura/" },
   videoSrc: "/videos/portafolio-portada.mp4",
   poster: {
-    src: "/images/about/nueva-torre-exterior.webp",
+    src: "/images/portafolio/chatgpt-image-17-sept-2026-14_59_16-890x664.webp",
     alt: "Render exterior de la nueva torre de Clínica La Esperanza",
   },
 };
@@ -34,187 +40,170 @@ export const heroLinks: PortfolioQuickLink[] = [
 
 export const whoWeAre = {
   title: "¿Quiénes somos?",
+  subtitle:
+    "Una institución preparada para responder a las necesidades de nuestros pacientes y aliados.",
   description:
     "Somos una institución prestadora de servicios de salud de mediana y alta complejidad que integra infraestructura, tecnología y talento humano para ofrecer una atención segura, oportuna y centrada en la calidad asistencial.",
+  image: {
+    src: "/images/portafolio/chatgpt-image-17-sept-2026-15_20_47-1024x1024.webp",
+    alt: "Equipo asistencial de Clínica La Esperanza",
+  },
 };
 
+export const whoWeAreTiles: PortfolioTile[] = [
+  { label: "¿Por qué elegirnos?", href: "/portafolio/hospitalizacion/", icon: "shield" },
+  { label: "Crecimiento", href: "/portafolio/infraestructura/", icon: "trending" },
+  { label: "Capacidad instalada", href: "/portafolio/infraestructura/", icon: "bed" },
+];
+
+/** Tab 1: "Presentación". */
 export const presentationTab = {
   description:
     "Nuestra gestión se orienta al mejoramiento continuo, la innovación y el fortalecimiento de las capacidades institucionales, consolidando una oferta de servicios que responde a los desafíos actuales del sector salud.",
   image: {
-    src: "/images/about/nueva-torre-exterior.webp",
-    alt: "Render exterior de la nueva torre de Clínica La Esperanza",
+    src: "/images/portafolio/1-1-1-e1787776597267-410x280.webp",
+    alt: "Fachada de Clínica La Esperanza",
   },
 };
 
-export const whyChooseUsIntro =
+/**
+ * Tab 2: "Por qué elegirnos". The deployed site repeats the same sentence under
+ * the four items, so it is kept as a shared description.
+ */
+export const whyChooseUsDescription =
   "Contamos con una oferta integral de servicios de mediana y alta complejidad.";
 
 export const whyChooseUs: PortfolioWhyItem[] = [
   {
     title: "Capacidad resolutiva",
-    description:
-      "Servicios de mediana y alta complejidad que resuelven el caso dentro de la institución.",
+    description: whyChooseUsDescription,
     href: "/portafolio/hospitalizacion/",
   },
   {
     title: "Infraestructura y tecnología",
-    description: "Áreas asistenciales renovadas y equipos de diagnóstico de última generación.",
-    href: "/portafolio/diagnostico-y-apoyo-terapeutico/",
+    description: whyChooseUsDescription,
+    href: "/portafolio/hospitalizacion/",
   },
   {
     title: "Equipo multidisciplinario",
-    description: "Especialistas de distintas áreas que trabajan de forma coordinada.",
-    href: "/portafolio/consulta-externa/",
+    description: whyChooseUsDescription,
+    href: "/portafolio/hospitalizacion/",
   },
   {
     title: "Calidad y seguridad",
-    description: "Protocolos de seguridad del paciente aplicados en cada servicio.",
+    description: whyChooseUsDescription,
     href: "/portafolio/hospitalizacion/",
   },
 ];
 
+/** Tab 3: "Capacidad instalada". */
+export const capacityStats: PortfolioCapacityStat[] = [
+  { value: "60", label: "Camas adultos" },
+  { value: "16", label: "Camas pediatría" },
+  { value: "14", label: "UCI/UCIM adultos" },
+  { value: "38", label: "Cubículos urgencias" },
+  { value: "2", label: "Salas de cirugía" },
+  { value: "123", label: "Camas habilitadas" },
+];
+
+/** Tab 4: "Crecimiento". */
 export const growthStats: PortfolioGrowthStat[] = [
   { caption: "Capacidad actual", value: "123", label: "Camas habilitadas" },
-  { caption: "En construcción", value: "7.764 m²", label: "Nueva torre" },
+  { caption: "En construcción", value: "7.764 m²", label: "nueva torre" },
   { caption: "Nueva torre", value: "218", label: "Camas proyectadas" },
-];
-
-export const whoWeAreTiles: PortfolioTile[] = [
-  {
-    label: "¿Por qué elegirnos?",
-    description: "Atención integral respaldada por un equipo asistencial especializado.",
-    href: "/portafolio/hospitalizacion/",
-    icon: "shield",
-  },
-  {
-    label: "Crecimiento",
-    description: "Un proyecto de expansión que duplica nuestra capacidad instalada.",
-    href: "/portafolio/infraestructura/",
-    icon: "trending",
-  },
-  {
-    label: "Capacidad instalada",
-    description: "123 camas habilitadas distribuidas en todos nuestros servicios.",
-    href: "/portafolio/infraestructura/",
-    icon: "bed",
-  },
 ];
 
 export const servicesIntro =
   "Oferta asistencial de mediana y alta complejidad, estructurada para responder de manera integral a las necesidades de nuestros pacientes.";
 
+/**
+ * The deployed site repeats the hospitalización summary under the five cards and
+ * links all of them to hospitalización; here each card links to its own page.
+ */
+export const numberedServicesSummary =
+  "Atención integral para pacientes que requieren estancia hospitalaria.";
+
 export const numberedServices: PortfolioNumberedService[] = [
   {
     number: "01",
     title: "Hospitalización",
-    summary: "Atención integral para pacientes que requieren estancia hospitalaria.",
+    summary: numberedServicesSummary,
     href: "/portafolio/hospitalizacion/",
-    image: {
-      src: "/images/services/hospitalizacion-habitacion.webp",
-      alt: "Habitación de hospitalización",
-    },
+    image: { src: "/images/portafolio/chatgpt-image-19-sept-2026-11_21_28.webp", alt: "" },
   },
   {
     number: "02",
     title: "Urgencias",
-    summary: "Atención de urgencias para adultos y población pediátrica las 24 horas.",
+    summary: numberedServicesSummary,
     href: "/portafolio/urgencias/",
-    image: { src: "/images/services/urgencias-pasillo.webp", alt: "Pasillo del área de urgencias" },
+    image: { src: "/images/portafolio/chatgpt-image-19-sept-2026-11_24_55.webp", alt: "" },
   },
   {
     number: "03",
     title: "Cuidado crítico",
-    summary: "Unidades de cuidado intensivo e intermedio para adultos, neonatos y pediatría.",
+    summary: numberedServicesSummary,
     href: "/portafolio/cuidado-critico/",
-    image: {
-      src: "/images/services/cuidado-critico-monitoreo.webp",
-      alt: "Monitoreo en cuidado crítico",
-    },
+    image: { src: "/images/portafolio/chatgpt-image-19-sept-2026-11_22_16.webp", alt: "" },
   },
   {
     number: "04",
     title: "Cirugía",
-    summary: "Unidad quirúrgica equipada para procedimientos de mediana y alta complejidad.",
+    summary: numberedServicesSummary,
     href: "/portafolio/cirugia/",
-    image: {
-      src: "/images/services/cirugia-quirofano.webp",
-      alt: "Quirófano de la unidad de cirugía",
-    },
+    image: { src: "/images/portafolio/chatgpt-image-19-sept-2026-11_23_45.webp", alt: "" },
   },
   {
     number: "05",
     title: "Ginecología y obstetricia",
-    summary: "Atención integral en salud femenina, maternidad y perinatología.",
+    summary: numberedServicesSummary,
     href: "/portafolio/ginecologia-y-obstetricia/",
-    image: {
-      src: "/images/services/nace-con-esperanza-madre.webp",
-      alt: "Madre acompañada en atención obstétrica",
-    },
+    image: { src: "/images/portafolio/chatgpt-image-19-sept-2026-11_27_47.webp", alt: "" },
   },
 ];
 
 export const serviceCards: PortfolioServiceCard[] = [
   {
     title: "Hospitalización",
-    summary: "Atención integral para pacientes que requieren estancia hospitalaria.",
     href: "/portafolio/hospitalizacion/",
-    image: {
-      src: "/images/services/hospitalizacion-habitacion.webp",
-      alt: "Habitación de hospitalización",
-    },
+    image: { src: "/images/portafolio/14-1-1024x683.webp", alt: "" },
   },
   {
     title: "Urgencias",
-    summary: "Servicio de urgencias de mediana y alta complejidad disponible las 24 horas.",
     href: "/portafolio/urgencias/",
-    image: { src: "/images/services/urgencias-pasillo.webp", alt: "Pasillo de urgencias" },
+    image: { src: "/images/portafolio/urgencias-2-1-1024x682.webp", alt: "" },
   },
   {
-    title: "Cuidado crítico",
-    summary: "Unidades de cuidado intensivo e intermedio para adultos, neonatos y pediatría.",
+    title: "Cuidado Crítico",
     href: "/portafolio/cuidado-critico/",
-    image: {
-      src: "/images/services/cuidado-critico-monitoreo.webp",
-      alt: "Monitoreo en cuidado crítico",
-    },
+    image: { src: "/images/portafolio/cuidado-critico-1024x683.webp", alt: "" },
   },
   {
     title: "Cirugía",
-    summary:
-      "Unidad quirúrgica con quirófanos equipados para cirugías de mediana y alta complejidad.",
     href: "/portafolio/cirugia/",
-    image: { src: "/images/services/cirugia-quirofano.webp", alt: "Quirófano de cirugía" },
+    image: { src: "/images/portafolio/cirugia-general-1024x683.webp", alt: "" },
   },
   {
     title: "Ginecología y obstetricia",
-    summary: "Atención integral en salud femenina, maternidad y perinatología.",
     href: "/portafolio/ginecologia-y-obstetricia/",
-    image: { src: "/images/services/nace-con-esperanza-madre.webp", alt: "Atención ginecológica" },
+    image: {
+      src: "/images/portafolio/chatgpt-image-27-ago-2026-12_00_23-e1787850518925-840x542.webp",
+      alt: "",
+    },
   },
   {
     title: "Consulta externa especializada",
-    summary: "29 especialidades médico-quirúrgicas para atención ambulatoria.",
     href: "/portafolio/consulta-externa/",
-    image: {
-      src: "/images/services/consulta-externa-recepcion.webp",
-      alt: "Recepción de consulta externa",
-    },
+    image: { src: "/images/portafolio/r6ph7609-1-1-1024x683.webp", alt: "" },
   },
   {
-    title: "Diagnóstico y apoyo terapéutico",
-    summary: "Laboratorio clínico, imagenología, farmacia y servicios de diagnóstico.",
+    title: "Diagnóstico y Apoyo Terapéutico",
     href: "/portafolio/diagnostico-y-apoyo-terapeutico/",
-    image: { src: "/images/services/diagnostico-tomografo.webp", alt: "Tomógrafo de diagnóstico" },
+    image: { src: "/images/portafolio/chatgpt-image-27-ago-2026-12_02_59-1024x683.webp", alt: "" },
   },
   {
     title: "Programas especiales",
-    summary: "Nace con Esperanza, Centro de Intervencionismo y chequeos médicos preventivos.",
     href: "/portafolio/programas/",
-    image: {
-      src: "/images/services/programas-recien-nacido.webp",
-      alt: "Programa Nace con Esperanza",
-    },
+    image: { src: "/images/portafolio/chatgpt-image-27-ago-2026-11_51_45-1024x682.webp", alt: "" },
   },
 ];
 
@@ -223,48 +212,50 @@ export const newInfrastructure = {
   description:
     "Construimos el futuro de la atención en salud a través de un proyecto de expansión que fortalecerá nuestra capacidad instalada.",
   cta: { label: "Conoce más", href: "/portafolio/infraestructura/" },
+  diagram: {
+    src: "/images/portafolio/diseno-sin-titulo-3.webp",
+    alt: "Esquema del crecimiento de la capacidad instalada de Clínica La Esperanza",
+  },
 };
+
+/** Figures of the "Nueva infraestructura" section of the home page. */
+export const expansionHighlights: PortfolioGrowthStat[] = [
+  { caption: "Capacidad actual", value: "123", label: "Camas habilitadas" },
+  { caption: "Nueva torre", value: "7.764 m²" },
+  { caption: "Proyección", value: "218", label: "Camas proyectadas" },
+];
 
 export const projectImages: ImageRef[] = [
   {
-    src: "/images/about/nueva-torre-fachada.webp",
-    alt: "Render de la fachada de la nueva torre",
+    src: "/images/portafolio/pasillo_1530x1900_4k_quality-825x1024.webp",
+    alt: "Render del pasillo de la nueva torre",
   },
   {
-    src: "/images/about/nueva-torre-exterior.webp",
-    alt: "Render exterior de la nueva torre",
-  },
-  {
-    src: "/images/about/nueva-torre-vista-aerea.webp",
-    alt: "Vista aérea del proyecto de expansión",
-  },
-  {
-    src: "/images/about/nueva-torre-habitacion.webp",
+    src: "/images/portafolio/chatgpt-image-17-sept-2026-15_38_32-768x512.webp",
     alt: "Render de una habitación de la nueva torre",
+  },
+  {
+    src: "/images/portafolio/chatgpt-image-19-sept-2026-10_59_23-768x512.webp",
+    alt: "Render de un área asistencial de la nueva torre",
+  },
+  {
+    src: "/images/portafolio/chatgpt-image-17-sept-2026-14_59_16-890x664.webp",
+    alt: "Render exterior de la nueva torre",
   },
 ];
 
 export const institutionalInfrastructure: PortfolioCaptionedImage[] = [
   {
     caption: "Hospitalización",
-    image: {
-      src: "/images/services/hospitalizacion-cama.webp",
-      alt: "Cama de hospitalización en Clínica La Esperanza",
-    },
+    image: { src: "/images/portafolio/34-1024x683.webp", alt: "" },
   },
   {
     caption: "Urgencias",
-    image: {
-      src: "/images/services/urgencias-equipo.webp",
-      alt: "Equipo del servicio de urgencias",
-    },
+    image: { src: "/images/portafolio/chatgpt-image-26-ago-2026-10_30_49-1024x683.webp", alt: "" },
   },
   {
     caption: "Cuidado crítico",
-    image: {
-      src: "/images/services/cuidado-critico-equipo.webp",
-      alt: "Equipo de la unidad de cuidado crítico",
-    },
+    image: { src: "/images/portafolio/cuidado-critico-1024x683.webp", alt: "" },
   },
 ];
 
@@ -274,22 +265,25 @@ export const storiesIntro =
 export const stories: PortfolioStory[] = [
   {
     tag: "Cirugía",
-    title: "Johan Cruz Martínez",
+    title: "Johan Cruz Martinez",
     description:
       "Cirugía de alta complejidad en la que se retiró el quiste de la vía biliar y se reconstruyó el paso de la bilis.",
-    image: { src: "/images/testimonials/johan-cruz-martinez.webp", alt: "Johan Cruz Martínez" },
+    href: "/portafolio/hospitalizacion/",
+    image: { src: "/images/portafolio/pagina-web-1024x576.webp", alt: "" },
   },
   {
     tag: "Cirugía especializada",
     title: "Cirugía de columna",
     description: "Intervención quirúrgica especializada para corregir la causa del dolor crónico.",
-    image: { src: "/images/home/neurocirugia.webp", alt: "Cirugía de columna" },
+    href: "/portafolio/hospitalizacion/",
+    image: { src: "/images/portafolio/cirugia-de-columna-1024x576.webp", alt: "" },
   },
   {
     tag: "Obstetricia",
     title: "Parto humanizado",
     description: "Experiencia de nacimiento respetuosa, segura y acompañada.",
-    image: { src: "/images/services/nace-con-esperanza-suite.webp", alt: "Parto humanizado" },
+    href: "/portafolio/ginecologia-y-obstetricia/",
+    image: { src: "/images/portafolio/parto-humanizado-1024x576.webp", alt: "" },
   },
 ];
 

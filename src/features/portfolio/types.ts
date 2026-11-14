@@ -1,8 +1,8 @@
 export type ImageRef = { src: string; alt: string };
 
+/** Photo card of the "Nuestros servicios" grid: the title is the only copy. */
 export type PortfolioServiceCard = {
   title: string;
-  summary: string;
   href: string;
   image: ImageRef;
 };
@@ -20,6 +20,7 @@ export type PortfolioStory = {
   tag: string;
   title: string;
   description: string;
+  href: string;
   image: ImageRef;
 };
 
@@ -47,13 +48,18 @@ export type PortfolioWhyItem = {
 export type PortfolioGrowthStat = {
   caption: string;
   value: string;
+  label?: string;
+};
+
+/** Figure of the "Capacidad instalada" tab. */
+export type PortfolioCapacityStat = {
+  value: string;
   label: string;
 };
 
-/** Icon tiles of the "¿Quiénes somos?" section. */
+/** Icon tiles of the "¿Quiénes somos?" section: a label and its link. */
 export type PortfolioTile = {
   label: string;
-  description: string;
   href: string;
   icon: "shield" | "trending" | "bed";
 };
