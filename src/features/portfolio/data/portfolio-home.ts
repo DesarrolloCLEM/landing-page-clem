@@ -212,9 +212,9 @@ export const newInfrastructure = {
   description:
     "Construimos el futuro de la atención en salud a través de un proyecto de expansión que fortalecerá nuestra capacidad instalada.",
   cta: { label: "Conoce más", href: "/portafolio/infraestructura/" },
-  diagram: {
+  image: {
     src: "/images/portafolio/diseno-sin-titulo-3.webp",
-    alt: "Esquema del crecimiento de la capacidad instalada de Clínica La Esperanza",
+    alt: "Fachada de Clínica La Esperanza",
   },
 };
 

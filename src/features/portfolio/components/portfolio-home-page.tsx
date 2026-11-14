@@ -170,11 +170,11 @@ export function PortfolioHomePage() {
           </div>
           <div className="relative aspect-[16/9] overflow-hidden rounded-card">
             <Image
-              src={newInfrastructure.diagram.src}
-              alt={newInfrastructure.diagram.alt}
+              src={newInfrastructure.image.src}
+              alt={newInfrastructure.image.alt}
               fill
               sizes="(min-width: 1024px) 70vw, 100vw"
-              className="object-contain"
+              className="object-cover"
             />
           </div>
           <ul className="grid gap-6 sm:grid-cols-3">

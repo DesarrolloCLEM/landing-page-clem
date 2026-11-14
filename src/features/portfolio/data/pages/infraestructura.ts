@@ -54,7 +54,7 @@ export const infraestructuraPage: PortfolioPageContent = {
       images: [
         {
           src: "/images/portafolio/diseno-sin-titulo.webp",
-          alt: "Plano del proyecto de expansión",
+          alt: "Fachada de Clínica La Esperanza",
         },
         {
           src: "/images/portafolio/chatgpt-image-27-ago-2026-15_56_10-1024x683.webp",
