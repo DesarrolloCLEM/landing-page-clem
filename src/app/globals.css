@@ -5,47 +5,59 @@
 @source not "../../assets";
 
 /*
- * Brand tokens for Clínica La Esperanza (taken from clinicalaesperanza.co).
- * Light theme only: the brand does not define a dark palette.
+ * Brand tokens for Clínica La Esperanza, taken from the 2027 identity manual
+ * (assets/brand/). Light theme only: the brand does not define a dark palette.
+ *
+ * The manual publishes five colors: #091f5b navy, #6f96d1 mid blue,
+ * #bad6eb light blue, #f0efeb bone and #d6c8af taupe. Only the navy carries
+ * enough contrast for text, so the intermediate steps of the brand scale are
+ * interpolated between the three official blues; 600-950 pass WCAG AA on white
+ * and 50-400 are for backgrounds, icons and decoration.
  *
  * Text pairs that meet WCAG 2.1 AA (>= 4.5:1):
- *   white on primary (5.8:1), white on health-strong (5.5:1),
- *   white on emergency-strong (5.6:1), white on navy, navy on sky-accent,
- *   foreground / muted on white and surface.
- * health, emergency and sky-accent are for icons and decoration, not for text.
+ *   white on primary (7.3:1), white on navy (15.5:1), white on health-strong
+ *   (5.5:1), white on emergency-strong (5.6:1), navy on sky-accent (10.2:1),
+ *   navy on sand (9.4:1), foreground / muted on white and surface.
+ * health, emergency, sand and sky-accent are for decoration, not for text.
  */
 @theme {
-  --color-brand-50: #eef6fd;
-  --color-brand-100: #d8eafa;
-  --color-brand-200: #b6d7f5;
-  --color-brand-300: #85bdee;
-  --color-brand-400: #4f9be3;
-  --color-brand-500: #1166b5;
-  --color-brand-600: #0b559a;
-  --color-brand-700: #0a4680;
-  --color-brand-800: #0d3a69;
-  --color-brand-900: #103258;
-  --color-brand-950: #0b203b;
+  --color-brand-50: #f0f6fb;
+  --color-brand-100: #deebf5;
+  /* Light blue of the manual. */
+  --color-brand-200: #bad6eb;
+  --color-brand-300: #95b6de;
+  /* Mid blue of the manual. */
+  --color-brand-400: #6f96d1;
+  --color-brand-500: #5d81bc;
+  --color-brand-600: #4a6ba7;
+  --color-brand-700: #375590;
+  --color-brand-800: #253f7b;
+  --color-brand-900: #132b67;
+  /* Navy of the manual: the main brand color. */
+  --color-brand-950: #091f5b;
 
-  --color-primary: var(--color-brand-500);
-  --color-primary-dark: var(--color-brand-600);
+  --color-primary: var(--color-brand-700);
+  --color-primary-dark: var(--color-brand-800);
   --color-primary-foreground: #ffffff;
 
-  --color-sky-accent: #47bff3;
+  --color-sky-accent: var(--color-brand-200);
+  /* Taupe of the manual: the warm accent. */
+  --color-sand: #d6c8af;
   --color-health: #009c41;
   --color-health-strong: #007a33;
   --color-health-50: #e7f6ed;
-  --color-navy: #111542;
+  --color-navy: var(--color-brand-950);
   --color-emergency: #f9313b;
   --color-emergency-strong: #d0101c;
   --color-emergency-50: #feeceb;
 
   --color-ink: #1f242e;
   --color-ink-muted: #4b5563;
-  --color-surface: #f4f3f8;
-  --color-border: #e2e4ec;
+  /* Bone of the manual. */
+  --color-surface: #f0efeb;
+  --color-border: #e4e3dd;
   /* Form control borders: >= 3:1 against white and surface (WCAG 1.4.11). */
-  --color-border-strong: #868ca3;
+  --color-border-strong: #7e8498;
 
   /*
    * Semantic text colors. Dark section tones redefine them on their own element so
@@ -58,8 +70,8 @@
 
   --radius-card: 1rem;
 
-  --shadow-card: 0 1px 3px 0 rgb(17 21 66 / 0.06), 0 4px 16px -4px rgb(17 21 66 / 0.08);
-  --shadow-card-hover: 0 4px 8px -2px rgb(17 21 66 / 0.08), 0 16px 32px -8px rgb(17 21 66 / 0.16);
+  --shadow-card: 0 1px 3px 0 rgb(9 31 91 / 0.06), 0 4px 16px -4px rgb(9 31 91 / 0.08);
+  --shadow-card-hover: 0 4px 8px -2px rgb(9 31 91 / 0.08), 0 16px 32px -8px rgb(9 31 91 / 0.16);
 }
 
 @theme inline {

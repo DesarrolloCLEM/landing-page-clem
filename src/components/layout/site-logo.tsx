@@ -19,7 +19,7 @@ export function SiteLogo({ inverted = false, className }: SiteLogoProps) {
         }
         alt={`${siteConfig.name} – Inicio`}
         preload={!inverted}
-        width={176}
+        width={184}
         height={48}
         className="h-10 w-auto sm:h-12"
       />
