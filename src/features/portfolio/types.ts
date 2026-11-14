@@ -111,6 +111,22 @@ export type PortfolioGroupItem = {
   items?: string[];
 };
 
+/** Hospitalization option of the "Suite VIP" page. */
+export type PortfolioRoomOption = {
+  title: string;
+  subtitle?: string;
+  description: string;
+  features: string[];
+  image: ImageRef;
+  badge?: string;
+  cta?: PortfolioQuickLink;
+};
+
+export type PortfolioComparisonRow = {
+  feature: string;
+  values: (boolean | string)[];
+};
+
 export type PortfolioBlock =
   /** Full-width photo strip that opens the page. */
   | { kind: "banner"; image: ImageRef }
@@ -130,6 +146,23 @@ export type PortfolioBlock =
   | { kind: "stats"; title?: string; items: PortfolioStatItem[] }
   | { kind: "groups"; title?: string; body?: string; items: PortfolioGroupItem[] }
   | { kind: "gallery"; title?: string; body?: string; images: ImageRef[] }
+  /** Grid of photo cards whose only copy is the title. */
+  | {
+      kind: "photoCards";
+      title?: string;
+      body?: string;
+      items: { title: string; href?: string; image: ImageRef }[];
+      cols?: 2 | 3 | 4;
+    }
+  | { kind: "rooms"; title?: string; items: PortfolioRoomOption[] }
+  | {
+      kind: "comparison";
+      title?: string;
+      /** Header of the first column; "Característica" when omitted. */
+      rowHeader?: string;
+      columns: string[];
+      rows: PortfolioComparisonRow[];
+    }
   /** Navy band that closes the page. */
   | { kind: "closing"; title: string; body?: string; cta?: PortfolioQuickLink };
 

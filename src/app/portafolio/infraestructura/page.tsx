@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { PortfolioInfrastructurePage } from "@/features/portfolio";
+import { infraestructuraPage, PortfolioContentPage } from "@/features/portfolio";
 
 export const metadata: Metadata = {
   title: "Infraestructura | Portafolio | Clínica La Esperanza",
@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <PortfolioInfrastructurePage />;
+  return <PortfolioContentPage page={infraestructuraPage} />;
 }

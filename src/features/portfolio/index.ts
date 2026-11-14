@@ -32,7 +32,11 @@ export { PortfolioServicePage } from "./components/portfolio-service-page";
 
 export { gynecologyEquipment, interventionismEquipment } from "./data/portfolio-equipment";
 export {
+  getPortfolioHospitalizationPage,
   getPortfolioUnitPage,
+  infraestructuraPage,
+  portfolioHospitalizationPages,
+  portfolioHospitalizationSlugs,
   portfolioUnitPages,
   portfolioUnitSlugs,
 } from "./data/portfolio-pages";

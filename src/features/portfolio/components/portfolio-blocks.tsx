@@ -1,9 +1,9 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Check, Minus } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 import { Container, Grid, Section } from "@/components/layout";
-import { Eyebrow, Heading, ImageGallery, Text } from "@/components/ui";
+import { Badge, Eyebrow, Heading, ImageGallery, Text } from "@/components/ui";
 
 import type { PortfolioBlock } from "../types";
 
@@ -257,6 +257,149 @@ function PortfolioBlockView({ block, tone }: { block: PortfolioBlock; tone: "whi
         </Section>
       );
 
+    case "photoCards":
+      return (
+        <Section tone={tone} spacing="compact">
+          <Container className="flex flex-col gap-8">
+            <BlockHeading title={block.title} body={block.body} />
+            <Grid as="ul" cols={block.cols ?? 4} gap="md">
+              {block.items.map((item) => {
+                const media = (
+                  <>
+                    <div className="relative aspect-[3/2]">
+                      <Image
+                        src={item.image.src}
+                        alt={item.image.alt}
+                        fill
+                        sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                        className="object-cover"
+                      />
+                    </div>
+                    <h3 className="p-4 font-heading text-base font-bold text-navy">{item.title}</h3>
+                  </>
+                );
+                return (
+                  <li key={item.title}>
+                    {item.href ? (
+                      <Link
+                        href={item.href}
+                        className="flex h-full flex-col overflow-hidden rounded-card border border-border bg-white shadow-card transition-shadow hover:shadow-card-hover"
+                      >
+                        {media}
+                      </Link>
+                    ) : (
+                      <div className="flex h-full flex-col overflow-hidden rounded-card border border-border bg-white shadow-card">
+                        {media}
+                      </div>
+                    )}
+                  </li>
+                );
+              })}
+            </Grid>
+          </Container>
+        </Section>
+      );
+
+    case "rooms":
+      return (
+        <Section tone={tone} spacing="compact">
+          <Container className="flex flex-col gap-8">
+            <BlockHeading title={block.title} />
+            <ul className="grid gap-6 lg:grid-cols-3">
+              {block.items.map((room) => (
+                <li
+                  key={room.title}
+                  className="flex flex-col overflow-hidden rounded-card border border-border bg-white shadow-card"
+                >
+                  <div className="relative aspect-[4/3]">
+                    <Image
+                      src={room.image.src}
+                      alt={room.image.alt}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, 100vw"
+                      className="object-cover"
+                    />
+                    {room.badge ? (
+                      <Badge tone="primary" className="absolute top-3 left-3">
+                        {room.badge}
+                      </Badge>
+                    ) : null}
+                  </div>
+                  <div className="flex flex-1 flex-col gap-3 p-6">
+                    <h3 className="font-heading text-xl font-bold text-navy">{room.title}</h3>
+                    {room.subtitle ? (
+                      <p className="font-heading font-semibold text-primary">{room.subtitle}</p>
+                    ) : null}
+                    <p className="text-sm leading-relaxed text-ink-muted">{room.description}</p>
+                    <ul className="flex flex-wrap gap-1.5">
+                      {room.features.map((feature) => (
+                        <li
+                          key={feature}
+                          className="rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-700"
+                        >
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                    {room.cta ? (
+                      <div className="mt-auto pt-2">
+                        <BlockCta cta={room.cta} />
+                      </div>
+                    ) : null}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </Container>
+        </Section>
+      );
+
+    case "comparison":
+      return (
+        <Section tone={tone} spacing="compact">
+          <Container className="flex flex-col gap-8">
+            <BlockHeading title={block.title} />
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-xl border-collapse text-sm">
+                <thead>
+                  <tr className="border-b border-border">
+                    <th scope="col" className="p-3 text-left font-heading text-navy">
+                      {block.rowHeader ?? "Característica"}
+                    </th>
+                    {block.columns.map((column) => (
+                      <th
+                        key={column}
+                        scope="col"
+                        className="p-3 text-center font-heading text-navy"
+                      >
+                        {column}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {block.rows.map((row) => (
+                    <tr key={row.feature} className="border-b border-border/60">
+                      <th scope="row" className="p-3 text-left font-normal text-ink-muted">
+                        {row.feature}
+                      </th>
+                      {row.values.map((value, index) => (
+                        <td
+                          key={`${row.feature}-${block.columns[index] ?? index}`}
+                          className="p-3 text-center text-ink-muted"
+                        >
+                          <ComparisonValue value={value} />
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </Container>
+        </Section>
+      );
+
     case "closing":
       return (
         <Section tone="navy" spacing="compact">
@@ -282,6 +425,21 @@ function PortfolioBlockView({ block, tone }: { block: PortfolioBlock; tone: "whi
         </Section>
       );
   }
+}
+
+function ComparisonValue({ value }: { value: boolean | string }) {
+  if (typeof value === "string") return <span className="font-semibold text-navy">{value}</span>;
+  return value ? (
+    <>
+      <Check aria-hidden="true" className="mx-auto size-5 text-health-strong" />
+      <span className="sr-only">Incluido</span>
+    </>
+  ) : (
+    <>
+      <Minus aria-hidden="true" className="mx-auto size-5 text-ink-muted" />
+      <span className="sr-only">No incluido</span>
+    </>
+  );
 }
 
 function BlockHeading({ title, body }: { title?: string; body?: string }) {
