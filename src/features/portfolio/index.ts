@@ -3,6 +3,11 @@ export type {
   CapacityRow,
   EquipmentItem,
   ImageRef,
+  PortfolioBlock,
+  PortfolioCardItem,
+  PortfolioGroupItem,
+  PortfolioPageContent,
+  PortfolioStatItem,
   PortfolioCapacityStat,
   PortfolioCaptionedImage,
   PortfolioGrowthStat,
@@ -17,6 +22,8 @@ export type {
   PortfolioWhyItem,
 } from "./types";
 
+export { PortfolioBlocks } from "./components/portfolio-blocks";
+export { PortfolioContentPage } from "./components/portfolio-content-page";
 export { PortfolioHomePage } from "./components/portfolio-home-page";
 export { PortfolioInfrastructurePage } from "./components/portfolio-infrastructure-page";
 export { PortfolioLayout } from "./components/portfolio-layout";
@@ -24,3 +31,8 @@ export { PortfolioRoomComparison } from "./components/portfolio-room-comparison"
 export { PortfolioServicePage } from "./components/portfolio-service-page";
 
 export { gynecologyEquipment, interventionismEquipment } from "./data/portfolio-equipment";
+export {
+  getPortfolioUnitPage,
+  portfolioUnitPages,
+  portfolioUnitSlugs,
+} from "./data/portfolio-pages";

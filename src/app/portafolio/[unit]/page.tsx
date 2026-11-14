@@ -1,42 +1,34 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { getSpecialty, getUnit, units } from "@/config/services";
-import { PortfolioServicePage } from "@/features/portfolio";
-
-const topLevelSpecialties = ["ginecologia-y-obstetricia"];
-
-function findEntry(slug: string) {
-  return getUnit(slug) ?? (topLevelSpecialties.includes(slug) ? getSpecialty(slug) : undefined);
-}
+import {
+  getPortfolioUnitPage,
+  PortfolioContentPage,
+  portfolioUnitSlugs,
+} from "@/features/portfolio";
 
 export const ensureStatic = "navigation";
 
 export function generateStaticParams() {
-  return [
-    ...units.map((entry) => ({ unit: entry.slug })),
-    ...topLevelSpecialties.map((slug) => ({ unit: slug })),
-  ];
+  return portfolioUnitSlugs.map((unit) => ({ unit }));
 }
 
 export async function generateMetadata({
   params,
 }: PageProps<"/portafolio/[unit]">): Promise<Metadata> {
   const { unit } = await params;
-  const entry = findEntry(unit);
-  if (!entry) return {};
+  const page = getPortfolioUnitPage(unit);
+  if (!page) return {};
   return {
-    title: `${entry.title} | Portafolio | Clínica La Esperanza`,
+    title: `${page.title} | Portafolio | Clínica La Esperanza`,
     robots: "noindex, nofollow",
   };
 }
 
 export default async function Page({ params }: PageProps<"/portafolio/[unit]">) {
   const { unit } = await params;
-  const entry = findEntry(unit);
-  if (!entry) notFound();
+  const page = getPortfolioUnitPage(unit);
+  if (!page) notFound();
 
-  const breadcrumbs = [{ label: "Portafolio", href: "/portafolio/" }, { label: entry.title }];
-
-  return <PortfolioServicePage entry={entry} breadcrumbs={breadcrumbs} />;
+  return <PortfolioContentPage page={page} />;
 }
