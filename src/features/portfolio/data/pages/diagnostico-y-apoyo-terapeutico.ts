@@ -8,10 +8,7 @@ export const diagnosticoPage: PortfolioPageContent = {
   blocks: [
     {
       kind: "banner",
-      image: {
-        src: "/images/portafolio/de.webp",
-        alt: "Servicio de diagnóstico y apoyo terapéutico",
-      },
+      image: { src: "/images/services/diagnostico-portada.webp", alt: "Sala de tomografía" },
     },
     {
       kind: "intro",
@@ -25,7 +22,7 @@ export const diagnosticoPage: PortfolioPageContent = {
       kind: "feature",
       title: "Tecnología que marca la diferencia",
       image: {
-        src: "/images/portafolio/chatgpt-image-26-ago-2026-16_56_38-1024x685.webp",
+        src: "/images/services/diagnostico-4.webp",
         alt: "Tomógrafo General Electric Revolution Ascend",
       },
       body: [
@@ -61,11 +58,8 @@ export const diagnosticoPage: PortfolioPageContent = {
       title: "Tomografía de nueva generación",
       body: "Contamos con el tomógrafo General Electric Revolution™ Ascend, el primer equipo en Latinoamérica con inteligencia artificial integrada.",
       images: [
-        {
-          src: "/images/portafolio/chatgpt-image-27-ago-2026-11_26_55-1024x576.webp",
-          alt: "Sala de tomografía",
-        },
-        { src: "/images/portafolio/0-1024x576.webp", alt: "Tomógrafo en funcionamiento" },
+        { src: "/images/services/diagnostico-1.webp", alt: "Tomógrafo GE Revolution Ascend" },
+        { src: "/images/services/diagnostico-2.webp", alt: "Tecnólogo programando el tomógrafo" },
       ],
     },
     {

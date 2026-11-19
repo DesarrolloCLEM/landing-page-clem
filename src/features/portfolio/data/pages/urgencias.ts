@@ -9,8 +9,8 @@ export const urgenciasPage: PortfolioPageContent = {
     {
       kind: "banner",
       image: {
-        src: "/images/portafolio/88.webp",
-        alt: "Servicio de urgencias de Clínica La Esperanza",
+        src: "/images/services/urgencias-portada.webp",
+        alt: "Pasillo del servicio de urgencias",
       },
     },
     {
@@ -46,11 +46,8 @@ export const urgenciasPage: PortfolioPageContent = {
     {
       kind: "gallery",
       images: [
-        {
-          src: "/images/portafolio/personal-urgencias-1024x576.webp",
-          alt: "Personal del servicio de urgencias",
-        },
-        { src: "/images/portafolio/urg3-1024x576.webp", alt: "Cubículos de urgencias" },
+        { src: "/images/services/urgencias-1.webp", alt: "Equipo de enfermería de urgencias" },
+        { src: "/images/services/urgencias-2.webp", alt: "Cubículos de urgencias" },
       ],
     },
     {

@@ -72,9 +72,9 @@ export function MediaShowcase() {
         >
           <ImageGallery
             images={[
-              { src: "/images/home/hospitalizacion-habitacion.webp", alt: "Foto de ejemplo 1" },
-              { src: "/images/home/cirugia-quirofano.webp", alt: "Foto de ejemplo 2" },
-              { src: "/images/home/urgencias-equipo.webp", alt: "Foto de ejemplo 3" },
+              { src: "/images/services/hospitalizacion-portada.webp", alt: "Foto de ejemplo 1" },
+              { src: "/images/services/cirugia-2.webp", alt: "Foto de ejemplo 2" },
+              { src: "/images/services/urgencias-1.webp", alt: "Foto de ejemplo 3" },
             ]}
           />
         </ShowcaseBlock>

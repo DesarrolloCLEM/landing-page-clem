@@ -11,7 +11,7 @@ export const specialties: ServiceEntry[] = [
     summary:
       "La cirugía general es la especialidad médica que se ocupa del diagnóstico, tratamiento y manejo de las patologías quirúrgicas que afectan el sistema digestivo, la pared abdominal y los tejidos blandos.",
     image: {
-      src: "/images/services/especialidades/cirugia-general.webp",
+      src: "/images/services/cirugia-2.webp",
       alt: "Equipo de cirugía general durante una intervención en el quirófano",
     },
     intro: [
@@ -1599,7 +1599,7 @@ export const specialties: ServiceEntry[] = [
     summary:
       "En Clínica La Esperanza ofrecemos un servicio de Pediatría orientado a la prevención, el diagnóstico, el tratamiento y el seguimiento de la salud infantil, brindando una atención cercana, segura y humanizada.",
     image: {
-      src: "/images/services/especialidades/pediatria.webp",
+      src: "/images/services/hospitalizacion-pediatrica-portada.webp",
       alt: "Madre e hija sonriendo en la consulta pediátrica",
     },
     intro: [

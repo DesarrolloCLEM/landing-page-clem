@@ -9,7 +9,7 @@ export const cirugiaPage: PortfolioPageContent = {
     {
       kind: "banner",
       image: {
-        src: "/images/portafolio/228.webp",
+        src: "/images/services/cirugia-portada.webp",
         alt: "Quirófano de Clínica La Esperanza",
       },
     },
@@ -130,10 +130,15 @@ export const cirugiaPage: PortfolioPageContent = {
       kind: "gallery",
       title: "Conoce nuestra Unidad Quirúrgica",
       images: [
-        { src: "/images/portafolio/67-370x493.webp", alt: "Quirófano de la unidad quirúrgica" },
-        { src: "/images/portafolio/321-1.webp", alt: "Equipo quirúrgico en procedimiento" },
-        { src: "/images/portafolio/271-370x303.webp", alt: "Instrumental quirúrgico" },
-        { src: "/images/portafolio/87-370x493.webp", alt: "Área de recuperación postoperatoria" },
+        {
+          src: "/images/services/cirugia-1.webp",
+          alt: "Cirujano preparando el instrumental quirúrgico",
+        },
+        {
+          src: "/images/services/cirugia-2.webp",
+          alt: "Equipo quirúrgico durante un procedimiento",
+        },
+        { src: "/images/services/cirugia-3.webp", alt: "Equipo de la Unidad Quirúrgica" },
       ],
     },
     {

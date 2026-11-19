@@ -129,35 +129,35 @@ export const numberedServices: PortfolioNumberedService[] = [
     title: "Hospitalización",
     summary: numberedServicesSummary,
     href: "/portafolio/hospitalizacion/",
-    image: { src: "/images/portafolio/chatgpt-image-19-sept-2026-11_21_28.webp", alt: "" },
+    image: { src: "/images/services/hospitalizacion-portada.webp", alt: "" },
   },
   {
     number: "02",
     title: "Urgencias",
     summary: numberedServicesSummary,
     href: "/portafolio/urgencias/",
-    image: { src: "/images/portafolio/chatgpt-image-19-sept-2026-11_24_55.webp", alt: "" },
+    image: { src: "/images/services/urgencias-portada.webp", alt: "" },
   },
   {
     number: "03",
     title: "Cuidado crítico",
     summary: numberedServicesSummary,
     href: "/portafolio/cuidado-critico/",
-    image: { src: "/images/portafolio/chatgpt-image-19-sept-2026-11_22_16.webp", alt: "" },
+    image: { src: "/images/services/cuidado-critico-portada.webp", alt: "" },
   },
   {
     number: "04",
     title: "Cirugía",
     summary: numberedServicesSummary,
     href: "/portafolio/cirugia/",
-    image: { src: "/images/portafolio/chatgpt-image-19-sept-2026-11_23_45.webp", alt: "" },
+    image: { src: "/images/services/cirugia-portada.webp", alt: "" },
   },
   {
     number: "05",
     title: "Ginecología y obstetricia",
     summary: numberedServicesSummary,
     href: "/portafolio/ginecologia-y-obstetricia/",
-    image: { src: "/images/portafolio/chatgpt-image-19-sept-2026-11_27_47.webp", alt: "" },
+    image: { src: "/images/services/especialidades/ginecologia-y-obstetricia.webp", alt: "" },
   },
 ];
 
@@ -165,12 +165,12 @@ export const serviceCards: PortfolioServiceCard[] = [
   {
     title: "Hospitalización",
     href: "/portafolio/hospitalizacion/",
-    image: { src: "/images/portafolio/14-1-1024x683.webp", alt: "" },
+    image: { src: "/images/services/suite-serena-1.webp", alt: "" },
   },
   {
     title: "Urgencias",
     href: "/portafolio/urgencias/",
-    image: { src: "/images/portafolio/urgencias-2-1-1024x682.webp", alt: "" },
+    image: { src: "/images/services/urgencias-1.webp", alt: "" },
   },
   {
     title: "Cuidado Crítico",
@@ -180,7 +180,7 @@ export const serviceCards: PortfolioServiceCard[] = [
   {
     title: "Cirugía",
     href: "/portafolio/cirugia/",
-    image: { src: "/images/portafolio/cirugia-general-1024x683.webp", alt: "" },
+    image: { src: "/images/services/cirugia-2.webp", alt: "" },
   },
   {
     title: "Ginecología y obstetricia",
@@ -193,17 +193,17 @@ export const serviceCards: PortfolioServiceCard[] = [
   {
     title: "Consulta externa especializada",
     href: "/portafolio/consulta-externa/",
-    image: { src: "/images/portafolio/r6ph7609-1-1-1024x683.webp", alt: "" },
+    image: { src: "/images/services/consulta-externa-portada.webp", alt: "" },
   },
   {
     title: "Diagnóstico y Apoyo Terapéutico",
     href: "/portafolio/diagnostico-y-apoyo-terapeutico/",
-    image: { src: "/images/portafolio/chatgpt-image-27-ago-2026-12_02_59-1024x683.webp", alt: "" },
+    image: { src: "/images/services/diagnostico-4.webp", alt: "" },
   },
   {
     title: "Programas especiales",
     href: "/portafolio/programas/",
-    image: { src: "/images/portafolio/chatgpt-image-27-ago-2026-11_51_45-1024x682.webp", alt: "" },
+    image: { src: "/images/services/nace-con-esperanza-portada.webp", alt: "" },
   },
 ];
 

@@ -14,8 +14,8 @@ export const hospitalizacionPage: PortfolioPageContent = {
     {
       kind: "banner",
       image: {
-        src: "/images/portafolio/diseno-sin-titulo-5-1024x514.webp",
-        alt: "Área de hospitalización de Clínica La Esperanza",
+        src: "/images/services/hospitalizacion-portada.webp",
+        alt: "Habitación de hospitalización",
       },
     },
     {
@@ -128,7 +128,6 @@ export const hospitalizacionPage: PortfolioPageContent = {
       title: "Conoce nuestros espacios",
       body: "En Clínica La Esperanza creemos que sanar también significa sentirse acompañado, cómodo y seguro. Por eso ofrecemos espacios diseñados para brindar bienestar, tranquilidad y una atención humanizada durante cada etapa de la recuperación.",
       images: [
-        { src: "/images/portafolio/bpersonal-1024x683.webp", alt: "Personal asistencial" },
         { src: "/images/portafolio/detalller-1024x683.webp", alt: "Detalle de una habitación" },
         {
           src: "/images/portafolio/llamado-1024x683.webp",

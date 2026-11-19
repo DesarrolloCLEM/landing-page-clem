@@ -105,7 +105,7 @@ export const programs: ServiceEntry[] = [
     summary:
       "Un proceso respetuoso y cercano para cada madre, honrando su ritmo y sus decisiones, con todo el respaldo clínico disponible si se necesita.",
     image: {
-      src: "/images/services/nace-con-esperanza-madre.webp",
+      src: "/images/services/nace-con-esperanza-portada.webp",
       alt: "Madre sosteniendo a su bebé recién nacido en la habitación",
     },
     intro: [
@@ -229,12 +229,20 @@ export const programs: ServiceEntry[] = [
     ],
     gallery: [
       {
-        src: "/images/services/nace-con-esperanza-habitacion.webp",
-        alt: "Madre acompañada por su pareja y el equipo de enfermería",
+        src: "/images/services/nace-con-esperanza-1.webp",
+        alt: "Ejercicios con balón durante el trabajo de parto",
       },
       {
-        src: "/images/services/nace-con-esperanza-suite.webp",
-        alt: "Sala de descanso de la Suite VIP",
+        src: "/images/services/nace-con-esperanza-2.webp",
+        alt: "Valoración médica de una gestante",
+      },
+      {
+        src: "/images/services/nace-con-esperanza-3.webp",
+        alt: "Madre amamantando a su recién nacido",
+      },
+      {
+        src: "/images/services/nace-con-esperanza-4.webp",
+        alt: "Equipo médico atendiendo un nacimiento",
       },
     ],
     related: [

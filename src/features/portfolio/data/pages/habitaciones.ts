@@ -22,21 +22,18 @@ export const habitacionEstandarPage: PortfolioPageContent = {
     {
       kind: "gallery",
       images: [
+        { src: "/images/services/habitacion-estandar-portada.webp", alt: "Habitación Estándar" },
         {
-          src: "/images/portafolio/chatgpt-image-27-ago-2026-09_22_26-1024x683.webp",
-          alt: "Habitación Estándar",
+          src: "/images/services/habitacion-estandar-1.webp",
+          alt: "Cama de la Habitación Estándar",
         },
         {
-          src: "/images/portafolio/chatgpt-image-27-ago-2026-09_31_19-1024x683.webp",
-          alt: "Baño de la Habitación Estándar",
+          src: "/images/services/habitacion-estandar-2.webp",
+          alt: "Habitación Estándar con sillón para el acompañante",
         },
         {
-          src: "/images/portafolio/chatgpt-image-27-ago-2026-09_24_49-1024x683.webp",
+          src: "/images/services/habitacion-estandar-3.webp",
           alt: "Detalle de la Habitación Estándar",
-        },
-        {
-          src: "/images/portafolio/chatgpt-image-27-ago-2026-09_29_21-1024x683.webp",
-          alt: "Espacio para el acompañante",
         },
       ],
     },
@@ -57,26 +54,22 @@ export const habitacionPlusPage: PortfolioPageContent = {
     {
       kind: "gallery",
       images: [
+        { src: "/images/services/habitacion-plus-portada.webp", alt: "Habitación Plus" },
         {
-          src: "/images/portafolio/chatgpt-image-26-ago-2026-16_31_47-1024x1024.webp",
-          alt: "Habitación Plus",
+          src: "/images/services/habitacion-plus-1.webp",
+          alt: "Detalle de la cama de la Habitación Plus",
         },
         {
-          src: "/images/portafolio/chatgpt-image-27-ago-2026-09_40_41-1024x1024.webp",
+          src: "/images/services/habitacion-plus-2.webp",
           alt: "Zona de descanso de la Habitación Plus",
         },
-        { src: "/images/portafolio/33.webp", alt: "Detalle de la Habitación Plus" },
         {
-          src: "/images/portafolio/chatgpt-image-26-ago-2026-16_31_01-1024x1024.webp",
-          alt: "Baño de la Habitación Plus",
+          src: "/images/services/habitacion-plus-3.webp",
+          alt: "Sillón para el acompañante en la Habitación Plus",
         },
         {
-          src: "/images/portafolio/chatgpt-image-26-ago-2026-16_26_43-1024x1024.webp",
-          alt: "Estación de café de la Habitación Plus",
-        },
-        {
-          src: "/images/portafolio/chatgpt-image-27-ago-2026-09_38_11-1024x1024.webp",
-          alt: "Espacio para el acompañante",
+          src: "/images/services/habitacion-plus-4.webp",
+          alt: "Habitación Plus con cuna para el recién nacido",
         },
       ],
     },
@@ -97,23 +90,26 @@ export const suiteSerenaPage: PortfolioPageContent = {
     {
       kind: "gallery",
       images: [
-        { src: "/images/portafolio/57.webp", alt: "Suite Serena" },
-        { src: "/images/portafolio/14-2-1024x683.webp", alt: "Habitación de la Suite Serena" },
+        { src: "/images/services/suite-serena-portada.webp", alt: "Suite Serena" },
+        { src: "/images/services/suite-serena-1.webp", alt: "Sala de la Suite Serena" },
+        { src: "/images/services/suite-serena-2.webp", alt: "Sofá y flores en la Suite Serena" },
+        { src: "/images/services/suite-serena-3.webp", alt: "Cama de la Suite Serena" },
         {
-          src: "/images/portafolio/chatgpt-image-27-ago-2026-08_53_59-1024x683.webp",
-          alt: "Zona de estar de la Suite Serena",
+          src: "/images/services/suite-serena-menu-desayuno.webp",
+          alt: "Desayuno del menú de la Suite Serena",
         },
         {
-          src: "/images/portafolio/chatgpt-image-27-ago-2026-08_51_02-1024x997.webp",
-          alt: "Baño de la Suite Serena",
+          src: "/images/services/suite-serena-menu-almuerzo.webp",
+          alt: "Almuerzo del menú de la Suite Serena",
         },
-        { src: "/images/portafolio/imagen_463x549.webp", alt: "Detalle de la Suite Serena" },
         {
-          src: "/images/portafolio/chatgpt-image-27-ago-2026-08_38_11-864x1024.webp",
-          alt: "Espacio para el acompañante",
+          src: "/images/services/suite-serena-menu-cena.webp",
+          alt: "Cena del menú de la Suite Serena",
         },
-        { src: "/images/portafolio/56.webp", alt: "Estación de café de la Suite Serena" },
-        { src: "/images/portafolio/55-2.webp", alt: "Vista general de la Suite Serena" },
+        {
+          src: "/images/services/suite-serena-menu-snack.webp",
+          alt: "Merienda del menú de la Suite Serena",
+        },
       ],
     },
   ],

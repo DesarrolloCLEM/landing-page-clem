@@ -13,10 +13,7 @@ export const suiteVipPage: PortfolioPageContent = {
   blocks: [
     {
       kind: "banner",
-      image: {
-        src: "/images/portafolio/41-1024x453.webp",
-        alt: "Suite VIP de Clínica La Esperanza",
-      },
+      image: { src: "/images/services/suite-vip-portada.webp", alt: "Suite VIP" },
     },
     {
       kind: "intro",
@@ -56,7 +53,10 @@ export const suiteVipPage: PortfolioPageContent = {
             "Enfermería 24h",
             "Acompañante",
           ],
-          image: { src: "/images/portafolio/13.webp", alt: "Habitación Estándar" },
+          image: {
+            src: "/images/services/habitacion-estandar-portada.webp",
+            alt: "Habitación Estándar",
+          },
           cta: {
             label: "Conoce más",
             href: "/portafolio/hospitalizacion/habitacion-estandar/",
@@ -77,7 +77,7 @@ export const suiteVipPage: PortfolioPageContent = {
             "Espacios amplios",
             "Acompañante",
           ],
-          image: { src: "/images/portafolio/14.webp", alt: "Habitación Plus" },
+          image: { src: "/images/services/habitacion-plus-portada.webp", alt: "Habitación Plus" },
           cta: { label: "Conoce más", href: "/portafolio/hospitalizacion/habitacion-plus/" },
         },
         {
@@ -98,7 +98,7 @@ export const suiteVipPage: PortfolioPageContent = {
             "Espacio acompañante",
             "Menú dif. acompañante",
           ],
-          image: { src: "/images/portafolio/12.webp", alt: "Suite Serena" },
+          image: { src: "/images/services/suite-serena-portada.webp", alt: "Suite Serena" },
           cta: { label: "Conoce más", href: "/portafolio/hospitalizacion/suite-serena/" },
         },
       ],

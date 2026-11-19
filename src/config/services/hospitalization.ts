@@ -9,7 +9,7 @@ export const roomOptions: (ContentItem & { slug: string; image: string })[] = [
     description:
       "La Habitación Estándar ofrece un espacio cómodo, seguro y funcional, pensado para brindar una estancia agradable con la calidad y el cuidado que caracterizan a la Clínica La Esperanza.",
     href: `${base}/habitacion-estandar/`,
-    image: "/images/services/habitacion-estandar-1.webp",
+    image: "/images/services/habitacion-estandar-portada.webp",
     tags: [
       "Habitación privada",
       "Baño privado",
@@ -27,7 +27,7 @@ export const roomOptions: (ContentItem & { slug: string; image: string })[] = [
     description:
       "La Habitación Plus está diseñada para quienes desean disfrutar de un ambiente más amplio, moderno y confortable durante su proceso de recuperación.",
     href: `${base}/habitacion-plus/`,
-    image: "/images/services/habitacion-plus-1.webp",
+    image: "/images/services/habitacion-plus-portada.webp",
     tags: [
       "Habitación privada",
       "Baño privado",
@@ -86,7 +86,7 @@ export const hospitalizationOptions: ServiceEntry[] = [
     summary:
       "Un área diseñada para brindar una atención segura, cálida y especializada para los niños y sus familias.",
     image: {
-      src: "/images/services/pediatria-madre-e-hija.webp",
+      src: "/images/services/hospitalizacion-pediatrica-portada.webp",
       alt: "Madre e hija sonriendo en la clínica",
     },
     intro: [
@@ -155,8 +155,8 @@ export const hospitalizationOptions: ServiceEntry[] = [
     summary:
       "Habitaciones Estándar, Plus y Suite Serena: mayor privacidad, confort y servicios exclusivos para el paciente y su acompañante.",
     image: {
-      src: "/images/services/suite-serena-1.webp",
-      alt: "Sala de la Suite Serena con sofá, sillas y flores",
+      src: "/images/services/suite-vip-portada.webp",
+      alt: "Suite VIP",
     },
     intro: [
       "La Suite Serena ofrece el máximo nivel de comodidad, con un espacio exclusivo que combina privacidad, amplitud y servicios diferenciados para el paciente y su acompañante.",
@@ -182,7 +182,7 @@ export const hospitalizationOptions: ServiceEntry[] = [
     summary:
       "Un espacio cómodo, seguro y funcional para una estancia agradable durante la recuperación.",
     image: {
-      src: "/images/services/habitacion-estandar-1.webp",
+      src: "/images/services/habitacion-estandar-portada.webp",
       alt: "Habitación Estándar con cama clínica y mesa auxiliar",
     },
     intro: [
@@ -191,16 +191,16 @@ export const hospitalizationOptions: ServiceEntry[] = [
     sections: [],
     gallery: [
       {
+        src: "/images/services/habitacion-estandar-1.webp",
+        alt: "Cama de la Habitación Estándar",
+      },
+      {
         src: "/images/services/habitacion-estandar-2.webp",
-        alt: "Cama clínica de la Habitación Estándar",
+        alt: "Habitación Estándar con sillón para el acompañante",
       },
       {
         src: "/images/services/habitacion-estandar-3.webp",
-        alt: "Habitación Estándar con división de vidrio",
-      },
-      {
-        src: "/images/services/habitacion-estandar-4.webp",
-        alt: "Habitación Estándar con monitor y sillón",
+        alt: "Detalle de la Habitación Estándar",
       },
     ],
     related: roomRelated,
@@ -214,7 +214,7 @@ export const hospitalizationOptions: ServiceEntry[] = [
     summary:
       "Una habitación más amplia y confortable, con amenidades adicionales para el paciente y su acompañante.",
     image: {
-      src: "/images/services/habitacion-plus-1.webp",
+      src: "/images/services/habitacion-plus-portada.webp",
       alt: "Habitación Plus con cama clínica, sillón y mesa auxiliar",
     },
     intro: [
@@ -223,20 +223,20 @@ export const hospitalizationOptions: ServiceEntry[] = [
     sections: [],
     gallery: [
       {
+        src: "/images/services/habitacion-plus-1.webp",
+        alt: "Detalle de la cama de la Habitación Plus",
+      },
+      {
         src: "/images/services/habitacion-plus-2.webp",
-        alt: "Sillón reclinable para el acompañante en la Habitación Plus",
+        alt: "Zona de descanso de la Habitación Plus",
       },
       {
         src: "/images/services/habitacion-plus-3.webp",
-        alt: "Cama clínica y cuna en la Habitación Plus",
+        alt: "Sillón para el acompañante en la Habitación Plus",
       },
       {
         src: "/images/services/habitacion-plus-4.webp",
-        alt: "Sala de estar de la Habitación Plus",
-      },
-      {
-        src: "/images/services/habitacion-plus-5.webp",
-        alt: "Detalle de la cama con el logo de la clínica",
+        alt: "Habitación Plus con cuna para el recién nacido",
       },
     ],
     related: roomRelated,
@@ -248,30 +248,42 @@ export const hospitalizationOptions: ServiceEntry[] = [
     title: "Suite Serena",
     tagline: "Nuestra experiencia premium de hospitalización",
     summary: "La opción de máxima categoría: elegancia, privacidad y servicios diferenciados.",
-    image: { src: "/images/services/suite-serena-3.webp", alt: "Cama clínica de la Suite Serena" },
+    image: {
+      src: "/images/services/suite-serena-portada.webp",
+      alt: "Cama clínica de la Suite Serena",
+    },
     intro: [
       "La opción de máxima categoría en Clínica La Esperanza combina elegancia, privacidad y servicios diferenciados para una hospitalización excepcional. Pensada para quienes buscan una experiencia superior durante su recuperación, ofrece un ambiente exclusivo, ideal para pacientes y acompañantes que desean sumar tranquilidad y distinción a su proceso.",
     ],
     sections: [],
     gallery: [
-      { src: "/images/services/suite-serena-1.webp", alt: "Sala de la Suite Serena" },
-      { src: "/images/services/suite-serena-2.webp", alt: "Detalle de la Suite Serena" },
-      { src: "/images/services/suite-serena-4.webp", alt: "Sofá y flores en la Suite Serena" },
+      {
+        src: "/images/services/suite-serena-1.webp",
+        alt: "Sala de la Suite Serena",
+      },
+      {
+        src: "/images/services/suite-serena-2.webp",
+        alt: "Sofá y flores en la Suite Serena",
+      },
+      {
+        src: "/images/services/suite-serena-3.webp",
+        alt: "Cama de la Suite Serena",
+      },
       {
         src: "/images/services/suite-serena-menu-desayuno.webp",
-        alt: "Desayuno del menú especial",
+        alt: "Desayuno del menú de la Suite Serena",
       },
       {
         src: "/images/services/suite-serena-menu-almuerzo.webp",
-        alt: "Plato de pasta del menú especial",
+        alt: "Almuerzo del menú de la Suite Serena",
       },
       {
         src: "/images/services/suite-serena-menu-cena.webp",
-        alt: "Pechuga con ensalada del menú especial",
+        alt: "Cena del menú de la Suite Serena",
       },
       {
         src: "/images/services/suite-serena-menu-snack.webp",
-        alt: "Yogur con granola y frutas del menú especial",
+        alt: "Merienda del menú de la Suite Serena",
       },
     ],
     related: roomRelated,

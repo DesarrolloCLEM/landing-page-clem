@@ -13,7 +13,7 @@ export const units: ServiceEntry[] = [
       "Nuestro servicio de urgencias de mediana y alta complejidad está en la capacidad de atender cualquier tipo de urgencia médica, con una infraestructura amplia y renovada.",
     emergency: true,
     image: {
-      src: "/images/services/urgencias-pasillo.webp",
+      src: "/images/services/urgencias-portada.webp",
       alt: "Pasillo de cubículos del servicio de urgencias",
     },
     intro: [
@@ -55,12 +55,12 @@ export const units: ServiceEntry[] = [
     ],
     gallery: [
       {
-        src: "/images/services/urgencias-equipo.webp",
-        alt: "Equipo de enfermería del servicio de urgencias",
+        src: "/images/services/urgencias-1.webp",
+        alt: "Equipo de enfermería de urgencias",
       },
       {
-        src: "/images/services/urgencias-pediatrica.webp",
-        alt: "Equipo médico atendiendo a un paciente",
+        src: "/images/services/urgencias-2.webp",
+        alt: "Cubículos de urgencias",
       },
     ],
     related: [
@@ -82,7 +82,7 @@ export const units: ServiceEntry[] = [
     summary:
       "Cuidado integral y acompañamiento continuo para pacientes que requieren manejo intrahospitalario, con seguimiento médico y de enfermería enfocado en la seguridad y la recuperación.",
     image: {
-      src: "/images/services/hospitalizacion-habitacion.webp",
+      src: "/images/services/hospitalizacion-portada.webp",
       alt: "Habitación de hospitalización con cama clínica y sillón para el acompañante",
     },
     intro: [
@@ -242,8 +242,8 @@ export const units: ServiceEntry[] = [
     summary:
       "Valoración y manejo quirúrgico de patologías frecuentes y de mayor complejidad, con un enfoque seguro, oportuno y humanizado.",
     image: {
-      src: "/images/services/cirugia-quirofano.webp",
-      alt: "Cirujanos operando en uno de los quirófanos de la clínica",
+      src: "/images/services/cirugia-portada.webp",
+      alt: "Quirófano de Clínica La Esperanza",
     },
     intro: [
       "Nuestro servicio de Cirugía realiza la valoración y manejo quirúrgico de patologías frecuentes, con un enfoque seguro, oportuno y humanizado. Acompañamos al paciente en todo el proceso: evaluación prequirúrgica, preparación, procedimiento y seguimiento postoperatorio, priorizando la seguridad clínica y una recuperación organizada.",
@@ -460,16 +460,16 @@ export const units: ServiceEntry[] = [
     ],
     gallery: [
       {
-        src: "/images/services/cirugia-equipo-quirurgico.webp",
-        alt: "Equipo quirúrgico de la clínica en el quirófano",
+        src: "/images/services/cirugia-1.webp",
+        alt: "Cirujano preparando el instrumental quirúrgico",
       },
       {
-        src: "/images/services/cirugia-procedimiento.webp",
-        alt: "Cirujanos durante un procedimiento",
+        src: "/images/services/cirugia-2.webp",
+        alt: "Equipo quirúrgico durante un procedimiento",
       },
       {
-        src: "/images/services/cirugia-cirujano.webp",
-        alt: "Cirujano preparándose para una intervención",
+        src: "/images/services/cirugia-3.webp",
+        alt: "Equipo de la Unidad Quirúrgica",
       },
     ],
     related: [
@@ -491,7 +491,7 @@ export const units: ServiceEntry[] = [
     summary:
       "Atención médica programada para valoración, diagnóstico, tratamiento y seguimiento de pacientes, con especialistas de diferentes áreas.",
     image: {
-      src: "/images/services/consulta-externa-sala-espera.webp",
+      src: "/images/services/consulta-externa-portada.webp",
       alt: "Sala de espera de consulta externa con el logo de la clínica",
     },
     intro: [
@@ -668,8 +668,8 @@ export const units: ServiceEntry[] = [
     summary:
       "Unidades de cuidado intensivo e intermedio para adultos, niños y recién nacidos, con monitoreo y vigilancia permanente.",
     image: {
-      src: "/images/services/cuidado-critico-equipo.webp",
-      alt: "Equipo médico y de enfermería de la unidad de cuidado crítico",
+      src: "/images/services/cuidado-critico-portada.webp",
+      alt: "Especialista en la unidad de cuidado crítico neonatal",
     },
     intro: [
       "En Clínica La Esperanza contamos con unidades de Cuidado Crítico dotadas con tecnología especializada, dirigidas a pacientes adultos, pediátricos y neonatales que requieren monitoreo y vigilancia permanente. Nuestro equipo asistencial trabaja de manera integral para brindar una atención segura en cada etapa del proceso.",
@@ -771,7 +771,7 @@ export const units: ServiceEntry[] = [
     summary:
       "Imágenes diagnósticas, laboratorio clínico y servicios de apoyo terapéutico que respaldan los procesos clínicos de la clínica.",
     image: {
-      src: "/images/services/diagnostico-tomografo.webp",
+      src: "/images/services/diagnostico-portada.webp",
       alt: "Tomógrafo General Electric Revolution Ascend de la clínica",
     },
     intro: [
@@ -848,16 +848,20 @@ export const units: ServiceEntry[] = [
     ],
     gallery: [
       {
-        src: "/images/services/diagnostico-tecnologo.webp",
-        alt: "Tecnólogo programando un estudio en el tomógrafo",
+        src: "/images/services/diagnostico-1.webp",
+        alt: "Tomógrafo GE Revolution Ascend",
       },
       {
-        src: "/images/services/diagnostico-tomografo-detalle.webp",
-        alt: "Detalle del tomógrafo de última generación",
+        src: "/images/services/diagnostico-2.webp",
+        alt: "Tecnólogo programando el tomógrafo",
       },
       {
-        src: "/images/services/diagnostico-ecografia.webp",
-        alt: "Médico realizando una ecografía",
+        src: "/images/services/diagnostico-3.webp",
+        alt: "Ecografía obstétrica",
+      },
+      {
+        src: "/images/services/diagnostico-4.webp",
+        alt: "Detalle del tomógrafo",
       },
     ],
     related: [

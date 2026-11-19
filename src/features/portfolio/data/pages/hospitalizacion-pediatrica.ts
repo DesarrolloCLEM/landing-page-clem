@@ -16,8 +16,8 @@ export const hospitalizacionPediatricaPage: PortfolioPageContent = {
     {
       kind: "banner",
       image: {
-        src: "/images/portafolio/24.webp",
-        alt: "Área de hospitalización pediátrica de Clínica La Esperanza",
+        src: "/images/services/hospitalizacion-pediatrica-portada.webp",
+        alt: "Madre e hija en la consulta pediátrica",
       },
     },
     {
@@ -41,11 +41,11 @@ export const hospitalizacionPediatricaPage: PortfolioPageContent = {
       items: [
         {
           title: "Cardiología pediátrica",
-          image: { src: "/images/portafolio/14-1-1024x683.webp", alt: "" },
+          image: { src: "/images/services/suite-serena-1.webp", alt: "" },
         },
         {
           title: "Neumología pediátrica",
-          image: { src: "/images/portafolio/urgencias-2-1-1024x682.webp", alt: "" },
+          image: { src: "/images/services/urgencias-portada.webp", alt: "" },
         },
         {
           title: "Infectología pediátrica",
@@ -53,7 +53,7 @@ export const hospitalizacionPediatricaPage: PortfolioPageContent = {
         },
         {
           title: "Neonatología",
-          image: { src: "/images/portafolio/cirugia-general-1024x683.webp", alt: "" },
+          image: { src: "/images/services/cirugia-2.webp", alt: "" },
         },
         {
           title: "Neurocirugía pediátrica",
@@ -69,14 +69,14 @@ export const hospitalizacionPediatricaPage: PortfolioPageContent = {
         {
           title: "Endocrinología",
           image: {
-            src: "/images/portafolio/chatgpt-image-27-ago-2026-12_02_59-1024x683.webp",
+            src: "/images/services/diagnostico-4.webp",
             alt: "",
           },
         },
         {
           title: "Nefrología",
           image: {
-            src: "/images/portafolio/chatgpt-image-27-ago-2026-11_51_45-1024x682.webp",
+            src: "/images/services/hospitalizacion-pediatrica-portada.webp",
             alt: "",
           },
         },
@@ -94,7 +94,7 @@ export const hospitalizacionPediatricaPage: PortfolioPageContent = {
         {
           title: "Cirugía pediátrica",
           image: {
-            src: "/images/portafolio/chatgpt-image-27-ago-2026-12_02_59-1024x683.webp",
+            src: "/images/services/diagnostico-4.webp",
             alt: "",
           },
         },

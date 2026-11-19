@@ -10,8 +10,8 @@ export const naceConEsperanzaPage: PortfolioPageContent = {
     {
       kind: "banner",
       image: {
-        src: "/images/portafolio/sd.webp",
-        alt: "Programa Nace con Esperanza de Clínica La Esperanza",
+        src: "/images/services/nace-con-esperanza-portada.webp",
+        alt: "Madre con su recién nacido",
       },
     },
     {
@@ -52,12 +52,12 @@ export const naceConEsperanzaPage: PortfolioPageContent = {
       kind: "gallery",
       images: [
         {
-          src: "/images/portafolio/chatgpt-image-27-ago-2026-11_04_41-1024x683.webp",
-          alt: "Suite de maternidad",
+          src: "/images/services/nace-con-esperanza-1.webp",
+          alt: "Ejercicios con balón durante el trabajo de parto",
         },
         {
-          src: "/images/portafolio/chatgpt-image-27-ago-2026-08_31_18-768x1024.webp",
-          alt: "Madre con su recién nacido",
+          src: "/images/services/nace-con-esperanza-2.webp",
+          alt: "Valoración médica de una gestante",
         },
       ],
     },
@@ -177,10 +177,13 @@ export const naceConEsperanzaPage: PortfolioPageContent = {
       kind: "gallery",
       images: [
         {
-          src: "/images/portafolio/chatgpt-image-27-ago-2026-11_01_08-1024x682.webp",
-          alt: "Atención al recién nacido",
+          src: "/images/services/nace-con-esperanza-3.webp",
+          alt: "Madre amamantando a su recién nacido",
         },
-        { src: "/images/portafolio/14-2-1024x683.webp", alt: "Suite de maternidad" },
+        {
+          src: "/images/services/nace-con-esperanza-4.webp",
+          alt: "Equipo médico atendiendo un nacimiento",
+        },
       ],
     },
     {

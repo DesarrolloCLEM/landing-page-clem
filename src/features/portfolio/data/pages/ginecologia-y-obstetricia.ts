@@ -9,8 +9,8 @@ export const ginecologiaPage: PortfolioPageContent = {
     {
       kind: "banner",
       image: {
-        src: "/images/portafolio/777.webp",
-        alt: "Servicio de ginecología y obstetricia de Clínica La Esperanza",
+        src: "/images/services/especialidades/ginecologia-y-obstetricia.webp",
+        alt: "Control obstétrico en una habitación de la clínica",
       },
     },
     {
@@ -25,7 +25,7 @@ export const ginecologiaPage: PortfolioPageContent = {
       kind: "feature",
       title: "Obstetricia",
       image: {
-        src: "/images/portafolio/chatgpt-image-27-ago-2026-10_17_32-1024x682.webp",
+        src: "/images/services/diagnostico-3.webp",
         alt: "Atención obstétrica en Clínica La Esperanza",
       },
       body: [
@@ -116,16 +116,16 @@ export const ginecologiaPage: PortfolioPageContent = {
       title: "Conoce nuestro servicio de Ginecología y Obstetricia",
       images: [
         {
-          src: "/images/portafolio/chatgpt-image-27-ago-2026-10_36_38-1024x682.webp",
-          alt: "Habitación de obstetricia",
+          src: "/images/services/nace-con-esperanza-2.webp",
+          alt: "Valoración médica de una gestante",
         },
         {
-          src: "/images/portafolio/chatgpt-image-27-ago-2026-10_52_47-1024x682.webp",
-          alt: "Sala de partos",
+          src: "/images/services/nace-con-esperanza-3.webp",
+          alt: "Madre amamantando a su recién nacido",
         },
         {
-          src: "/images/portafolio/chatgpt-image-27-ago-2026-11_01_08-1024x682.webp",
-          alt: "Atención al recién nacido",
+          src: "/images/services/nace-con-esperanza-4.webp",
+          alt: "Equipo médico atendiendo un nacimiento",
         },
       ],
     },

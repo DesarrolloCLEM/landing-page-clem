@@ -42,7 +42,7 @@ export const history = {
     "Desde los inicios la visión fue crear una institución cuyos usuarios fueran pacientes pertenecientes al régimen subsidiado, con el fin de brindarle a esta población vulnerable una atención con altos estándares de calidad, como las mejores clínicas del país.",
   ],
   images: [
-    { src: "/images/about/sala-de-espera.webp", alt: "Sala de espera de la clínica" },
+    { src: "/images/services/consulta-externa-portada.webp", alt: "Sala de espera de la clínica" },
     { src: "/images/about/recepcion.webp", alt: "Recepción principal de Clínica La Esperanza" },
   ] satisfies ImageAsset[],
 };

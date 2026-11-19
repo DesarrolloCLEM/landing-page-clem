@@ -27,7 +27,7 @@ export const pediatriaPage: PortfolioPageContent = {
       kind: "gallery",
       images: [
         {
-          src: "/images/portafolio/chatgpt-image-27-ago-2026-11_51_45-1024x682.webp",
+          src: "/images/services/hospitalizacion-pediatrica-portada.webp",
           alt: "Pediatría",
         },
       ],

@@ -9,8 +9,8 @@ export const cirugiaCardiovascularPage: PortfolioPageContent = {
     {
       kind: "banner",
       image: {
-        src: "/images/portafolio/corazon.webp",
-        alt: "Cirugía Cardiovascular",
+        src: "/images/services/especialidades/cirugia-cardiovascular.webp",
+        alt: "Cirugía cardiovascular en el quirófano",
       },
     },
     {

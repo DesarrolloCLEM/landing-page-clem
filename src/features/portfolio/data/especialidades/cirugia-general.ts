@@ -31,7 +31,7 @@ export const cirugiaGeneralPage: PortfolioPageContent = {
       kind: "feature",
       title: "Procedimientos quirúrgicos",
       image: {
-        src: "/images/portafolio/321.webp",
+        src: "/images/services/cirugia-3.webp",
         alt: "Cirugía General",
       },
     },

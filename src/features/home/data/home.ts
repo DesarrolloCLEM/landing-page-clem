@@ -33,7 +33,7 @@ export const mainServices = {
         "Nuestro servicio de hospitalización brinda cuidado integral y acompañamiento continuo para pacientes que requieren manejo intrahospitalario, con seguimiento médico y de enfermería enfocado en la seguridad y la recuperación.",
       href: "/servicios/hospitalizacion/",
       image: {
-        src: "/images/home/hospitalizacion-habitacion.webp",
+        src: "/images/services/hospitalizacion-portada.webp",
         alt: "Habitación de hospitalización con cama clínica",
       },
     },
@@ -43,7 +43,7 @@ export const mainServices = {
         "Nuestro servicio de Cirugía realiza la valoración y manejo quirúrgico de patologías frecuentes, con un enfoque seguro, oportuno y humanizado.",
       href: "/servicios/cirugia/",
       image: {
-        src: "/images/home/cirugia-quirofano.webp",
+        src: "/images/services/cirugia-2.webp",
         alt: "Equipo quirúrgico durante una cirugía en el quirófano",
       },
     },
@@ -53,7 +53,7 @@ export const mainServices = {
         "Brindamos atención médica programada para valoración, diagnóstico, tratamiento y seguimiento de pacientes, con un enfoque integral y humanizado y especialistas que orientan cada caso.",
       href: "/servicios/consulta-externa/",
       image: {
-        src: "/images/home/consulta-externa-sala-espera.webp",
+        src: "/images/services/consulta-externa-portada.webp",
         alt: "Sala de espera de consulta externa de la clínica",
       },
     },
@@ -63,7 +63,7 @@ export const mainServices = {
         "Nuestro servicio de urgencias de mediana y alta complejidad está en la capacidad de atender cualquier tipo de urgencia médica, con una infraestructura amplia y renovada para la comodidad de nuestros pacientes.",
       href: "/servicios/urgencias/",
       image: {
-        src: "/images/home/urgencias-equipo.webp",
+        src: "/images/services/urgencias-1.webp",
         alt: "Personal de enfermería del servicio de urgencias",
       },
     },

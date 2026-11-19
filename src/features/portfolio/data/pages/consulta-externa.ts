@@ -11,8 +11,8 @@ export const consultaExternaPage: PortfolioPageContent = {
     {
       kind: "banner",
       image: {
-        src: "/images/portafolio/211.webp",
-        alt: "Consulta externa de Clínica La Esperanza",
+        src: "/images/services/consulta-externa-portada.webp",
+        alt: "Sala de espera de consulta externa",
       },
     },
     {

@@ -9,8 +9,8 @@ export const cuidadoCriticoPage: PortfolioPageContent = {
     {
       kind: "banner",
       image: {
-        src: "/images/portafolio/88.webp",
-        alt: "Unidad de cuidado crítico de Clínica La Esperanza",
+        src: "/images/services/cuidado-critico-portada.webp",
+        alt: "Especialista en la unidad de cuidado crítico neonatal",
       },
     },
     {
