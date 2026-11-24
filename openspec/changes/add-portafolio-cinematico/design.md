@@ -101,7 +101,7 @@ Cada `li` es `sticky` con `top: calc(var(--portfolio-header-h) + 1.5rem + var(--
 - cada tarjeta se reduce (`scale` 1 → 0,92) y atenúa en el tramo `contain` que corresponde a la llegada de la siguiente, con rangos derivados de `--i`;
 - la última tarjeta no se anima.
 
-En celular es una lista con revelación simple.
+En celular es una lista sin animación, para no sumar efectos de entrada.
 
 ### 7. Galería horizontal: sección alta, contenedor `sticky` y pista trasladada (≥ 768 px)
 - **Sección:** su altura (`calc(var(--count) * 55svh)`) define cuánto scroll vertical dura el recorrido, y declara `view-timeline: --cine-hscroll`.
@@ -115,7 +115,8 @@ Variantes según el contexto:
 | Celular (< 768 px) | Sin esas reglas: es el carrusel `overflow-x: auto` + `scroll-snap` que ya usa el sitio, con `motion-carousel`. |
 | Movimiento reducido o sin soporte | Cuadrícula de 2 o 4 columnas. |
 
-**Teclado:** cuando hay foco visible dentro (`:has(:focus-visible)`), la pista pierde la animación, la sección vuelve a su altura natural y el contenedor pasa a `overflow-x: auto`. Así el navegador puede llevar la tarjeta enfocada a la vista. Es un salto visual solo para quien navega con teclado, a cambio de que el foco nunca quede fuera de pantalla.
+**Teclado:** cuando hay foco visible dentro (`:has(:focus-visible)`), la galería vuelve a la cuadrícula de la composición estática: 2 columnas, o 4 desde 1024 px, sin animación y con la sección a su altura natural. Es un salto visual solo para quien navega con teclado, a cambio de que el foco nunca quede fuera de pantalla.
+- *Descartado tras probarlo:* convertir la pista en una fila con `overflow-x: auto`. Chrome no desplaza una tarjeta enfocada que ya se ve en parte, así que 2 de 8 quedaban cortadas en el borde.
 
 ### 8. Collage de la nueva infraestructura y revelación
 Las fotos de `projectImages` se reparten en tres columnas. La columna central se desplaza más lento y las laterales más rápido (`translateY` de hasta ±60 px), con `animation-timeline: view()` sobre la sección. Las tarjetas de infraestructura institucional y de historias usan `motion-stagger`, que ya existe. Las cifras de crecimiento usan `CountUp`. Los títulos y párrafos no llevan animación, según la spec.

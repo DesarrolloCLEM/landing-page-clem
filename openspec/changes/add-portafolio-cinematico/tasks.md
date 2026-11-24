@@ -36,12 +36,12 @@
 
 ## 4. Servicios: apilado y galería horizontal
 
-- [ ] 4.1 Crear las unidades numeradas apiladas, con `sticky` por tarjeta y la línea de tiempo `--cine-stack` (decisión 6). Verificar a 1024 px y 1440 px:
+- [x] 4.1 Crear las unidades numeradas apiladas, con `sticky` por tarjeta y la línea de tiempo `--cine-stack` (decisión 6). Verificar a 1024 px y 1440 px:
   - la 02 cubre a la 01 y así hasta la 05;
   - cada tarjeta sigue siendo un enlace;
   - a 375 px es una lista sin apilado.
-- [ ] 4.2 Crear la galería horizontal de las ocho tarjetas con sección alta, contenedor `sticky` y pista trasladada (decisión 7). Verificar a 1024 px y 1440 px que se ven las ocho tarjetas completas antes de que la página siga bajando, y en una tablet horizontal (1024 × 600) que las tarjetas caben en pantalla.
-- [ ] 4.3 Implementar las variantes de la galería y verificarlas:
+- [x] 4.2 Crear la galería horizontal de las ocho tarjetas con sección alta, contenedor `sticky` y pista trasladada (decisión 7). Verificar a 1024 px y 1440 px que se ven las ocho tarjetas completas antes de que la página siga bajando, y en una tablet horizontal (1024 × 600) que las tarjetas caben en pantalla.
+- [x] 4.3 Implementar las variantes de la galería y verificarlas:
 
   | Variante | Verificación |
   |---|---|
@@ -49,7 +49,7 @@
   | Cuadrícula con movimiento reducido o sin soporte | Se ven las 8 tarjetas sin desplazamiento horizontal. |
   | Foco de teclado (`:has(:focus-visible)`) | Recorriendo con Tab, cada tarjeta enfocada queda visible. |
 
-- [ ] 4.4 Commit: `feat(portfolio): agrega servicios apilados y galería horizontal`.
+- [x] 4.4 Commit: `feat(portfolio): agrega servicios apilados y galería horizontal`.
 
 ## 5. Nueva infraestructura, historias y contacto
 

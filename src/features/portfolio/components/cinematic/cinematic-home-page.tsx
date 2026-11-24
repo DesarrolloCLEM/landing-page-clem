@@ -1,4 +1,5 @@
 import { CinematicHero } from "./cinematic-hero";
+import { CinematicServices } from "./cinematic-services";
 import { CinematicWhoWeAre } from "./cinematic-who-we-are";
 
 /**
@@ -20,6 +21,8 @@ export function PortfolioCinematicHomePage() {
           <CinematicWhoWeAre />
         </div>
       </div>
+
+      <CinematicServices />
     </>
   );
 }

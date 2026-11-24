@@ -336,6 +336,14 @@
     }
   }
 
+  /* Numbered units: pinned cards that pile up, each one a little lower than the previous. */
+  @media (min-width: 48rem) {
+    .cine-stack-item {
+      position: sticky;
+      top: calc(var(--portfolio-header-h) + 1.5rem + var(--i, 0) * 0.75rem);
+    }
+  }
+
   @supports (animation-timeline: view()) {
     @keyframes cine-hero-zoom {
       to {
@@ -375,6 +383,104 @@
     .cine-drift {
       animation: cine-drift linear both;
       animation-timeline: --cine-drift;
+    }
+
+    @keyframes cine-stack-shrink {
+      to {
+        opacity: 0.55;
+        transform: scale(0.92);
+      }
+    }
+    /*
+     * The horizontal track ends with its last card against the right edge: -100% is the track
+     * width and 100cqw the width of the pinned viewport (a size container).
+     */
+    @keyframes cine-hscroll {
+      to {
+        transform: translateX(calc(-100% + 100cqw));
+      }
+    }
+
+    @media (min-width: 48rem) {
+      /*
+       * A pinned card never leaves the viewport, so its own view() timeline stands still. Each
+       * card shrinks along the timeline of the NEXT card instead (names hoisted to the list).
+       */
+      .cine-stack {
+        timeline-scope: var(--cards);
+      }
+      .cine-stack-item {
+        view-timeline-name: var(--card);
+      }
+      .cine-stack-shrink {
+        transform-origin: 50% 0;
+        animation: cine-stack-shrink linear both;
+        animation-timeline: var(--next-card);
+        animation-range: contain 0% contain 60%;
+      }
+
+      /*
+       * Horizontal gallery: the tall section sets how long the trip lasts, the viewport stays
+       * pinned under the header and the track slides from its first to its last card.
+       */
+      .cine-hscroll {
+        --card-w: min(24rem, 28vw, calc((100svh - var(--portfolio-header-h) - 8rem) * 0.8));
+        height: calc(var(--count) * (var(--card-w) + 1.5rem) + 100svh);
+        view-timeline-name: --cine-hscroll;
+      }
+      .cine-hscroll-viewport {
+        position: sticky;
+        top: var(--portfolio-header-h);
+        display: flex;
+        align-items: center;
+        max-width: none;
+        height: calc(100svh - var(--portfolio-header-h));
+        overflow: hidden;
+        container-type: inline-size;
+      }
+      .cine-hscroll-track {
+        display: flex;
+        width: max-content;
+        padding-inline: calc(max(0px, (100cqw - 80rem) / 2) + 2rem);
+        animation: cine-hscroll linear both;
+        animation-timeline: --cine-hscroll;
+        animation-range: contain 0% contain 100%;
+      }
+      .cine-hscroll-track > li {
+        width: var(--card-w);
+      }
+
+      /*
+       * Keyboard: while a card has visible focus the gallery falls back to the static grid of
+       * the reduced-motion composition, so no card is ever off screen or cut at an edge.
+       */
+      .cine-hscroll:has(:focus-visible) {
+        height: auto;
+      }
+      .cine-hscroll:has(:focus-visible) .cine-hscroll-viewport {
+        position: static;
+        display: block;
+        max-width: 80rem;
+        height: auto;
+        overflow: visible;
+      }
+      .cine-hscroll:has(:focus-visible) .cine-hscroll-track {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: auto;
+        padding-inline: 1.5rem;
+        animation: none;
+      }
+      .cine-hscroll:has(:focus-visible) .cine-hscroll-track > li {
+        width: auto;
+      }
+    }
+
+    @media (min-width: 64rem) {
+      .cine-hscroll:has(:focus-visible) .cine-hscroll-track {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        padding-inline: 2rem;
+      }
     }
   }
 }
