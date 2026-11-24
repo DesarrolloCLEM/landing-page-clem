@@ -74,7 +74,7 @@ export function CinematicServices() {
                 <div className="flex flex-col justify-between gap-6 p-6 sm:p-10">
                   <span
                     aria-hidden="true"
-                    className="font-heading text-6xl leading-none font-extrabold text-brand-300 tabular-nums"
+                    className="font-heading text-6xl leading-none font-extrabold text-brand-500 tabular-nums"
                   >
                     {service.number}
                   </span>

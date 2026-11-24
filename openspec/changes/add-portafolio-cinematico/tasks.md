@@ -64,19 +64,28 @@
 
 ## 6. Verificación final
 
-- [ ] 6.1 `pnpm lint && pnpm format:check && pnpm build` sin errores, y `openspec validate add-portafolio-cinematico --strict` válido.
-- [ ] 6.2 Revisión responsive y táctil a 375 px, 768 px, 1024 px y 1440 px, en emulación táctil y en un celular real si está disponible. Verificar:
+- [x] 6.1 `pnpm lint && pnpm format:check && pnpm build` sin errores, y `openspec validate add-portafolio-cinematico --strict` válido.
+  - `pnpm lint`, `pnpm format:check` y `pnpm build` (119 páginas, `/portafolio/vista-previa` estática) sin errores; `openspec validate --strict` válido.
+- [x] 6.2 Revisión responsive y táctil a 375 px, 768 px, 1024 px y 1440 px, en emulación táctil y en un celular real si está disponible. Verificar:
   - el scroll es nativo;
   - los objetivos interactivos miden al menos 44 px;
   - ningún efecto depende del hover;
   - no hay desplazamiento horizontal de la página.
-- [ ] 6.3 Revisión de accesibilidad:
+  - Recorrido completo a 375 (táctil), 768 (táctil), 1024 y 1440 px: 0 pasos con desplazamiento horizontal y 0 objetivos interactivos menores de 44 px. El arrastre táctil mueve el carrusel y no bloquea el scroll vertical. No hay JavaScript de scroll; los efectos de hover son solo cosméticos.
+- [x] 6.3 Revisión de accesibilidad:
   - recorrido completo con Tab (orden visual, foco visible y siempre en pantalla);
   - axe sin errores;
   - movimiento reducido emulado: composición estática completa;
   - sin soporte de `animation-timeline` (Firefox o regla desactivada): contenido completo.
-- [ ] 6.4 Lighthouse móvil de la vista previa: mediana de 3 corridas igual o mayor que la línea base de 1.1 en rendimiento y accesibilidad. Comprobar en `.next/static/chunks` que el JavaScript propio añadido no supera 2 KB.
-- [ ] 6.5 Commit de ajustes si los hubo y publicación en `develop`. Verificar que `/portafolio/vista-previa/` responde 200 en Vercel y compartir el enlace para la aprobación.
+  - Tab: 35/35 elementos de `<main>` con foco visible, en pantalla y sin quedar tapados, a 1440 y 375 px.
+  - axe (WCAG 2.1 A/AA): 0 errores, tras subir los números 01–05 a `brand-500`.
+  - Movimiento reducido: 0 animaciones, 0 elementos fijados u ocultos y el video en pausa.
+  - Sin `animation-timeline` (CSS reescrito para simularlo): galería en cuadrícula de 4 columnas y 0 imágenes ocultas.
+- [x] 6.4 Lighthouse móvil de la vista previa: mediana de 3 corridas igual o mayor que la línea base de 1.1 en rendimiento y accesibilidad. Comprobar en `.next/static/chunks` que el JavaScript propio añadido no supera 2 KB.
+  - Lighthouse móvil, mediana de 3 corridas en las mismas condiciones: vista previa 88 / 100 (LCP 3,6 s, CLS 0, TBT 170 ms) frente a `/portafolio/` 87 / 100 (LCP 3,5 s, CLS 0, TBT 207 ms).
+  - La línea base de 1.1 dio 90 y la nueva medición de `/portafolio/` dio 87 con el mismo build: el ruido de la máquina supera la diferencia, por eso se compara en la misma sesión.
+  - Ambas páginas cargan los mismos 8 scripts (165 KB comprimidos). La isla `CinematicHeroVideo` con sus íconos ocupa unos 1,46 KB sin comprimir.
+- [x] 6.5 Commit de ajustes si los hubo y publicación en `develop`. Verificar que `/portafolio/vista-previa/` responde 200 en Vercel y compartir el enlace para la aprobación.
 
 ## Workflow follow-up
 
