@@ -8,7 +8,10 @@ export const diagnosticoPage: PortfolioPageContent = {
   blocks: [
     {
       kind: "banner",
-      image: { src: "/images/services/diagnostico-portada.webp", alt: "Sala de tomografía" },
+      image: {
+        src: "/images/services/diagnostico-portada.webp",
+        alt: "Tomógrafo General Electric Revolution Ascend",
+      },
     },
     {
       kind: "intro",
@@ -23,7 +26,7 @@ export const diagnosticoPage: PortfolioPageContent = {
       title: "Tecnología que marca la diferencia",
       image: {
         src: "/images/services/diagnostico-4.webp",
-        alt: "Tomógrafo General Electric Revolution Ascend",
+        alt: "Sala de tomografía con el tomógrafo General Electric Revolution Ascend",
       },
       body: [
         "Contamos con un tomógrafo General Electric Revolution™ Ascend, el primer equipo en Latinoamérica en incorporar un servidor con inteligencia artificial, que optimiza la calidad de los estudios y reduce significativamente la dosis de radiación.",

@@ -69,7 +69,7 @@ export const hospitalizacionPediatricaPage: PortfolioPageContent = {
         {
           title: "Endocrinología",
           image: {
-            src: "/images/services/diagnostico-4.webp",
+            src: "/images/services/diagnostico-portada.webp",
             alt: "",
           },
         },
@@ -94,7 +94,7 @@ export const hospitalizacionPediatricaPage: PortfolioPageContent = {
         {
           title: "Cirugía pediátrica",
           image: {
-            src: "/images/services/diagnostico-4.webp",
+            src: "/images/services/diagnostico-portada.webp",
             alt: "",
           },
         },
@@ -106,11 +106,13 @@ export const hospitalizacionPediatricaPage: PortfolioPageContent = {
       body: "En Clínica La Esperanza creemos que sanar también significa sentirse acompañado, cómodo y seguro. Por eso ofrecemos espacios diseñados para brindar bienestar, tranquilidad y una atención humanizada durante cada etapa de la recuperación.",
       images: [
         {
-          src: "/images/portafolio/33-e1787855374969.webp",
-          alt: "Habitación de hospitalización pediátrica",
+          src: "/images/services/hospitalizacion-pediatrica-1.webp",
+          alt: "Cuna para el recién nacido junto a la cama",
         },
-        { src: "/images/portafolio/25.webp", alt: "Área de juegos de hospitalización pediátrica" },
-        { src: "/images/portafolio/35-768x160.webp", alt: "Pasillo de hospitalización pediátrica" },
+        {
+          src: "/images/services/hospitalizacion-pediatrica-2.webp",
+          alt: "Equipo médico atendiendo a un recién nacido",
+        },
       ],
     },
     {

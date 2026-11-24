@@ -129,10 +129,13 @@ export const hospitalizationOptions: ServiceEntry[] = [
       },
     ],
     gallery: [
-      { src: "/images/services/pediatria-cuna.webp", alt: "Cuna de hospitalización pediátrica" },
       {
-        src: "/images/services/cuidado-critico-neonatal.webp",
-        alt: "Médico en la unidad neonatal",
+        src: "/images/services/hospitalizacion-pediatrica-1.webp",
+        alt: "Cuna para el recién nacido junto a la cama",
+      },
+      {
+        src: "/images/services/hospitalizacion-pediatrica-2.webp",
+        alt: "Equipo médico atendiendo a un recién nacido",
       },
     ],
     related: [

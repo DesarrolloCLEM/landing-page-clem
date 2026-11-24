@@ -82,12 +82,21 @@ export const cuidadoCriticoPage: PortfolioPageContent = {
       kind: "gallery",
       title: "Conoce nuestras Unidades de Cuidado Crítico",
       images: [
-        { src: "/images/portafolio/99-370x493.webp", alt: "Unidad de cuidado crítico" },
-        { src: "/images/portafolio/00.webp", alt: "Monitoreo en cuidado crítico" },
-        { src: "/images/portafolio/r6ph7029-1-1-scaled.webp", alt: "Equipo de cuidado crítico" },
         {
-          src: "/images/portafolio/000-e1787834207424-370x493.webp",
-          alt: "Cubículo de cuidado crítico",
+          src: "/images/services/cuidado-critico-1.webp",
+          alt: "Equipo médico atendiendo a un recién nacido en la unidad neonatal",
+        },
+        {
+          src: "/images/services/cuidado-critico-2.webp",
+          alt: "Especialistas revisando la historia clínica en tabletas",
+        },
+        {
+          src: "/images/services/cuidado-critico-3.webp",
+          alt: "Enfermera ajustando un equipo de soporte en cuidado crítico",
+        },
+        {
+          src: "/images/services/cuidado-critico-4.webp",
+          alt: "Enfermera ajustando un monitor de signos vitales",
         },
       ],
     },

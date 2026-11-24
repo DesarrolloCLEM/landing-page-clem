@@ -213,16 +213,16 @@ export const units: ServiceEntry[] = [
     ],
     gallery: [
       {
-        src: "/images/services/hospitalizacion-cama.webp",
-        alt: "Cama clínica en una habitación de hospitalización",
-      },
-      {
-        src: "/images/services/hospitalizacion-detalle.webp",
-        alt: "Detalle de la cama clínica con el logo de la clínica",
-      },
-      {
-        src: "/images/services/hospitalizacion-llamado-enfermeria.webp",
+        src: "/images/services/hospitalizacion-1.webp",
         alt: "Sistema de llamado de enfermería junto a la cama",
+      },
+      {
+        src: "/images/services/hospitalizacion-2.webp",
+        alt: "Cama clínica con mesa auxiliar en una habitación de hospitalización",
+      },
+      {
+        src: "/images/services/hospitalizacion-3.webp",
+        alt: "Detalle de la cama clínica",
       },
     ],
     related: ["/servicios/cuidado-critico/", "/servicios/cirugia/", "/servicios/urgencias/"],
@@ -736,20 +736,20 @@ export const units: ServiceEntry[] = [
     ],
     gallery: [
       {
-        src: "/images/services/cuidado-critico-neonatal.webp",
-        alt: "Médico revisando un monitor en la unidad neonatal",
+        src: "/images/services/cuidado-critico-1.webp",
+        alt: "Equipo médico atendiendo a un recién nacido en la unidad neonatal",
       },
       {
-        src: "/images/services/cuidado-critico-monitoreo.webp",
-        alt: "Enfermera ajustando un monitor de signos vitales",
-      },
-      {
-        src: "/images/services/cuidado-critico-especialistas.webp",
+        src: "/images/services/cuidado-critico-2.webp",
         alt: "Especialistas revisando la historia clínica en tabletas",
       },
       {
-        src: "/images/services/cuidado-critico-enfermeria.webp",
-        alt: "Enfermera atendiendo un cubículo de cuidado crítico",
+        src: "/images/services/cuidado-critico-3.webp",
+        alt: "Enfermera ajustando un equipo de soporte en cuidado crítico",
+      },
+      {
+        src: "/images/services/cuidado-critico-4.webp",
+        alt: "Enfermera ajustando un monitor de signos vitales",
       },
     ],
     related: [
@@ -861,7 +861,7 @@ export const units: ServiceEntry[] = [
       },
       {
         src: "/images/services/diagnostico-4.webp",
-        alt: "Detalle del tomógrafo",
+        alt: "Sala de tomografía",
       },
     ],
     related: [

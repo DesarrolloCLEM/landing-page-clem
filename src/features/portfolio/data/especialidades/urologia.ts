@@ -9,7 +9,7 @@ export const urologiaPage: PortfolioPageContent = {
     {
       kind: "banner",
       image: {
-        src: "/images/portafolio/00.webp",
+        src: "/images/services/cuidado-critico-2.webp",
         alt: "Urología",
       },
     },

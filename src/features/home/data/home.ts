@@ -6,7 +6,7 @@ export const hero = {
   title: "Cuidamos de ti y de los que amas",
   subtitle: "Atención médica integral con calidad, calidez y confianza",
   image: {
-    src: "/images/home/equipo-medico-clinica.webp",
+    src: "/images/services/cuidado-critico-2.webp",
     alt: "Equipo médico de Clínica La Esperanza revisando la historia de un paciente",
   },
   actions: {

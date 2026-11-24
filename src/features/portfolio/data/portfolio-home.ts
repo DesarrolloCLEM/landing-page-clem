@@ -198,7 +198,7 @@ export const serviceCards: PortfolioServiceCard[] = [
   {
     title: "Diagnóstico y Apoyo Terapéutico",
     href: "/portafolio/diagnostico-y-apoyo-terapeutico/",
-    image: { src: "/images/services/diagnostico-4.webp", alt: "" },
+    image: { src: "/images/services/diagnostico-portada.webp", alt: "" },
   },
   {
     title: "Programas especiales",

@@ -128,15 +128,15 @@ export const hospitalizacionPage: PortfolioPageContent = {
       title: "Conoce nuestros espacios",
       body: "En Clínica La Esperanza creemos que sanar también significa sentirse acompañado, cómodo y seguro. Por eso ofrecemos espacios diseñados para brindar bienestar, tranquilidad y una atención humanizada durante cada etapa de la recuperación.",
       images: [
-        { src: "/images/portafolio/detalller-1024x683.webp", alt: "Detalle de una habitación" },
         {
-          src: "/images/portafolio/llamado-1024x683.webp",
-          alt: "Sistema de llamado de enfermería",
+          src: "/images/services/hospitalizacion-1.webp",
+          alt: "Sistema de llamado de enfermería junto a la cama",
         },
-        { src: "/images/portafolio/20.webp", alt: "Habitación de hospitalización" },
-        { src: "/images/portafolio/17.webp", alt: "Pasillo del área de hospitalización" },
-        { src: "/images/portafolio/18.webp", alt: "Habitación de hospitalización" },
-        { src: "/images/portafolio/19.webp", alt: "Área de hospitalización" },
+        {
+          src: "/images/services/hospitalizacion-2.webp",
+          alt: "Cama clínica con mesa auxiliar en una habitación de hospitalización",
+        },
+        { src: "/images/services/hospitalizacion-3.webp", alt: "Detalle de la cama clínica" },
       ],
     },
     {

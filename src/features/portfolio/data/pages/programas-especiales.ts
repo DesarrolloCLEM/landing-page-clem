@@ -55,9 +55,9 @@ export const programasEspecialesPage: PortfolioPageContent = {
           src: "/images/portafolio/chatgpt-image-26-ago-2026-15_29_59-1024x765.webp",
           alt: "Sala del Centro de Intervencionismo",
         },
-        { src: "/images/portafolio/detalller-1024x683.webp", alt: "Detalle de una habitación" },
+        { src: "/images/services/hospitalizacion-3.webp", alt: "Detalle de una habitación" },
         {
-          src: "/images/portafolio/llamado-1024x683.webp",
+          src: "/images/services/hospitalizacion-1.webp",
           alt: "Sistema de llamado de enfermería",
         },
         { src: "/images/portafolio/20.webp", alt: "Habitación de hospitalización" },
