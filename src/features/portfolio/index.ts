@@ -23,6 +23,7 @@ export type {
   PortfolioWhyItem,
 } from "./types";
 
+export { PortfolioCinematicHomePage } from "./components/cinematic/cinematic-home-page";
 export { PortfolioBlocks } from "./components/portfolio-blocks";
 export { PortfolioContentPage } from "./components/portfolio-content-page";
 export { PortfolioHomePage } from "./components/portfolio-home-page";

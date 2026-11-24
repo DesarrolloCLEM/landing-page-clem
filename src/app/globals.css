@@ -83,6 +83,12 @@
 @layer base {
   :root {
     color-scheme: light;
+    /* Height of the sticky portfolio header (h-16, sm:h-20): pinned elements sit below it. */
+    --portfolio-header-h: 4rem;
+
+    @media (min-width: 40rem) {
+      --portfolio-header-h: 5rem;
+    }
   }
 
   /* Keeps anchors and focused elements clear of the sticky header. */
@@ -295,5 +301,19 @@
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
+  }
+}
+
+/*
+ * Cinematic portfolio preview (openspec/changes/add-portafolio-cinematico), `cine-*` classes.
+ * Every rule lives under `screen` + no-preference, and the scroll-driven ones also under
+ * @supports, so print, reduced motion and browsers without scroll timelines get the static
+ * composition: nothing pinned, translated or hidden. Only opacity and transform are animated.
+ */
+@media screen and (prefers-reduced-motion: no-preference) {
+  /* Time-based effects (the hero headline entrance) go here. */
+
+  @supports (animation-timeline: view()) {
+    /* Scroll-driven effects (curtain, stack, horizontal gallery, parallax) go here. */
   }
 }
