@@ -6,6 +6,7 @@ import { CountUp, Heading, Text } from "@/components/ui";
 
 import {
   capacityStats,
+  growthStats,
   presentationTab,
   whoWeAre,
   whoWeAreTiles,
@@ -15,8 +16,7 @@ import {
 
 /**
  * "Quiénes somos" in two columns: from 1024px the text column stays pinned (`.cine-pin`) while
- * the other column scrolls the content of the current home tabs, shown in sequence. The
- * "Crecimiento" figures are the same as the new infrastructure ones and appear there.
+ * the other column scrolls the content of the four tabs of the current home, in sequence.
  */
 export function CinematicWhoWeAre() {
   return (
@@ -106,6 +106,25 @@ export function CinematicWhoWeAre() {
                 <div key={stat.label} className="flex flex-col gap-1 border-t border-border pt-4">
                   <dt className="order-2 text-sm text-ink-muted">{stat.label}</dt>
                   <dd className="order-1 font-heading text-5xl font-extrabold text-navy tabular-nums">
+                    <CountUp value={stat.value} />
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+
+          <div className="flex flex-col gap-6">
+            <Heading as="h3" size="md">
+              Crecimiento
+            </Heading>
+            <dl className="grid gap-x-6 gap-y-8 sm:grid-cols-3">
+              {growthStats.map((stat) => (
+                <div key={stat.caption} className="flex flex-col gap-1 border-t border-border pt-4">
+                  <dt className="order-2 flex flex-col text-sm text-ink-muted">
+                    <span className="font-semibold text-navy">{stat.caption}</span>
+                    {stat.label ? <span>{stat.label}</span> : null}
+                  </dt>
+                  <dd className="order-1 font-heading text-4xl font-extrabold text-navy tabular-nums">
                     <CountUp value={stat.value} />
                   </dd>
                 </div>

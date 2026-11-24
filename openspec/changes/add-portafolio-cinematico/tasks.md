@@ -53,13 +53,14 @@
 
 ## 5. Nueva infraestructura, historias y contacto
 
-- [ ] 5.1 Crear `CinematicInfrastructure`: collage en tres columnas con parallax, cifras de crecimiento con `CountUp`, tarjetas institucionales con `motion-stagger` y enlace a `/portafolio/infraestructura/` (decisión 8). Verificar:
+- [x] 5.1 Crear `CinematicInfrastructure`: collage en tres columnas con parallax, cifras de crecimiento con `CountUp`, tarjetas institucionales con `motion-stagger` y enlace a `/portafolio/infraestructura/` (decisión 8). Verificar:
   - las columnas se mueven a distinta velocidad;
   - las cifras cuentan una sola vez;
   - con movimiento reducido todo está quieto y completo.
-- [ ] 5.2 Crear `CinematicStories` y `CinematicContact` con el mismo contenido de la portada actual. Las tarjetas de historias se revelan escalonadas y los textos no se animan. Verificar que los enlaces de las historias llevan a sus subpáginas y que el contacto muestra dirección, correo y teléfono.
-- [ ] 5.3 Agregar `ScrollProgress` a la vista previa. Comparar sección por sección con `/portafolio/` que no falta ningún texto, cifra, imagen ni enlace. Verificar con una lista de cotejo en el PR.
-- [ ] 5.4 Commit: `feat(portfolio): agrega infraestructura, historias y contacto cinematográficos`.
+- [x] 5.2 Crear `CinematicStories` y `CinematicContact` con el mismo contenido de la portada actual. Las tarjetas de historias se revelan escalonadas y los textos no se animan. Verificar que los enlaces de las historias llevan a sus subpáginas y que el contacto muestra dirección, correo y teléfono.
+- [x] 5.3 Agregar `ScrollProgress` a la vista previa. Comparar sección por sección con `/portafolio/` que no falta ningún texto, cifra, imagen ni enlace. Verificar con una lista de cotejo en el PR.
+  - Cotejo automático de `<main>` contra `/portafolio/` (build local, 2026-11-24): 0 textos, 0 imágenes y 0 enlaces faltantes. El video es el mismo. Única diferencia: el separador "·" entre nombre y lema, que ahora son dos líneas.
+- [x] 5.4 Commit: `feat(portfolio): agrega infraestructura, historias y contacto cinematográficos`.
 
 ## 6. Verificación final
 

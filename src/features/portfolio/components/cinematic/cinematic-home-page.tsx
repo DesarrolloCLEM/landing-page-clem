@@ -1,5 +1,10 @@
+import { ScrollProgress } from "@/components/layout";
+
+import { CinematicContact } from "./cinematic-contact";
 import { CinematicHero } from "./cinematic-hero";
+import { CinematicInfrastructure } from "./cinematic-infrastructure";
 import { CinematicServices } from "./cinematic-services";
+import { CinematicStories } from "./cinematic-stories";
 import { CinematicWhoWeAre } from "./cinematic-who-we-are";
 
 /**
@@ -9,6 +14,11 @@ import { CinematicWhoWeAre } from "./cinematic-who-we-are";
 export function PortfolioCinematicHomePage() {
   return (
     <>
+      {/* Reading progress right under the sticky portfolio header (decorative, CSS only). */}
+      <div className="pointer-events-none fixed inset-x-0 top-(--portfolio-header-h) z-40 h-[3px]">
+        <ScrollProgress />
+      </div>
+
       {/*
        * Curtain: the hero stays pinned under the header while "Quiénes somos" slides over it.
        * The wrapper ends with that section, so the hero stops being pinned there.
@@ -23,6 +33,9 @@ export function PortfolioCinematicHomePage() {
       </div>
 
       <CinematicServices />
+      <CinematicInfrastructure />
+      <CinematicStories />
+      <CinematicContact />
     </>
   );
 }

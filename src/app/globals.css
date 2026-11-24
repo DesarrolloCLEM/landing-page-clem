@@ -385,6 +385,24 @@
       animation-timeline: --cine-drift;
     }
 
+    /* New infrastructure collage: side columns rise faster than the middle one. */
+    @keyframes cine-layer-fast {
+      from {
+        transform: translateY(60px);
+      }
+      to {
+        transform: translateY(-60px);
+      }
+    }
+    @keyframes cine-layer-slow {
+      from {
+        transform: translateY(-30px);
+      }
+      to {
+        transform: translateY(30px);
+      }
+    }
+
     @keyframes cine-stack-shrink {
       to {
         opacity: 0.55;
@@ -402,6 +420,18 @@
     }
 
     @media (min-width: 48rem) {
+      .cine-collage {
+        view-timeline-name: --cine-collage;
+      }
+      .cine-layer-fast {
+        animation: cine-layer-fast linear both;
+        animation-timeline: --cine-collage;
+      }
+      .cine-layer-slow {
+        animation: cine-layer-slow linear both;
+        animation-timeline: --cine-collage;
+      }
+
       /*
        * A pinned card never leaves the viewport, so its own view() timeline stands still. Each
        * card shrinks along the timeline of the NEXT card instead (names hoisted to the list).
