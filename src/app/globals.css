@@ -328,6 +328,14 @@
     top: var(--portfolio-header-h);
   }
 
+  /* Pinned text column (Quiénes somos), only where two columns fit. */
+  @media (min-width: 64rem) {
+    .cine-pin {
+      position: sticky;
+      top: calc(var(--portfolio-header-h) + 2.5rem);
+    }
+  }
+
   @supports (animation-timeline: view()) {
     @keyframes cine-hero-zoom {
       to {
@@ -350,6 +358,23 @@
       animation: cine-hero-fade linear both;
       animation-timeline: scroll(root);
       animation-range: 0 80vh;
+    }
+
+    /* Photo drifting inside its frame while the frame crosses the viewport (inner parallax). */
+    @keyframes cine-drift {
+      from {
+        transform: translateY(-5%) scale(1.12);
+      }
+      to {
+        transform: translateY(5%) scale(1.12);
+      }
+    }
+    .cine-drift-frame {
+      view-timeline-name: --cine-drift;
+    }
+    .cine-drift {
+      animation: cine-drift linear both;
+      animation-timeline: --cine-drift;
     }
   }
 }

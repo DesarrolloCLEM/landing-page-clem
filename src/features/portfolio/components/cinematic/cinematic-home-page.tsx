@@ -1,5 +1,5 @@
-import { PortfolioWhoWeAre } from "../portfolio-who-we-are";
 import { CinematicHero } from "./cinematic-hero";
+import { CinematicWhoWeAre } from "./cinematic-who-we-are";
 
 /**
  * Cinematic version of the portfolio home, published at /portafolio/vista-previa/ for approval
@@ -17,7 +17,7 @@ export function PortfolioCinematicHomePage() {
           <CinematicHero />
         </div>
         <div className="relative z-10 bg-white">
-          <PortfolioWhoWeAre />
+          <CinematicWhoWeAre />
         </div>
       </div>
     </>

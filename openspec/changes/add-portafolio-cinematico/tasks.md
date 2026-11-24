@@ -27,12 +27,12 @@
 
 ## 3. Quiénes somos con columnas fijadas
 
-- [ ] 3.1 Crear `CinematicWhoWeAre`: columna de texto fija desde 1024 px y columna con presentación, motivos y cifras de capacidad con `CountUp` (decisión 5). Verificar:
+- [x] 3.1 Crear `CinematicWhoWeAre`: columna de texto fija desde 1024 px y columna con presentación, motivos y cifras de capacidad con `CountUp` (decisión 5). Verificar:
   - a 1440 px el texto permanece a la vista;
   - a 375 px todo va en una columna;
   - la imagen de presentación no supera su tamaño natural;
   - no queda ninguna pestaña.
-- [ ] 3.2 Commit: `feat(portfolio): agrega Quiénes somos con columnas fijadas`.
+- [x] 3.2 Commit: `feat(portfolio): agrega Quiénes somos con columnas fijadas`.
 
 ## 4. Servicios: apilado y galería horizontal
 

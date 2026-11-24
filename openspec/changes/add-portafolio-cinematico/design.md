@@ -86,11 +86,14 @@ Ambos usan `animation-timeline: scroll(root)` en el rango `0 100svh`. Se usa `sv
 
 ### 5. Columnas fijadas en "Quiénes somos" (≥ 1024 px)
 Grid de dos columnas. La izquierda (título, subtítulo, descripción y accesos) es `lg:sticky` con `self-start`, y la derecha apila:
-- la imagen de presentación con parallax interno;
+- la foto principal de "Quiénes somos" (1024 px) con parallax interno;
+- la presentación;
 - los motivos para elegir la clínica;
 - las cifras de capacidad con `CountUp`.
 
-La imagen de "Presentación" (410 × 280 px) se muestra con un tamaño máximo de unos 410 px de ancho, para que no se vea pixelada. Las cifras de "Crecimiento" son las mismas que las de la nueva infraestructura, así que se muestran una sola vez, en esa sección (la spec lo permite).
+La imagen de "Presentación" (410 × 280 px) se muestra a su tamaño natural y sin parallax, porque el sobre-escalado que necesita el efecto la pixelaría.
+
+La frase repetida bajo los cuatro motivos se muestra una sola vez como introducción. Las cifras de "Crecimiento" son las mismas que las de la nueva infraestructura, así que se muestran una sola vez, en esa sección (la spec lo permite).
 
 ### 6. Unidades apiladas: `sticky` por tarjeta y línea de tiempo con nombre del contenedor (≥ 768 px)
 Cada `li` es `sticky` con `top: calc(var(--portfolio-header-h) + 1.5rem + var(--i) * 0.75rem)` y una altura máxima que cabe en pantalla. Una tarjeta `sticky` no tiene una línea de tiempo `view()` útil, porque nunca sale de pantalla. Por eso:
