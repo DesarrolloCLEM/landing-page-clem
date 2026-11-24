@@ -122,7 +122,7 @@ Las fotos de `projectImages` se reparten en tres columnas. La columna central se
 - si `prefers-reduced-motion` es `no-preference`, llama a `play()`;
 - en caso contrario, se queda en el póster.
 
-El botón pausa y reanuda, con `aria-pressed` y la etiqueta "Pausar video" o "Reproducir video", y mide 44 × 44 px.
+El botón pausa y reanuda, y mide 44 × 44 px. Su etiqueta cambia entre "Pausar video" y "Reproducir video". No lleva `aria-pressed`, porque combinar un estado con una etiqueta que cambia confunde a los lectores de pantalla.
 - **Justificación de `"use client"`:** reproducir y pausar un video y leer la preferencia de movimiento para decidir si arranca requieren JavaScript. Además, WCAG 2.2.2 exige poder pausar contenido en movimiento de más de 5 s.
 - *Alternativa descartada:* mantener `autoPlay` como la portada actual. Ignora el movimiento reducido y no se puede pausar.
 

@@ -311,9 +311,45 @@
  * composition: nothing pinned, translated or hidden. Only opacity and transform are animated.
  */
 @media screen and (prefers-reduced-motion: no-preference) {
-  /* Time-based effects (the hero headline entrance) go here. */
+  /* Hero headline: each word rises inside its mask once, on load. 7 words end in ~900 ms. */
+  @keyframes cine-word-in {
+    from {
+      transform: translateY(105%);
+    }
+  }
+  .cine-word {
+    animation: cine-word-in 600ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    animation-delay: calc(var(--i, 0) * 50ms);
+  }
+
+  /* Curtain: the hero stays under the header while the next section covers it. */
+  .cine-curtain-stage {
+    position: sticky;
+    top: var(--portfolio-header-h);
+  }
 
   @supports (animation-timeline: view()) {
-    /* Scroll-driven effects (curtain, stack, horizontal gallery, parallax) go here. */
+    @keyframes cine-hero-zoom {
+      to {
+        transform: scale(1.08);
+      }
+    }
+    @keyframes cine-hero-fade {
+      to {
+        opacity: 0;
+        transform: translateY(-2rem);
+      }
+    }
+
+    .cine-hero-video {
+      animation: cine-hero-zoom linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 100vh;
+    }
+    .cine-hero-content {
+      animation: cine-hero-fade linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 80vh;
+    }
   }
 }

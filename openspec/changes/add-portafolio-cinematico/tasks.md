@@ -11,19 +11,19 @@
 
 ## 2. Hero: entrada del titular, telón y video
 
-- [ ] 2.1 Crear `CinematicHero` con el titular dividido en palabras con máscara en el servidor (decisión 3). Verificar:
+- [x] 2.1 Crear `CinematicHero` con el titular dividido en palabras con máscara en el servidor (decisión 3). Verificar:
   - las palabras suben y terminan antes de 1 s;
   - con movimiento reducido emulado el titular está quieto;
   - el árbol de accesibilidad muestra el `h1` como una sola frase.
-- [ ] 2.2 Crear la isla `CinematicHeroVideo`, con video sin `autoPlay` y botón de pausa de 44 × 44 px (decisión 9). Verificar:
+- [x] 2.2 Crear la isla `CinematicHeroVideo`, con video sin `autoPlay` y botón de pausa de 44 × 44 px (decisión 9). Verificar:
   - arranca solo con movimiento permitido;
   - con movimiento reducido queda el póster;
   - el botón funciona con mouse, toque y teclado, y cambia su etiqueta.
-- [ ] 2.3 Implementar el telón: envoltorio hero + "Quiénes somos", hero `sticky` con zoom del video y atenuación del contenido (decisión 4). Verificar:
+- [x] 2.3 Implementar el telón: envoltorio hero + "Quiénes somos", hero `sticky` con zoom del video y atenuación del contenido (decisión 4). Verificar:
   - a 375 px y a 1440 px, "Quiénes somos" cubre el hero;
   - el hero deja de estar fijado al terminar la sección;
   - con movimiento reducido no hay telón.
-- [ ] 2.4 Commit: `feat(portfolio): agrega el hero cinematográfico con telón y control del video`.
+- [x] 2.4 Commit: `feat(portfolio): agrega el hero cinematográfico con telón y control del video`.
 
 ## 3. Quiénes somos con columnas fijadas
 
