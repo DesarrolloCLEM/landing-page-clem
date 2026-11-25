@@ -7,7 +7,7 @@ Define la navegación global del sitio (barra superior, menú principal, menú m
 ## ADDED Requirements
 
 ### Requirement: Datos de contacto institucionales consistentes
-Todas las páginas SHALL mostrar los mismos datos de contacto, tomados de una única fuente: dirección "Calle 12 # 4-58, Barrio Buenavista, Montería, Córdoba", PBX "60(4) 784 8903", correo `info@clinicalaesperanza.co`, WhatsApp de citas `+57 304 684 3367` y redes sociales (Facebook, Instagram, TikTok).
+Todas las páginas SHALL mostrar los mismos datos de contacto, tomados de una única fuente: dirección "Calle 12 # 4-58, Barrio Buenavista, Montería, Córdoba", PBX "60(4) 784 8903", correo `info@clinicalaesperanza.co`, WhatsApp de citas `+57 317 372 1211` y redes sociales (Facebook, Instagram, TikTok).
 
 #### Scenario: Cambio de un dato de contacto
 - **WHEN** cambia el teléfono de la clínica en la fuente única

@@ -34,8 +34,8 @@ export const contact = {
   // The comma pauses the call and then dials the emergency extension.
   emergencyPhone: { label: "60(4) 784 8903 ext. 108", href: "tel:+576047848903,108" },
   email: { label: "info@clinicalaesperanza.co", href: "mailto:info@clinicalaesperanza.co" },
-  whatsappAppointments: { label: "+57 304 684 3367", href: "https://wa.me/573046843367" },
-  whatsappUserAlliance: { label: "+57 304 474 8399", href: "https://wa.me/573044748399" },
+  whatsappAppointments: { label: "+57 317 372 1211", href: "https://wa.me/573173721211" },
+  whatsappUserAlliance: { label: "+57 317 372 1211", href: "https://wa.me/573173721211" },
 } as const;
 
 export const socialLinks = [
