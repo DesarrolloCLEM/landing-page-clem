@@ -1,6 +1,8 @@
 import type { ReactNode } from "react";
 
-import { FloatingWhatsApp } from "./floating-whatsapp";
+// Floating WhatsApp button hidden at the clinic's request. To bring it back, uncomment this
+// import and <FloatingWhatsApp /> below.
+// import { FloatingWhatsApp } from "./floating-whatsapp";
 import { Footer } from "./footer";
 import { Header } from "./header";
 import { TopBar } from "./top-bar";
@@ -23,7 +25,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
         {children}
       </main>
       <Footer />
-      <FloatingWhatsApp />
+      {/* <FloatingWhatsApp /> */}
     </>
   );
 }

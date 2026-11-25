@@ -87,17 +87,6 @@ Todas las páginas SHALL terminar con un footer que contenga logo y lema "Fe, Am
 - **WHEN** un visitante pulsa un ícono de red social
 - **THEN** se abre el perfil oficial en una pestaña nueva y el enlace tiene un nombre accesible ("Facebook de Clínica La Esperanza", etc.)
 
-### Requirement: Acceso flotante a WhatsApp
-El sitio SHALL mostrar un botón flotante de WhatsApp que abre una conversación con el número de citas, sin tapar contenido ni controles.
-
-#### Scenario: Botón flotante
-- **WHEN** un visitante pulsa el botón flotante
-- **THEN** se abre `https://wa.me/573046843367` en una pestaña nueva
-
-#### Scenario: No tapa el contenido
-- **WHEN** el visitante llega al final de una página en móvil
-- **THEN** el botón flotante no cubre los enlaces del footer ni los botones de formularios
-
 ### Requirement: Enlace para saltar al contenido
 Cada página SHALL ofrecer como primer elemento enfocable un enlace "Saltar al contenido" que lleva al contenido principal.
 
