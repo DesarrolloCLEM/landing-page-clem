@@ -11,7 +11,7 @@ La ruta `/agenda/` SHALL explicar que las citas se agendan por WhatsApp, recorda
 
 #### Scenario: Agendar
 - **WHEN** un visitante pulsa "Agendar por WhatsApp"
-- **THEN** se abre `https://wa.me/573046843367` en una pestaña nueva
+- **THEN** se abre `https://wa.me/573173721211` en una pestaña nueva
 
 #### Scenario: Horario de citas
 - **WHEN** un visitante revisa el horario

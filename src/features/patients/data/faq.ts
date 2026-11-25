@@ -122,7 +122,7 @@ export const faqCategories: FaqCategory[] = [
         id: "cita-rayos-x",
         question: "¿Cómo agendo una cita para Rayos X?",
         answer: [
-          "Usted debe comunicarse al número celular 320 655 9439 en el siguiente horario:",
+          "Usted debe comunicarse al número celular 317 372 1211 en el siguiente horario:",
           [
             "Lunes a viernes: 8:00 a. m. a 12:00 p. m. y 2:00 p. m. a 6:00 p. m.",
             "Sábado: 8:00 a. m. a 11:00 a. m.",

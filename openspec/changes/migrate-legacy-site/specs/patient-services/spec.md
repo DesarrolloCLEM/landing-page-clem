@@ -11,7 +11,7 @@ La ruta `/usuarios/` SHALL presentar el contenido del sitio actual sobre la Coor
 
 #### Scenario: Unirse a la Alianza
 - **WHEN** un visitante pulsa "Quiero hacer parte de la Alianza de Usuarios"
-- **THEN** se abre una conversación de WhatsApp con `+57 304 474 8399` en una pestaña nueva
+- **THEN** se abre una conversación de WhatsApp con `+57 317 372 1211` en una pestaña nueva
 
 #### Scenario: Accesos a trámites
 - **WHEN** un visitante está en `/usuarios/`
